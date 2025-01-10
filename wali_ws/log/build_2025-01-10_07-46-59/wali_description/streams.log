@@ -1,0 +1,60 @@
+[0.013s] Invoking command in '/home/ubuntu/TB5-WaLI/wali_ws/build/wali_description': AMENT_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ubuntu/TB5-WaLI/wali_ws/src/wali_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/TB5-WaLI/wali_ws/install/wali_description
+[0.161s] -- The C compiler identification is GNU 13.3.0
+[0.289s] -- The CXX compiler identification is GNU 13.3.0
+[0.317s] -- Detecting C compiler ABI info
+[0.514s] -- Detecting C compiler ABI info - done
+[0.528s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.529s] -- Detecting C compile features
+[0.530s] -- Detecting C compile features - done
+[0.548s] -- Detecting CXX compiler ABI info
+[0.764s] -- Detecting CXX compiler ABI info - done
+[0.780s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.780s] -- Detecting CXX compile features
+[0.781s] -- Detecting CXX compile features - done
+[0.788s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.113s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.277s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.375s] -- Found urdf: 2.10.0 (/opt/ros/jazzy/share/urdf/cmake)
+[1.500s] -- Found TinyXML2 via Config file: /usr/lib/aarch64-linux-gnu/cmake/tinyxml2
+[1.564s] -- Found irobot_create_description: 2.0.0 (/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description/share/irobot_create_description/cmake)
+[1.572s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.880s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.885s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.889s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.895s] -- Added test 'lint_cmake' to check CMake code style
+[1.898s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.903s] -- Added test 'xmllint' to check XML markup files
+[1.908s] -- Configuring done (1.9s)
+[1.917s] -- Generating done (0.0s)
+[1.921s] -- Build files have been written to: /home/ubuntu/TB5-WaLI/wali_ws/build/wali_description
+[1.938s] Invoked command in '/home/ubuntu/TB5-WaLI/wali_ws/build/wali_description' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/ubuntu/TB5-WaLI/wali_ws/src/wali_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuntu/TB5-WaLI/wali_ws/install/wali_description
+[1.940s] Invoking command in '/home/ubuntu/TB5-WaLI/wali_ws/build/wali_description': AMENT_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ubuntu/TB5-WaLI/wali_ws/build/wali_description -- -j4 -l4
+[2.113s] Invoked command in '/home/ubuntu/TB5-WaLI/wali_ws/build/wali_description' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ubuntu/TB5-WaLI/wali_ws/build/wali_description -- -j4 -l4
+[2.114s] Invoking command in '/home/ubuntu/TB5-WaLI/wali_ws/build/wali_description': AMENT_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ubuntu/TB5-WaLI/wali_ws/build/wali_description
+[2.140s] -- Install configuration: ""
+[2.140s] -- Execute custom install script
+[2.140s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/launch/robot_description.launch.py
+[2.169s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/meshes/camera_bracket.dae
+[2.197s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/meshes/oakd_lite.dae
+[2.219s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/meshes/shell.dae
+[2.249s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/meshes/shell_collision.dae
+[2.316s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/meshes/weight_block.dae
+[2.344s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/urdf/sensors/camera_bracket.urdf.xacro
+[2.375s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/urdf/sensors/oakd.urdf.xacro
+[2.402s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/urdf/wali/wali.urdf.xacro
+[2.447s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/ament_index/resource_index/package_run_dependencies/wali_description
+[2.495s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/ament_index/resource_index/parent_prefix_path/wali_description
+[2.526s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/environment/ament_prefix_path.sh
+[2.550s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/environment/ament_prefix_path.dsv
+[2.583s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/environment/path.sh
+[2.625s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/environment/path.dsv
+[2.667s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/local_setup.bash
+[2.690s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/local_setup.sh
+[2.708s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/local_setup.zsh
+[2.731s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/local_setup.dsv
+[2.752s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/package.dsv
+[2.771s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/ament_index/resource_index/packages/wali_description
+[2.791s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/cmake/wali_descriptionConfig.cmake
+[2.812s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/cmake/wali_descriptionConfig-version.cmake
+[2.831s] -- Symlinking: /home/ubuntu/TB5-WaLI/wali_ws/install/wali_description/share/wali_description/package.xml
+[2.861s] Invoked command in '/home/ubuntu/TB5-WaLI/wali_ws/build/wali_description' returned '0': AMENT_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuntu/TB5-WaLI/wali_ws/install/irobot_create_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ubuntu/TB5-WaLI/wali_ws/build/wali_description

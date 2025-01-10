@@ -1,0 +1,1 @@
+/home/ubuntu/TB5-WaLI/wali_ws/build/create3_examples_msgs/rosidl_generator_c/create3_examples_msgs/action/detail/coverage__struct.h

@@ -1,0 +1,1 @@
+/home/ubuntu/TB5-WaLI/wali_ws/build/wali_interfaces/rosidl_generator_c/wali_interfaces/msg/rosidl_generator_c__visibility_control.h
