@@ -45,7 +45,7 @@ DEBUG = False
 # Uncomment for debug prints to console
 # DEBUG = True
 
-ODOLOGFILE = '/home/pi/wali_pi5/logs/odometer.log'
+ODOLOGFILE = '/home/ubuntu/TB5-WaLI/logs/odometer.log'
 # CLOSE_TOLERANCE = 0.001  # less than 1 millimeter in any direction for has not moved since last check
 # CLOSE_HEADING_TOLERANCE = 0.001745  # Heading varies from 0 to 2pi (6.28), 0.1deg is 0.001745 radians, (0.01745 is actually 1 deg from 6.28)
 TWO_PI= math.pi * 2.0

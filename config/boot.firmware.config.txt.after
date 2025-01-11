@@ -43,8 +43,4 @@ dtoverlay=i2c-gpio,bus=3,i2c_gpio_delay_us=1,i2c_gpio_sda=4,i2c_gpio_scl=5
 # such a board)
 dtoverlay=dwc2,dr_mode=host
 
-[pi5]
-usb_current_limit=1A6
-dtparam=rtc_bbat_vchg=3000000
-
 [all]
