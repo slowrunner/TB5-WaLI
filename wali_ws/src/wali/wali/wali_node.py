@@ -14,7 +14,7 @@
     - Logs successful docking to life.log
 
     Requires:
-    - /home/pi/wali_pi5/logs/life.log with 666 permission
+    - /home/ubuntu/TB5-WaLI/logs/life.log with 666 permission
 
     Message Formats:
 
@@ -97,7 +97,7 @@ DEBUG = False
 # Uncomment for debug prints to console, run kill_docker-r2hdp.sh, then ./run_docker_r2hdp.sh to see console msgs
 # DEBUG = True
 
-LIFELOGFILE = "/home/pi/wali_pi5/logs/life.log"
+LIFELOGFILE = "/home/ubuntu/TB5-WaLI/logs/life.log"
 
 # "Sleep Time" Wali needs to stay on dock
 START_SLEEP_TIME = dt.datetime.strptime('22:00', '%H:%M').time()

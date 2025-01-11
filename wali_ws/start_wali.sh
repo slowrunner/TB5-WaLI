@@ -33,9 +33,9 @@ source install/setup.bash
 # sleep to allow fastdds server startup?
 # sleep 5
 
-echo -e "\n*** Start F710 game controller node"
-echo '*** ros2 launch teleop_twist_joy teleop-launch.py joy_config:="F710" '
-ros2 launch teleop_twist_joy teleop-launch.py joy_config:="F710" &
+# echo -e "\n*** Start F710 game controller node"
+# echo '*** ros2 launch teleop_twist_joy teleop-launch.py joy_config:="F710" '
+# ros2 launch teleop_twist_joy teleop-launch.py joy_config:="F710" &
 
 
 echo -e "\n*** Start odometer node"
@@ -57,6 +57,6 @@ ros2 run wali say_node &
 # sleep 5
 
 echo -e "\n *** STARTING WALI "
-echo -e "executing: ros2 run wali wali_node"
-ros2 run wali wali_node
+echo -e "executing: ros2 run wali wali_node &"
+ros2 run wali wali_node &
 
