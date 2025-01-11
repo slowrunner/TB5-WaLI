@@ -1,0 +1,14 @@
+# Create3-WaLI Life Statistics
+
+```
+Total Awake:   1962.57  hrs
+Total Naps:     248.85  hrs
+Total Life:    2211.42  hrs (12/2023 to 3/12/24)
+Playtimes (Undocked-Docked): 361
+Average playtime (last five) 2.4 hrs 
+Average docked time (last five) 5.3 hrs 
+Sessions (boot):  99
+Average Session:  19.8 hrs
+Safety Shutdowns:  4
+
+```
