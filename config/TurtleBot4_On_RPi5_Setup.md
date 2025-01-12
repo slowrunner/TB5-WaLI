@@ -115,7 +115,7 @@ wget -qO - https://raw.githubusercontent.com/turtlebot/turtlebot4_setup/jazzy/sc
 
 
 
-=== Run turtlebot4-setup
+=== Run turtlebot4-setup only for WiFi setup first
 
 REF: https://turtlebot.github.io/turtlebot4-user-manual/software/turtlebot4_setup.html#configuration-tools
 
@@ -181,13 +181,14 @@ sudo nano /etc/netplan/50-wifis.yaml
 Replace free text password with SHA password
 
 === CONFIGURE PASSWORD-LESS SUDO
-
+```
 sudo nano /etc/sudoers
-
+```
 make sudo group look like:
+```
 # Allow members of group sudo to execute any command
 sudo %sudo	ALL=(ALL:ALL) NOPASSWD: ALL
-
+```
 
 === Continue turtlebot4-setup for ROS and Robot
 
