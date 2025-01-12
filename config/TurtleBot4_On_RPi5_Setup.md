@@ -117,10 +117,10 @@ wget -qO - https://raw.githubusercontent.com/turtlebot/turtlebot4_setup/jazzy/sc
 
 === Run turtlebot4-setup
 
-REF: https://github.com/turtlebot/turtlebot4_setup/tree/jazzy
+REF: https://turtlebot.github.io/turtlebot4-user-manual/software/turtlebot4_setup.html#configuration-tools
 
 ```
-wget -qO - https://raw.githubusercontent.com/turtlebot/turtlebot4_setup/jazzy/scripts/turtlebot4_setup.sh | bash
+turtlebot4-setup
 ```
 
 ### OPTIONAL: Edit to keep WiFi setup
