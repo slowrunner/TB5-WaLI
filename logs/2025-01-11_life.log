@@ -1,0 +1,20 @@
+#
+# TB5-WaLI life.log
+#
+# Prior Life as Create3-WaLi from 12/2023 to 3/12/2024
+#   Total Awake:   1962.57  hrs
+#   Total Naps:     248.85  hrs
+#   Total Life:    2211.42  hrs 
+#   Playtimes (Undocked-Docked): 361
+#   Average playtime (last five) 2.4 hrs
+#   Average docked time (last five) 5.3 hrs
+#
+2025-01-09 00:00|CATCHUP execution: 15.0
+2025-01-11 13:43|------------ boot ------------
+2023-12-13 21:21|wali_node.py| ** WaLI Undocking: success at battery 100%, docked for 4.0 hrs **
+2023-12-14 05:02|wali_node.py| ** WaLI Docking: success at battery 14% after 1.0 hrs playtime **
+2025-01-11 14:13|lifelogger.dEmain execution: 0.50
+2025-01-11 18:32|wali_node.py| ** WaLI node started - Undock:99% Rotate:18% Dock:15% **
+2025-01-11 18:53|------------ boot ------------
+2025-01-11 23:59|lifelogger.dEmain execution: 5.10
+2025-01-12 00:02|lifelogger.dEmain execution: 5.15

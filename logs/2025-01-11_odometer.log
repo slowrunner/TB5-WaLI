@@ -1,0 +1,6 @@
+# FILE: odometer.log
+# Travel by ROS 2 Robot TB5-WaLI
+2023-12-30 21:43:08|CATCHUP -     x:  0.0   y: 0.0    z:  0.0   heading:    0 - moved:  300.0 meters in 0.0s
+#
+2023-12-30 21:43:02|start_point - x:  0.598 y: -0.319 z:  0.281 heading: -178
+2023-12-30 21:43:08|stop_point -  x:  0.115 y: -0.329 z:  0.284 heading: -179 - moved:  0.483 meters in 6.2s
