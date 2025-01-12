@@ -127,7 +127,7 @@ turtlebot4-setup
 
 ```
 sudo cp /etc/netplan/50-wifis.yaml /etc/netplan/50-wifis.yaml.ap
-```
+
 sudo nano /etc/netplan/50-wifis.yaml
 ```
 Make it look like (with your SSID and NET_PWD_SHA):
