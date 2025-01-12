@@ -52,3 +52,4 @@ CATKIN_IGNORE
 
 # Added By Alan
 log/
+install/
