@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/build/wali_description/ament_cmake_core/wali_descriptionConfig-version.cmake

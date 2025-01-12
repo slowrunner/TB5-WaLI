@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/build/wali_interfaces/rosidl_typesupport_introspection_c/wali_interfaces/srv/detail/say__rosidl_typesupport_introspection_c.h

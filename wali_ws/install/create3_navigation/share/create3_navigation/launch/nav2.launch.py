@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/src/create3_navigation/launch/nav2.launch.py

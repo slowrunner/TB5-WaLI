@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/build/wali_interfaces/rosidl_generator_cpp/wali_interfaces/srv/detail/say__type_support.hpp

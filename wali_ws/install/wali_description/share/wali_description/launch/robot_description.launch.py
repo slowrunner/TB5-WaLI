@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/src/wali_description/launch/robot_description.launch.py

@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/build/wali_interfaces/rosidl_cmake/rosidl_cmake-extras.cmake

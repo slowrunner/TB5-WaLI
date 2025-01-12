@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/build/wali_description/ament_cmake_environment_hooks/local_setup.bash

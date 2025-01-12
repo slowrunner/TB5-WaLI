@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/build/create3_examples_msgs/rosidl_generator_cpp/create3_examples_msgs/action/detail/coverage__traits.hpp

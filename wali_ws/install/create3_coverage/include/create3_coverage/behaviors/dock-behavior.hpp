@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/src/create3_examples/create3_coverage/include/create3_coverage/behaviors/dock-behavior.hpp

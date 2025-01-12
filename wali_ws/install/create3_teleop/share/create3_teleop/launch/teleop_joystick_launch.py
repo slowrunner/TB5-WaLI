@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/build/create3_teleop/launch/teleop_joystick_launch.py

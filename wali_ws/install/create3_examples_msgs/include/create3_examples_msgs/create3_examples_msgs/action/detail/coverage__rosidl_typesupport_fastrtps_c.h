@@ -1,1 +1,0 @@
-/home/ubuntu/TB5-WaLI/wali_ws/build/create3_examples_msgs/rosidl_typesupport_fastrtps_c/create3_examples_msgs/action/detail/coverage__rosidl_typesupport_fastrtps_c.h
