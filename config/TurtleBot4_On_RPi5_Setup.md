@@ -371,7 +371,7 @@ espeak-ng 'hello'
 ==== BRING DOWN TB5-WaLI SPECIFIC CODE ====
 (Created git repo TB5-WaLI) 
 
-
+```
 ubuntu@TB5WaLI:~$ git clone https://github.com/slowrunner/TB5-WaLI.git
 ubuntu@TB5WaLI:~/TB5-WaLI$ git config --global user.name "slowrunner"
 ubuntu@TB5WaLI:~/TB5-WaLI$ git config --global user.email "slowrunner@users.noreply.github.com"
@@ -382,7 +382,7 @@ git commit
 git push
 user: slowrunner
 password:  secret sauce pass code
-
+```
 
 === setup life logging / totalife / logMaintenance
 ```
@@ -407,8 +407,9 @@ ros2 node list
 
 
 === OPTIONAL:  install gamepad config files  
+```
 ~/TB5-WaLI/config/install_gamepad_param_files.sh
-
+```
 
 
 === useful files to check
