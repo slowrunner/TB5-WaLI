@@ -187,7 +187,7 @@ sudo nano /etc/sudoers
 make sudo group look like:
 ```
 # Allow members of group sudo to execute any command
-sudo %sudo	ALL=(ALL:ALL) NOPASSWD: ALL
+%sudo	ALL=(ALL:ALL) NOPASSWD: ALL
 ```
 
 === Continue turtlebot4-setup for ROS and Robot
