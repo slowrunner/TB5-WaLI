@@ -247,6 +247,7 @@ ros2 node list
 ```
 
 === Republisher Info
+```
 ubuntu@TB5WaLI:~/TB5-WaLI/wali_ws$ ros2 node info /create3_repub
 /create3_repub
   Subscribers:
@@ -290,7 +291,7 @@ ubuntu@TB5WaLI:~/TB5-WaLI/wali_ws$ ros2 node info /create3_repub
     /undock: irobot_create_msgs/action/Undock
     /wall_follow: irobot_create_msgs/action/WallFollow
   Action Clients:
-
+```
 
 # ==== TB5-WaLI Specific Setup ====  
 
