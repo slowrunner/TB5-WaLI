@@ -1,6 +1,6 @@
 # USB Speaker/Mic for TB5-WaLI
 
-Purchased the "ROFAL Speaker with Mic"   
+Purchased the "ROFAL USB Speaker with Mic"   
 
 Initially, it was recognized but no sound out or in.  Was ready to send back,  
 then thought to try 
