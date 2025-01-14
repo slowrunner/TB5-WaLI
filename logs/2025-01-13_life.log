@@ -1,0 +1,44 @@
+#
+# TB5-WaLI life.log
+#
+# Prior Life as Create3-WaLi from 12/2023 to 3/12/2024
+#   Total Awake:   1962.57  hrs
+#   Total Naps:     248.85  hrs
+#   Total Life:    2211.42  hrs 
+#   Playtimes (Undocked-Docked): 361
+#   Average playtime (last five) 2.4 hrs
+#   Average docked time (last five) 5.3 hrs
+#
+2025-01-09 00:00|CATCHUP execution: 15.0
+2025-01-11 13:43|------------ boot ------------
+2023-12-13 21:21|wali_node.py| ** WaLI Undocking: success at battery 100%, docked for 4.0 hrs **
+2023-12-14 05:02|wali_node.py| ** WaLI Docking: success at battery 14% after 1.0 hrs playtime **
+2025-01-11 14:13|lifelogger.dEmain execution: 15.50
+2025-01-11 18:32|wali_node.py| ** WaLI node started - Undock:99% Rotate:18% Dock:15% **
+2025-01-11 18:53|------------ boot ------------
+2025-01-12 00:02|lifelogger.dEmain execution: 5.15
+2025-01-12 11:25|[logMaintenance.py.main]** rebuilt OS image **
+2025-01-12 11:29|------------ boot ------------
+2025-01-12 11:40|wali_node.py| ** WaLI node started - Undock:99% Rotate:18% Dock:15% **
+2025-01-12 11:46|wali_node.py| ** WaLI node started - Undock:99% Rotate:18% Dock:15% **
+2025-01-12 11:47|lifelogger.dEmain execution: 0.30
+2025-01-12 11:51|------------ boot ------------
+2025-01-12 11:51|wali_node.py| ** WaLI node started - Undock:99% Rotate:18% Dock:15% **
+2025-01-12 11:57|lifelogger.dEmain execution: 0.10
+2025-01-12 13:40|------------ boot ------------
+2025-01-12 13:55|lifelogger.dEmain execution: 0.25
+2025-01-12 13:59|------------ boot ------------
+2025-01-12 14:10|wali_node.py| ** WaLI node started - Undock:99% Rotate:18% Dock:15% **
+2025-01-12 22:29|lifelogger.dEmain execution: 8.50
+2025-01-12 22:32|------------ boot ------------
+2025-01-12 23:29|lifelogger.dEmain execution: 0.95
+2025-01-12 23:31|[logMaintenance.py.main]** RPLidar C1 integrated, Oak-D-Lite camera tested successfully **
+2025-01-12 23:34|------------ boot ------------
+2025-01-12 23:40|lifelogger.dEmain execution: 0.10
+2025-01-13 08:07|wali_node.py| ** WaLI node started - Undock:99% Rotate:18% Dock:15% **
+2025-01-13 08:07|------------ boot ------------
+2025-01-13 13:43|lifelogger.dEmain execution: 5.60
+2025-01-13 13:48|------------ boot ------------
+2025-01-13 13:52|wali_node.py| ** WaLI node started - Undock:99% Rotate:18% Dock:15% **
+2025-01-13 20:00|lifelogger.dEmain execution: 6.20
+2025-01-13 20:00|[logMaintenance.py.main]** USB Speaker/Mic works after setting levels to 80%/84% with alsamixer **
