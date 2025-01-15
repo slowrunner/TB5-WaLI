@@ -14,3 +14,5 @@ Raspberry Pi 5 based ROS 2 Robot "Wallfollower Looking for Intelligence" loosely
   - Iron Firmware is the last release before iRobot discontinued selling Create3  
   - Certified to work with ROS 2 Jazzy nodes  
   - Communicates with RPi5 using Ethernet-over-USB  
+
+<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/Graphics/WaLI_Waiting_For_Create3.JPG" width="378" height="504" />
