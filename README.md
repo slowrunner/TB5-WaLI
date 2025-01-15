@@ -1,6 +1,6 @@
 # TB5-WaLI
 
-Raspberry Pi 5 based ROS 2 Robot "Wallfollower Looking for Intelligence" loosely based on TurtleBot 4 Lite  
+Raspberry Pi 5 based ROS 2 Robot "Wallfollower Looking for Intelligence" based on TurtleBot 4 Lite  
 
 - TB5-WaLI ROS 2 Nodes  
   - wali_node  
@@ -15,4 +15,4 @@ Raspberry Pi 5 based ROS 2 Robot "Wallfollower Looking for Intelligence" loosely
   - Certified to work with ROS 2 Jazzy nodes  
   - Communicates with RPi5 using Ethernet-over-USB  
 
-<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/WaLI_Waiting_For_Create3.JPG" width="378" height="504" />
+<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/2025-01-15_TB5-WaLI_First_Assembly.jpg" width="378" height="504" />
