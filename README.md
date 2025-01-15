@@ -15,4 +15,4 @@ Raspberry Pi 5 based ROS 2 Robot "Wallfollower Looking for Intelligence" loosely
   - Certified to work with ROS 2 Jazzy nodes  
   - Communicates with RPi5 using Ethernet-over-USB  
 
-<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/Graphics/WaLI_Waiting_For_Create3.JPG" width="378" height="504" />
+<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/WaLI_Waiting_For_Create3.JPG" width="378" height="504" />
