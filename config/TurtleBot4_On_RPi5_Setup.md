@@ -429,3 +429,5 @@ ros2 node list
 - turtlebot4-update
 
 
+=== Useful commands
+- sudo systemctl stop turtlebot4    (is  ```turtlebot4-stop```   better because it will clean pids?)
