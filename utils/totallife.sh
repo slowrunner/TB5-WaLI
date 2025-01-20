@@ -27,9 +27,9 @@ echo "Playtimes (Undocked-Docked):" `(grep -c " Docking: success " $fn)`
 last5playtimes=`(grep " hrs playtime " $fn | tail -5 | awk -F" after "  '{sum+=$2}END{print sum;}' )`
 last5avePlaytime=`(echo "scale=1; $last5playtimes / 5" | bc)`
 echo "Average playtime (last five)" $last5avePlaytime "hrs "
-last5dockedtimes=`(grep " docked for " $fn | tail -5 | awk -F" for "  '{sum+=$2}END{print sum;}' )`
-last5aveDockedtime=`(echo "scale=1; $last5dockedtimes / 5" | bc)`
-echo "Average docked time (last five)" $last5aveDockedtime "hrs "
+last2dockedtimes=`(grep " docked for " $fn | tail -2 | awk -F" for "  '{sum+=$2}END{print sum;}' )`
+last2aveDockedtime=`(echo "scale=1; $last2dockedtimes / 2" | bc)`
+echo "Average docked time (last two)" $last2aveDockedtime "hrs "
 booted=`(grep -c "\- boot \-" $fn)`
 echo "Sessions (boot): " `(grep -c "\- boot \-" $fn)`
 aveSession=`(echo "scale=1; ($totalAwake / $booted)" | bc -l)`
