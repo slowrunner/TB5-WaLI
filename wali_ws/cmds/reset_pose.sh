@@ -8,7 +8,7 @@ echo -e '** CURRENT ODOM'
 echo -e 'ros2 topic echo --once --flow-style --qos-reliability best_effort --qos-durability volatile /odom'
 ros2 topic echo --once --flow-style --qos-reliability best_effort --qos-durability volatile /odom
 
-# ~/TB5-WaLI/utils/logMaintenance.py 'Issued reset_pose'
+~/TB5-WaLI/utils/logMaintenance.py 'Issued reset_pose'
 
 echo -e '** SEND RESET_POSE'
 echo -e 'ros2 service call /reset_pose irobot_create_msgs/srv/ResetPose "{}"'

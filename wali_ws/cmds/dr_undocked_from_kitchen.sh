@@ -3,7 +3,7 @@
 
 echo -e "\n*** DEAD-RECKONING TO UNDOCKED FROM KITCHEN ***"
 
-/home/pi/wali_pi5/utils/logMaintenance.py "Dead-Reckoning To Undocked position From Kitchen"
+~/TB5-WaLI/utils/logMaintenance.py "Dead-Reckoning To Undocked position From Kitchen"
 
 echo -e "\n*** DRIVE TO Nook  ***"
 
@@ -27,5 +27,4 @@ echo -e "\n*** GOTO x: -0.300, y: 0.0  Q(-180 deg about Z) "
 ros2 action send_goal /navigate_to_position irobot_create_msgs/action/NavigateToPosition "{achieve_goal_heading: true, max_translation_speed: 0.1, max_rotation_speed: 0.5, goal_pose:{pose:{position:{x: -0.300, y: 0.0,z: 0.0}, orientation:{x: 0,y: 0, z: -1.0, w: 0.0}}}}"
 
 
-
-/home/pi/wali_pi5/utils/logMaintenance.py "Arrived at Undocked Position"
+~/TB5-WaLI/utils/logMaintenance.py "Arrived at Undocked Position"
