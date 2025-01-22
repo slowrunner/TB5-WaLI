@@ -11,6 +11,7 @@ Turtlebot 4 code modifications:
 - Uncommented /stop_status in Create3 republisher.yaml (for odometer node)
 - Raspberry Pi 5 instead of Raspberry Pi 4 - custom OS setup
 - TEMP: modified turtlebot4.urdf.xacro for LIDAR and camera locations
+- turtlebot4_bringup/config/turtlebot4.yaml  set power_saver: false
 
 Raspberry Pi 5 configurations:
 - setup RTC battery charging (in device tree)

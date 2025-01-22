@@ -1,9 +1,8 @@
-y
 #!/bin/bash
 
 cd ~/TB5-WaLI/wali_ws
 
-cmds/say.sh "I'm headed to the kitchen now"
+cmds/say.sh "I am headed to the kitchen now"
 
 echo -e "\n*** DEAD-RECKONING TO KITCHEN FROM UNDOCKED AND BACK***"
 
@@ -57,7 +56,7 @@ cmds/say.sh "There has to be a shorter way than this."
 echo -e "\n*** GOTO x: 0.225, y: 1.830  Q(-135 deg about Z) "
 ros2 action send_goal /navigate_to_position irobot_create_msgs/action/NavigateToPosition "{achieve_goal_heading: true, max_translation_speed: 0.1, max_rotation_speed: 0.5, goal_pose:{pose:{position:{x: 0.225, y: 1.830, z: 0.0}, orientation:{x: 0,y: 0, z: -0.9238795, w: 0.3826834}}}}"
 
-cmds/say.sh "I'm sort of in the way here.  Moving on."
+cmds/say.sh "I am sort of in the way here.  Moving on."
 
 echo -e "\n*** DRIVE To Dining Area ***"
 
@@ -72,7 +71,7 @@ cmds/say.sh "Almost there."
 echo -e "\n*** GOTO x: -0.300, y: 0.0  Q(-180 deg about Z) "
 ros2 action send_goal /navigate_to_position irobot_create_msgs/action/NavigateToPosition "{achieve_goal_heading: true, max_translation_speed: 0.1, max_rotation_speed: 0.5, goal_pose:{pose:{position:{x: -0.300, y: 0.0,z: 0.0}, orientation:{x: 0,y: 0, z: -1.0, w: 0.0}}}}"
 
-cmds/say.sh "Home again.  I think I'll stay here for a while."
+cmds/say.sh "Home again.  I think I will stay here for a while."
 
 
 ~/TB5-WaLI/utils/logMaintenance.py "Arrived Back at Undocked Position"
