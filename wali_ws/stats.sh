@@ -2,7 +2,7 @@
 
 ~/TB5-WaLI/utils/totallife.sh
 echo -e "\nLast Dock and UnDock:"
-tail ~/TB5-WaLI/logs/life.log | grep -E 'Docking: success | Undocking: success'
+tail ~/TB5-WaLI/logs/life.log | grep -E 'Docking: | Undocking: '
 
 echo -e "\nChecking Battery State"
 batt=$(ros2 topic echo --once --field percentage --qos-reliability best_effort --qos-durability volatile /battery_state)
