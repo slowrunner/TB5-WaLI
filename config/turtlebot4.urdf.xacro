@@ -8,12 +8,13 @@
 
   <!-- Mechanical properties -->
   <!--<xacro:property name="rplidar_x_offset"              value="${0.393584*cm2m}"/> -->
-  <xacro:property name="rplidar_x_offset"              value="${9.4*cm2m}"/>
+  <xacro:property name="rplidar_x_offset"              value="${0*cm2m}"/>
   <xacro:property name="rplidar_y_offset"              value="${0*cm2m}"/>
   <!-- <xacro:property name="rplidar_z_offset"              value="${7.529272*cm2m}"/> -->
-  <xacro:property name="rplidar_z_offset"              value="${32.25385*cm2m}"/>
+  <xacro:property name="rplidar_z_offset"              value="${23.0*cm2m}"/>
 
-  <xacro:property name="camera_mount_x_offset"         value="${-9*cm2m}"/>
+  <!-- <xacro:property name="camera_mount_x_offset"         value="${-9*cm2m}"/> -->
+  <xacro:property name="camera_mount_x_offset"         value="${5.8*cm2m}"/>
   <xacro:property name="camera_mount_y_offset"         value="${0*cm2m}"/>
   <xacro:property name="camera_mount_z_offset"         value="${2.914772*cm2m}"/>
 
@@ -26,8 +27,9 @@
   <xacro:rplidar name="rplidar" parent_link="base_link" gazebo="$(arg gazebo)">
     <!-- <origin xyz="${rplidar_x_offset} ${rplidar_y_offset} ${rplidar_z_offset + base_link_z_offset}"
             rpy="0 0 ${pi/2}"/> -->
+    <!-- rplidar is tilted about 5 degrees up around y axis -->
     <origin xyz="${rplidar_x_offset} ${rplidar_y_offset} ${rplidar_z_offset + base_link_z_offset}"
-            rpy="0 0 ${pi}"/>
+            rpy="0 0.0872665 ${pi}"/>
   </xacro:rplidar>
   
   <xacro:camera_bracket name="oakd_camera_bracket" parent_link="base_link">

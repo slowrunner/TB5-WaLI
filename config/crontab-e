@@ -1,3 +1,4 @@
 @reboot sleep 10  && /usr/bin/python3 /home/ubuntu/TB5-WaLI/plib/cleanlifelog.py
 @reboot sleep 15  && /home/ubuntu/TB5-WaLI/utils/nohup_loglife.sh
 0 * * * * /usr/bin/python3 /home/ubuntu/TB5-WaLI/plib/cleanlifelog.py
+@reboot sleep 75  && /home/ubuntu/TB5-WaLI/wali_ws/nohup_wali.sh
