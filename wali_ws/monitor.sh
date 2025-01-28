@@ -8,8 +8,10 @@ echo ""; \
 uptime; \
 vcgencmd measure_temp && vcgencmd measure_clock arm && vcgencmd get_throttled; \
 free -h; \
-# Print stats on particular process
-ps -o %cpu,%mem,cmd $(pgrep -f "/usr/bin/python3 /opt/ros/jazzy/bin/ros2 launch turtlebot4_navigation"); \
+echo ""; \
+
+
+ps -e -o %cpu,%mem,cmd | grep  'CPU\|MEM\|CMD\|rplidar\|robot\|joint\|oak\|nav\|slam\|turtlebot4\|wali' | grep -v "grep" | sort -rk 1 ; \
 sleep 5; \
 echo " "; \
 done
