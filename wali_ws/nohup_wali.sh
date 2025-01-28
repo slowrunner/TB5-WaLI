@@ -7,8 +7,8 @@ if [ -f /opt/ros/jazzy/setup.bash ]; then
     echo -e "sourced /opt/ros/jazzy setup.bash"
 fi
 
-if [ -f ~/TB5-WaLI/wali_ws/install/setup.bash ]; then
-    source ~/TB5-WaLI/wali_ws/install/setup.bash
+if [ -f /home/ubuntu/TB5-WaLI/wali_ws/install/setup.bash ]; then
+    source /home/ubuntu/TB5-WaLI/wali_ws/install/setup.bash
     echo -e "sourced wali_ws install setup.bash"
 fi
 
