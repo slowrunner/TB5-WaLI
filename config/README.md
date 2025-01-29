@@ -45,7 +45,7 @@ kill 29110
 (if need the camera ```cmds/launch_camera.sh```)
 
 
-### Configuring Turtlebot4 Overlays
+### Configuring Turtlebot4 Overlays for TB5-WaLI Modification
 
 To make changes to Turtlebot4 code, with the ability to compare the changed code base with the source repositories,  
 the following Turtlebot4 repositories will be "forked" and brought down to the local robot's ROS 2 workspace:
@@ -91,3 +91,40 @@ the following Turtlebot4 repositories will be "forked" and brought down to the l
   - nano ~/TB5-WaLI/.gitignore
     - add turtlebot4_fork_for_TB5-WaLI/ at end of file
  
+3) Install TB5-WaLI changes
+- URDF: 
+  - cd ~/TB5-Wali/wali_ws/src/turtlebot4_fork_for_TB5-WaLI/turtlebot4_description/urdf/lite/
+  - cp turtlebot4.urdf.xacro  turtlebot4.urdf.xacro
+  - cp ~/TB5-WaLI/config/turtlebot4.urdf.xacro .  (or use ~/TB5-WaLI/config/install_turtlebot4_description_urdf.sh)
+  - git add turtlebot4.urdf.xacro turtlebot4.urdf.xacro.orig
+  - git commit -m "TB5-WaLI mods to URDF"
+  - git push
+
+- power_save in turtlebot4.yaml:
+  - cd ~/TB5-WaLI/wali_ws/src/turtlebot4_robot_fork_for_TB5-WaLI/turtlebot4_bringup/config/
+  - cp turtlebot4.yaml turtlebot4.yaml.orig
+  - cp ~/TB5-WaLI/config/turtlebot4.yaml .  (or use ~/TB5-WaLI/config/install_turtlebot4_yaml.sh)
+  - git add turtlebot4.yaml turtlebot4.yaml.orig
+  - git commit -m "TB5-WaLI mod to turn off power save till Luxonis depthai_ros_driver issue with stop_camera fixed"
+  - git push
+
+- publish stop_status in republisher.yaml for odometer node:
+  - cd ~/TB5-WaLI/wali_ws/src/turtlebot4_robot_fork_for_TB5-WaLI/turtlebot4_bringup/config/
+  - cp republisher.yaml republisher.yaml.orig
+  - cp ~/TB5-WaLI/config/republisher.yaml .  (or use ~/TB5-WaLI/config/install_republisher_yaml.sh)
+  - git add republisher.yaml republisher.yaml.orig
+  - git commit -m "TB5-WaLI mod to enable stop_status topic for odometer node"
+  - git push
+
+
+4) Build
+- cd ~/TB5-WaLI/wali_ws
+- ./rebuild.sh
+- . ss.sh  (source /opt/ros/jazzy/setup.bash and ~/TB5-WaLI/wali_ws/install/setup.bash)
+- Confirm turtlebot4_bringup location is the built file
+ros2 pkg prefix turtlebot4_bringup 
+/home/ubuntu/TB5-WaLI/wali_ws/install/turtlebot4_bringup
+
+5) turtlebot4-setup: set new WORKSPACE_PATH
+- turtlebot4-setup
+
