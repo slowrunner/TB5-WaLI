@@ -54,3 +54,5 @@ CATKIN_IGNORE
 log/
 install/
 nohup.out
+turtlebot4_fork_for_TB5-WaLI/
+turtlebot4_robot_fork_for_TB5-WaLI/

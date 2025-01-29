@@ -45,3 +45,49 @@ kill 29110
 (if need the camera ```cmds/launch_camera.sh```)
 
 
+### Configuring Turtlebot4 Overlays
+
+To make changes to Turtlebot4 code, with the ability to compare the changed code base with the source repositories,  
+the following Turtlebot4 repositories will be "forked" and brought down to the local robot's ROS 2 workspace:
+- jazzy branch turtlebot4
+- jazzy branch turtlebot4_robot
+
+1) Setup jazzy turtlebot4 code in TB5-WaLI workspace (separately managed from TB5-WaLI repo)
+- Browse to https://github.com/turtlebot/turtlebot4
+- Click Fork 
+  - set name slowrunner/turtlebot4_fork_for_TB5-WaLI
+  - unclick Copy the humble branch only
+  - Click Create Fork
+- In the created fork
+  - Click Code button
+  - Click the "Copy Icon" to right of the https://...  
+- On TB5-Wali
+  - cd ~/TB5-Wali/wali_ws/src
+  - git clone -b jazzy https://github.com/slowrunner/turtlebot4_robot_fork_for_TB5-WaLI.git
+  - cd turtlebot4_fork_for_TB5-WaLI
+  - git status (will say matches origin - the origin is the jazzy branch of the forked repository)
+  - cd ..  (back to ~/TB5-WaLI/wali_ws/src)
+  - git status   (will show turtlebot4_fork_for_TB5-WaLI/ untracked.  It will be tracked by the fork)
+  - nano ~/TB5-WaLI/.gitignore
+    - add turtlebot4_fork_for_TB5-WaLI/ at end of file
+
+
+2) Setup jazzy turtlebot4_robot code in TB5-WaLI workspace (separately managed from TB5-WaLI repo)
+- Browse to https://github.com/turtlebot/turtlebot4_robot
+- Click Fork 
+  - set name slowrunner/turtlebot4_robot_fork_for_TB5-WaLI
+  - unclick Copy the humble branch only
+  - Click Create Fork
+- In the created fork
+  - Click Code button
+  - Click the "Copy Icon" to right of the https://...  
+- On TB5-Wali
+  - cd ~/TB5-Wali/wali_ws/src
+  - git clone -b jazzy https://github.com/slowrunner/turtlebot4_fork_for_TB5-WaLI.git
+  - cd turtlebot4_fork_for_TB5-WaLI
+  - git status (will say matches origin - the origin is the jazzy branch of the forked repository)
+  - cd ..  (back to ~/TB5-WaLI/wali_ws/src)
+  - git status   (will show turtlebot4_robot_fork_for_TB5-WaLI/ untracked.  It will be tracked by the fork)
+  - nano ~/TB5-WaLI/.gitignore
+    - add turtlebot4_fork_for_TB5-WaLI/ at end of file
+ 
