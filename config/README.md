@@ -8,10 +8,10 @@ Turtlebot 4 code modifications:
 - SLAMTEC RPLIDAR C1 instead of the A1M8 LIDAR (launch file and executable)
 - LIDAR is mounted atop WALL-E character instead of the Create3 baseplate (urdf)
 - WALL-E character replaces the Turtlebot 4 lite camera mount (urdf)
-- Uncommented /stop_status in Create3 /opt/ros/jazzy/share/turtlebot4_bringup/config/republisher.yaml (for odometer node)
+- Uncommented /stop_status in /turtlebot4_bringup/config/republisher.yaml (for odometer node)
 - Raspberry Pi 5 instead of Raspberry Pi 4 - custom OS setup
-- TEMP: modified /opt/ros/jazzy/share/turtlebot4_description/urdf/lite/turtlebot4.urdf.xacro for LIDAR and camera locations
-- TEMP: modified /opt/ros/jazzy/share/turtlebot4_bringup/config/turtlebot4.yaml  set power_saver: false
+- modified turtlebot4_description/urdf/lite/turtlebot4.urdf.xacro for LIDAR and camera locations
+- modified turtlebot4_bringup/config/turtlebot4.yaml  set power_saver: false
 
 Raspberry Pi 5 configurations:
 - setup RTC battery charging (in device tree)
@@ -24,9 +24,6 @@ Raspberry Pi 5 configurations:
 
 NOTE:  After running ```sudo apt update && sudo apt upgrade -y``` run:
 ```
-install_republisher.yaml.sh   (enable /stop_status for the odometer)
-install_turtlebot4_description_urdf.sh  (proper LIDAR and Camera transforms)
-install_turtlebot4_yaml.sh      (turn power_saver function off till Luxonis Jazzy depthai_ros_driver won't crash on /stop_camera)
 turtlebot4-service-restart
 ```
 Then wait till oakd container is up with "camera ready"
@@ -274,4 +271,4 @@ is_stopped: true
   - rviz2
     - RobotModel: Description Source->Topic, Description Topic->/robot_description
     - TFs: base_link, oakd_link, rplidar_link
-
+<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/2025-01-29_URDF_Confirmation.jpg" height="400" />
