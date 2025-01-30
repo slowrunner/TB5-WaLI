@@ -5,7 +5,7 @@ TurtleBot "5" WaLI is a Create3 with Raspberry Pi 5 running:
 - WaLI behaviors and functionality
 
 Turtlebot 4 code modifications:
-- SLAMTEC RPLIDAR C1 instead of the A1M8 LIDAR (launch file and executable)
+- SLAMTEC RPLIDAR C1 instead of the A1M8 LIDAR (turtlebot4_bringup/launch/rplidar.launch.py  )
 - LIDAR is mounted atop WALL-E character instead of the Create3 baseplate (urdf)
 - WALL-E character replaces the Turtlebot 4 lite camera mount (urdf)
 - Uncommented /stop_status in /turtlebot4_bringup/config/republisher.yaml (for odometer node)
@@ -113,6 +113,13 @@ the following Turtlebot4 repositories will be "forked" and brought down to the l
   - git commit -m "TB5-WaLI mod to enable stop_status topic for odometer node"
   - git push
 
+- RPLidar C1
+  - cd ~/TB5-WaLI/wali_ws/src/turtlebot4_robot_fork_for_TB5-WaLI/turtlebot4_bringup/launch
+  - cp rplidar.launch.py rplidar.launch.py.orig
+  - cp ~/TB5-WaLI/config/rplidar.launch.py .  (or use ~/TB5-WaLI/config/install_rplidar_launch.sh)
+  - git add rplidar.launch.py rplidar.launch.py.orig
+  - git commit -m "TB5-WaLI mod for C1 lidar"
+  - git push
 
 4) Build
 - cd ~/TB5-WaLI/wali_ws
