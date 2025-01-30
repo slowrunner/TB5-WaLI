@@ -3,15 +3,16 @@
 echo -e "nohup_wali.sh started"
 
 if [ -f /opt/ros/jazzy/setup.bash ]; then
-    source /opt/ros/jazzy/setup.bash
+    . /opt/ros/jazzy/setup.bash
     echo -e "sourced /opt/ros/jazzy setup.bash"
 fi
 
 if [ -f /home/ubuntu/TB5-WaLI/wali_ws/install/setup.bash ]; then
-    source /home/ubuntu/TB5-WaLI/wali_ws/install/setup.bash
+    . /home/ubuntu/TB5-WaLI/wali_ws/install/setup.bash
     echo -e "sourced wali_ws install setup.bash"
 fi
 
+export ROS_DOMAIN_ID=5
 
 echo -e "\n*** Start odometer node"
 echo '*** ros2 run wali odometer & '
