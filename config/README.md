@@ -11,8 +11,10 @@ Turtlebot 4 code modifications:
 - Uncommented /stop_status in /turtlebot4_bringup/config/republisher.yaml (for odometer node)
 - Raspberry Pi 5 instead of Raspberry Pi 4 - custom OS setup
 - modified turtlebot4_description/urdf/lite/turtlebot4.urdf.xacro for LIDAR and camera locations
-- modified turtlebot4_bringup/config/turtlebot4.yaml  set power_saver: false
-
+- modified turtlebot4_bringup/config/turtlebot4.yaml  
+  - set power_saver: false
+  - added mapping for dock/undock  to Logitech F710 Logitech button like TB4 controller home button
+ 
 Raspberry Pi 5 configurations:
 - setup RTC battery charging (in device tree)
 - Setup USB usb_max_current_enable=1 in config.txt

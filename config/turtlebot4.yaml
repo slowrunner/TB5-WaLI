@@ -67,6 +67,10 @@ turtlebot4_node:
       down: ["Scroll Down"]
       l2: ["Wall Follow Left"]
       r2: ["Wall Follow Right"]
+      # share button on Turtlebot4 controller is btn 8, Logitech button on F710 controller is btn 8
+      # map the usual Turtlebot4 controller home button functions to the Logitech button of F710
+      share: ["Dock", "Undock", "3000"]
+      # home button on Turtlebot4 controller is btn 10, Depressing right thumb-joystick on F710 is btn 10
       home: ["Dock", "Undock", "3000"]
 
 turtlebot4_base_node:

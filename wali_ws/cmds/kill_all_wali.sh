@@ -13,11 +13,11 @@ echo -e "\n**** KILL *ALL* WALI ROS 2 NODES (including wali_node)"
 # echo -e "Killing teleop_node"
 # pkill --signal SIGINT teleop_node 2> /dev/null
 echo -e "Killing odometer"
-pkill --signal SIGINT odometer 2> /dev/null
+sudo pkill --signal SIGINT odometer 2> /dev/null
 echo -e "KILLING WALI_NODE"
-pkill -e --signal SIGINT wali_node
+sudo pkill -e --signal SIGINT wali_node
 echo -e "Killing say_node"
-pkill -e --signal SIGINT say_node
+sudo pkill -e --signal SIGINT say_node
 
 echo -e "**** WAITING 5s FOR PROCESS TO FINISH ****"
 sleep 5
