@@ -11,7 +11,7 @@ echo -e "\n*** WAITING 10s FOR MAP SAVER"
 sleep 10
 
 
-
+# sudo apt install imagemagick  (for mogrify)
 # echo -e "\n*** NOW RUN export_jpg_map.sh ***"
 echo -e "\n*** Exporting xyzzy.map.pgm to jpg format: xyzzy.map.jpg"
 echo "***  mogrify -format jpg xyzzy.map.pgm"
