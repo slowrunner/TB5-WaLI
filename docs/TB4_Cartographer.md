@@ -31,3 +31,8 @@ Swap:             0B          0B          0B
 
 <img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/2025-01-24_WaLI_First_TB4_Nav_Map.jpg" width="600" />
 
+another run:
+
+<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/tb4_nav_2025-02-04.map.jpg" width="600" />
+
+
