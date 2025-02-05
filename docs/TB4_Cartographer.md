@@ -4,7 +4,7 @@ With another of my ROS 2 robots, I was able to create a great map of my house us
 
 With TB5-WaLI I ran the turtlebot4_navigation async SLAM and created a map, and for comparison have created turtlebot4_cartographer and built a map.
 
-With turtlebot4_cartographer:
+### With turtlebot4_cartographer:
 - Processor load (total):  about 2.5 (about 63% of Pi5 CPU)
 - cartographer_node:  55% of Pi5  using about 400MB memory
 - Total Battery Load: 12.9W  (12.8W usual playtime w/o cartographer_node)
@@ -23,5 +23,11 @@ Swap:             0B          0B          0B
 55.2  4.6 /opt/ros/jazzy/lib/cartographer_ros/cartographer_node -configuration_directory /home/ubuntu/TB5-WaLI/wali_ws/install/turtlebot4_cartographer/share/turtlebot4_cartographer/config -configuration_basename turtlebot4_lds_2d.lua --ros-args -r __node:=cartographer_node --params-file /tmp/launch_params_m9majweq
 ```
 - Generated Map:
+  
+<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/2025-02-03_First_cart_house.map.jpg" width="600" />
 
+
+### With turtlebot4_navigation async SLAM:
+
+<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/2025-01-24_WaLI_First_TB4_Nav_Map.jpg" width="600" />
 
