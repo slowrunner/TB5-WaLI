@@ -8,9 +8,9 @@
     - subscribes to Create3 /battery_state and /dock_status
     - publishes /undock action goal when BatteryState.percentage full
     - Logs successful undock to life.log
-    - publishes /rotate_angle {angle: 1.57} (180deg) when BatteryState.percentage < 20% 
+    - publishes /rotate_angle {angle: 1.57} (180deg) when BatteryState.percentage < 25% 
                                                           and dock not visible
-    - publishes /dock action goal when BatteryState.percentage < 0.18 and dock visible
+    - publishes /dock action goal when BatteryState.percentage < 0.205 and dock visible
     - Logs successful docking to life.log
 
     Requires:
@@ -114,8 +114,8 @@ DOCK_AT_PERCENTAGE   = 0.38 # 0.15
 
 # Quote out for testing
 UNDOCK_AT_PERCENTAGE = 0.995
-ROTATE_AT_PERCENTAGE = 0.20
-DOCK_AT_PERCENTAGE   = 0.18
+ROTATE_AT_PERCENTAGE = 0.25
+DOCK_AT_PERCENTAGE   = 0.205
 
 
 def isNotSleepTime(start,end):
