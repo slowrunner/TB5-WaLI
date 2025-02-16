@@ -45,4 +45,6 @@ echo -e "\n *** STARTING WALI NODE" >> $logfile
 echo -e "executing: ros2 run wali wali_node &" >> $logfile
 nohup ros2 run wali wali_node >> $logfile &
 
+sudo chmod 666 $logfile
+
 echo -e "Done nohup_wali.sh \n" >> $logfile
