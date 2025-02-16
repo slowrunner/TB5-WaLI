@@ -1,0 +1,23 @@
+1739734875.7812068 [INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2025-02-16-14-41-15-779374-TB5WaLI-5080
+1739734875.7815292 [INFO] [launch]: Default logging verbosity is set to INFO
+1739734876.1313341 [INFO] [controller_server-1]: process started with pid [5083]
+1739734876.1337786 [INFO] [smoother_server-2]: process started with pid [5084]
+1739734876.1355605 [INFO] [planner_server-3]: process started with pid [5085]
+1739734876.1360743 [INFO] [behavior_server-4]: process started with pid [5086]
+1739734876.1363804 [INFO] [bt_navigator-5]: process started with pid [5087]
+1739734876.1402075 [INFO] [waypoint_follower-6]: process started with pid [5088]
+1739734876.1404598 [INFO] [velocity_smoother-7]: process started with pid [5089]
+1739734876.1406059 [INFO] [collision_monitor-8]: process started with pid [5090]
+1739734876.1407382 [INFO] [opennav_docking-9]: process started with pid [5091]
+1739734876.1410320 [INFO] [lifecycle_manager-10]: process started with pid [5092]
+1739735613.3681731 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1739735614.1692073 [INFO] [collision_monitor-8]: process has finished cleanly [pid 5090]
+1739735614.3959122 [INFO] [waypoint_follower-6]: process has finished cleanly [pid 5088]
+1739735614.5769038 [INFO] [velocity_smoother-7]: process has finished cleanly [pid 5089]
+1739735614.9909992 [INFO] [smoother_server-2]: process has finished cleanly [pid 5084]
+1739735615.0585907 [INFO] [lifecycle_manager-10]: process has finished cleanly [pid 5092]
+1739735615.1125443 [INFO] [opennav_docking-9]: process has finished cleanly [pid 5091]
+1739735615.2221203 [INFO] [behavior_server-4]: process has finished cleanly [pid 5086]
+1739735615.5595732 [INFO] [controller_server-1]: process has finished cleanly [pid 5083]
+1739735615.6290846 [INFO] [planner_server-3]: process has finished cleanly [pid 5085]
+1739735615.8238430 [INFO] [bt_navigator-5]: process has finished cleanly [pid 5087]

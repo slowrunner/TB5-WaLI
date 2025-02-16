@@ -1,0 +1,9 @@
+1739734748.8178046 [INFO] [launch]: All log files can be found below /home/ubuntu/.ros/log/2025-02-16-14-39-08-812855-TB5WaLI-4982
+1739734748.8180413 [INFO] [launch]: Default logging verbosity is set to INFO
+1739734748.9962115 [INFO] [map_server-1]: process started with pid [4985]
+1739734748.9964855 [INFO] [amcl-2]: process started with pid [4986]
+1739734748.9965920 [INFO] [lifecycle_manager-3]: process started with pid [4987]
+1739735615.6099110 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+1739735615.9100590 [INFO] [lifecycle_manager-3]: process has finished cleanly [pid 4987]
+1739735615.9316530 [INFO] [map_server-1]: process has finished cleanly [pid 4985]
+1739735615.9872258 [INFO] [amcl-2]: process has finished cleanly [pid 4986]
