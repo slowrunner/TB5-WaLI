@@ -16,8 +16,10 @@ Turtlebot 4 code modifications:
 - modified turtlebot4_bringup/config/turtlebot4.yaml  
   - set power_saver: false
   - added mapping for dock/undock  to Logitech F710 Logitech button like TB4 controller home button
-- modified nav2 params_file
-  - increased voxel_z to prevent out of bounds sensor origin warning (LIDAR hieght is greater than TB4)
+- modified nav2.yaml params_file (and copied to params/wali.nav2.yaml)
+  - removed all use_sim_time: true
+- modified localization.yaml params file
+  - removed all use_sim_time: true
  
 Raspberry Pi 5 configurations:
 - setup RTC battery charging (in device tree)
