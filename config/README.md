@@ -28,6 +28,10 @@ Raspberry Pi 5 configurations:
 - setup lifelog, cleanlifelog in crontab
 - setup nohup_wali in crontab
 
+Create3 configuration:
+- Modified Application ROS 2 Parameters File Directly:
+  - _do_not_use/motion_control:
+  - safety_override: "full"
 
 
 NOTE:  After running ```sudo apt update && sudo apt upgrade -y``` run:
