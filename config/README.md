@@ -27,6 +27,7 @@ Raspberry Pi 5 configurations:
 - disabled IPv6 in cmdline.txt
 - setup lifelog, cleanlifelog in crontab
 - setup nohup_wali in crontab
+- disabled firmware update manager
 
 Create3 configuration:
 - Modified Application ROS 2 Parameters File Directly:
@@ -291,3 +292,15 @@ is_stopped: true
     - RobotModel: Description Source->Topic, Description Topic->/robot_description
     - TFs: base_link, oakd_link, rplidar_link
 <img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/2025-01-29_URDF_Confirmation.jpg" height="400" />
+
+
+### Disable Ubuntu Firmware Update Manager
+
+```
+systemctl status fwupd fwupd-refresh fwupd-refresh.timer
+sudo systemctl stop fwupd fwupd-refresh fwupd-refresh.timer
+sudo systemctl disable fwupd fwupd-refresh fwupd-refresh.timer
+
+ubuntu@TB5WaLI:~/TB5-WaLI/issues/create3stops_pub$ sudo systemctl disable fwupd fwupd-refresh fwupd-refresh.timer
+Removed "/etc/systemd/system/timers.target.wants/fwupd-refresh.timer".
+``` 
