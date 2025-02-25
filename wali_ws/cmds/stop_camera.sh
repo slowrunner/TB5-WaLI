@@ -1,0 +1,3 @@
+#!/bin/bash
+
+uptime; ros2 service call /oakd/stop_camera std_srvs/srv/Trigger "{}" ;uptime
