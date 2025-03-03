@@ -1,0 +1,1460 @@
+Mar 03 14:31:15 TB5WaLI kernel: Booting Linux on physical CPU 0x0000000000 [0x414fd0b1]
+Mar 03 14:31:15 TB5WaLI kernel: Linux version 6.8.0-1019-raspi (buildd@bos03-arm64-080) (aarch64-linux-gnu-gcc-13 (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #23-Ubuntu SMP PREEMPT_DYNAMIC Fri Jan 24 07:01:57 UTC 2025 (Ubuntu 6.8.0-1019.23-raspi 6.8.12)
+Mar 03 14:31:15 TB5WaLI kernel: KASLR enabled
+Mar 03 14:31:15 TB5WaLI kernel: random: crng init done
+Mar 03 14:31:15 TB5WaLI kernel: Machine model: Raspberry Pi 5 Model B Rev 1.0
+Mar 03 14:31:15 TB5WaLI kernel: Reserved memory: created CMA memory pool at 0x0000000002600000, size 64 MiB
+Mar 03 14:31:15 TB5WaLI kernel: OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+Mar 03 14:31:15 TB5WaLI kernel: OF: reserved mem: 0x0000000002600000..0x00000000065fffff (65536 KiB) map reusable linux,cma
+Mar 03 14:31:15 TB5WaLI kernel: OF: reserved mem: 0x0000000000000000..0x000000000007ffff (512 KiB) nomap non-reusable atf@0
+Mar 03 14:31:15 TB5WaLI kernel: OF: reserved mem: 0x000000003fd16620..0x000000003fd16656 (0 KiB) nomap non-reusable nvram@0
+Mar 03 14:31:15 TB5WaLI kernel: Zone ranges:
+Mar 03 14:31:15 TB5WaLI kernel:   DMA      [mem 0x0000000000000000-0x00000000ffffffff]
+Mar 03 14:31:15 TB5WaLI kernel:   DMA32    empty
+Mar 03 14:31:15 TB5WaLI kernel:   Normal   [mem 0x0000000100000000-0x00000001ffffffff]
+Mar 03 14:31:15 TB5WaLI kernel: Movable zone start for each node
+Mar 03 14:31:15 TB5WaLI kernel: Early memory node ranges
+Mar 03 14:31:15 TB5WaLI kernel:   node   0: [mem 0x0000000000000000-0x000000000007ffff]
+Mar 03 14:31:15 TB5WaLI kernel:   node   0: [mem 0x0000000000080000-0x000000003fbfffff]
+Mar 03 14:31:15 TB5WaLI kernel:   node   0: [mem 0x0000000040000000-0x00000001ffffffff]
+Mar 03 14:31:15 TB5WaLI kernel: Initmem setup node 0 [mem 0x0000000000000000-0x00000001ffffffff]
+Mar 03 14:31:15 TB5WaLI kernel: On node 0, zone DMA: 1024 pages in unavailable ranges
+Mar 03 14:31:15 TB5WaLI kernel: psci: probing for conduit method from DT.
+Mar 03 14:31:15 TB5WaLI kernel: psci: PSCIv1.1 detected in firmware.
+Mar 03 14:31:15 TB5WaLI kernel: psci: Using standard PSCI v0.2 function IDs
+Mar 03 14:31:15 TB5WaLI kernel: psci: MIGRATE_INFO_TYPE not supported.
+Mar 03 14:31:15 TB5WaLI kernel: psci: SMC Calling Convention v1.2
+Mar 03 14:31:15 TB5WaLI kernel: percpu: Embedded 52 pages/cpu s88296 r8192 d116504 u212992
+Mar 03 14:31:15 TB5WaLI kernel: pcpu-alloc: s88296 r8192 d116504 u212992 alloc=52*4096
+Mar 03 14:31:15 TB5WaLI kernel: pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Mar 03 14:31:15 TB5WaLI kernel: Detected PIPT I-cache on CPU0
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Virtualization Host Extensions
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Spectre-v4
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Spectre-BHB
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: kernel page table isolation forced ON by KASLR
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Kernel page table isolation (KPTI)
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: SSBS not fully self-synchronizing
+Mar 03 14:31:15 TB5WaLI kernel: alternatives: applying boot alternatives
+Mar 03 14:31:15 TB5WaLI kernel: Kernel command line: reboot=w coherent_pool=1M 8250.nr_uarts=1 pci=pcie_bus_safe snd_bcm2835.enable_compat_alsa=0 snd_bcm2835.enable_hdmi=1 bcm2708_fb.fbwidth=640 bcm2708_fb.fbheight=480 bcm2708_fb.fbdepth=16 bcm2708_fb.fbswap=1 smsc95xx.macaddr=D8:3A:DD:B6:36:A1 vc_mem.mem_base=0x3fc00000 vc_mem.mem_size=0x40000000  console=ttyAMA10,115200 dwc_otg.lpm_enable=0 console=tty1 root=LABEL=writable rootfstype=ext4 rootwait fixrtc quiet splash modules-load=dwc2,g_ether ipv6.disable=1
+Mar 03 14:31:15 TB5WaLI kernel: Unknown kernel command line parameters "fixrtc splash modules-load=dwc2,g_ether", will be passed to user space.
+Mar 03 14:31:15 TB5WaLI kernel: Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: Built 1 zonelists, mobility grouping on.  Total pages: 2063360
+Mar 03 14:31:15 TB5WaLI kernel: mem auto-init: stack:off, heap alloc:off, heap free:off
+Mar 03 14:31:15 TB5WaLI kernel: software IO TLB: area num 4.
+Mar 03 14:31:15 TB5WaLI kernel: software IO TLB: mapped [mem 0x00000000fbfff000-0x00000000fffff000] (64MB)
+Mar 03 14:31:15 TB5WaLI kernel: Memory: 8000232K/8384512K available (15104K kernel code, 2716K rwdata, 9520K rodata, 6528K init, 851K bss, 318744K reserved, 65536K cma-reserved)
+Mar 03 14:31:15 TB5WaLI kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Mar 03 14:31:15 TB5WaLI kernel: ftrace: allocating 45015 entries in 176 pages
+Mar 03 14:31:15 TB5WaLI kernel: ftrace: allocated 176 pages with 3 groups
+Mar 03 14:31:15 TB5WaLI kernel: trace event string verifier disabled
+Mar 03 14:31:15 TB5WaLI kernel: Dynamic Preempt: full
+Mar 03 14:31:15 TB5WaLI kernel: rcu: Preemptible hierarchical RCU implementation.
+Mar 03 14:31:15 TB5WaLI kernel: rcu:         RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+Mar 03 14:31:15 TB5WaLI kernel:         Trampoline variant of Tasks RCU enabled.
+Mar 03 14:31:15 TB5WaLI kernel:         Rude variant of Tasks RCU enabled.
+Mar 03 14:31:15 TB5WaLI kernel:         Tracing variant of Tasks RCU enabled.
+Mar 03 14:31:15 TB5WaLI kernel: rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+Mar 03 14:31:15 TB5WaLI kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Mar 03 14:31:15 TB5WaLI kernel: NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+Mar 03 14:31:15 TB5WaLI kernel: Root IRQ handler: gic_handle_irq
+Mar 03 14:31:15 TB5WaLI kernel: GIC: Using split EOI/Deactivate mode
+Mar 03 14:31:15 TB5WaLI kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Mar 03 14:31:15 TB5WaLI kernel: arch_timer: cp15 timer(s) running at 54.00MHz (phys).
+Mar 03 14:31:15 TB5WaLI kernel: clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xc743ce346, max_idle_ns: 440795203123 ns
+Mar 03 14:31:15 TB5WaLI kernel: sched_clock: 56 bits at 54MHz, resolution 18ns, wraps every 4398046511102ns
+Mar 03 14:31:15 TB5WaLI kernel: Console: colour dummy device 80x25
+Mar 03 14:31:15 TB5WaLI kernel: printk: legacy console [tty1] enabled
+Mar 03 14:31:15 TB5WaLI kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 108.00 BogoMIPS (lpj=54000)
+Mar 03 14:31:15 TB5WaLI kernel: pid_max: default: 32768 minimum: 301
+Mar 03 14:31:15 TB5WaLI kernel: LSM: initializing lsm=lockdown,capability,landlock,yama,apparmor,integrity
+Mar 03 14:31:15 TB5WaLI kernel: landlock: Up and running.
+Mar 03 14:31:15 TB5WaLI kernel: Yama: becoming mindful.
+Mar 03 14:31:15 TB5WaLI kernel: AppArmor: AppArmor initialized
+Mar 03 14:31:15 TB5WaLI kernel: Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Mar 03 14:31:15 TB5WaLI kernel: RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Mar 03 14:31:15 TB5WaLI kernel: RCU Tasks Trace: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+Mar 03 14:31:15 TB5WaLI kernel: rcu: Hierarchical SRCU implementation.
+Mar 03 14:31:15 TB5WaLI kernel: rcu:         Max phase no-delay instances is 400.
+Mar 03 14:31:15 TB5WaLI kernel: smp: Bringing up secondary CPUs ...
+Mar 03 14:31:15 TB5WaLI kernel: Detected PIPT I-cache on CPU1
+Mar 03 14:31:15 TB5WaLI kernel: CPU1: Booted secondary processor 0x0000000100 [0x414fd0b1]
+Mar 03 14:31:15 TB5WaLI kernel: Detected PIPT I-cache on CPU2
+Mar 03 14:31:15 TB5WaLI kernel: CPU2: Booted secondary processor 0x0000000200 [0x414fd0b1]
+Mar 03 14:31:15 TB5WaLI kernel: Detected PIPT I-cache on CPU3
+Mar 03 14:31:15 TB5WaLI kernel: CPU3: Booted secondary processor 0x0000000300 [0x414fd0b1]
+Mar 03 14:31:15 TB5WaLI kernel: smp: Brought up 1 node, 4 CPUs
+Mar 03 14:31:15 TB5WaLI kernel: SMP: Total of 4 processors activated.
+Mar 03 14:31:15 TB5WaLI kernel: CPU: All CPU(s) started at EL2
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: 32-bit EL0 Support
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Common not Private translations
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: CRC32 instructions
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Data cache clean to Point of Persistence
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: RCpc load-acquire (LDAPR)
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: LSE atomic instructions
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Privileged Access Never
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+Mar 03 14:31:15 TB5WaLI kernel: alternatives: applying system-wide alternatives
+Mar 03 14:31:15 TB5WaLI kernel: CPU features: detected: Hardware dirty bit management on CPU0-3
+Mar 03 14:31:15 TB5WaLI kernel: devtmpfs: initialized
+Mar 03 14:31:15 TB5WaLI kernel: Enabled cp15_barrier support
+Mar 03 14:31:15 TB5WaLI kernel: Enabled setend support
+Mar 03 14:31:15 TB5WaLI kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Mar 03 14:31:15 TB5WaLI kernel: futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: pinctrl core: initialized pinctrl subsystem
+Mar 03 14:31:15 TB5WaLI kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Mar 03 14:31:15 TB5WaLI kernel: DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+Mar 03 14:31:15 TB5WaLI kernel: DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+Mar 03 14:31:15 TB5WaLI kernel: DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Mar 03 14:31:15 TB5WaLI kernel: audit: initializing netlink subsys (disabled)
+Mar 03 14:31:15 TB5WaLI kernel: audit: type=2000 audit(0.010:1): state=initialized audit_enabled=0 res=1
+Mar 03 14:31:15 TB5WaLI kernel: thermal_sys: Registered thermal governor 'fair_share'
+Mar 03 14:31:15 TB5WaLI kernel: thermal_sys: Registered thermal governor 'bang_bang'
+Mar 03 14:31:15 TB5WaLI kernel: thermal_sys: Registered thermal governor 'step_wise'
+Mar 03 14:31:15 TB5WaLI kernel: thermal_sys: Registered thermal governor 'user_space'
+Mar 03 14:31:15 TB5WaLI kernel: cpuidle: using governor ladder
+Mar 03 14:31:15 TB5WaLI kernel: cpuidle: using governor menu
+Mar 03 14:31:15 TB5WaLI kernel: hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+Mar 03 14:31:15 TB5WaLI kernel: ASID allocator initialised with 32768 entries
+Mar 03 14:31:15 TB5WaLI kernel: Serial: AMBA PL011 UART driver
+Mar 03 14:31:15 TB5WaLI kernel: bcm2835-mbox 107c013880.mailbox: mailbox enabled
+Mar 03 14:31:15 TB5WaLI kernel: 107d001000.serial: ttyAMA10 at MMIO 0x107d001000 (irq = 15, base_baud = 0) is a PL011 rev2
+Mar 03 14:31:15 TB5WaLI kernel: printk: legacy console [ttyAMA10] enabled
+Mar 03 14:31:15 TB5WaLI kernel: raspberrypi-firmware soc:firmware: Attached to firmware from 2024-06-05T15:41:49, variant start_cd
+Mar 03 14:31:15 TB5WaLI kernel: raspberrypi-firmware soc:firmware: Firmware hash is 6fe0b09100000000000000000000000000000000
+Mar 03 14:31:15 TB5WaLI kernel: Modules: 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+Mar 03 14:31:15 TB5WaLI kernel: Modules: 0 pages in range for non-PLT usage
+Mar 03 14:31:15 TB5WaLI kernel: Modules: 515552 pages in range for PLT usage
+Mar 03 14:31:15 TB5WaLI kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+Mar 03 14:31:15 TB5WaLI kernel: HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+Mar 03 14:31:15 TB5WaLI kernel: HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+Mar 03 14:31:15 TB5WaLI kernel: HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+Mar 03 14:31:15 TB5WaLI kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Mar 03 14:31:15 TB5WaLI kernel: HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+Mar 03 14:31:15 TB5WaLI kernel: HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+Mar 03 14:31:15 TB5WaLI kernel: HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+Mar 03 14:31:15 TB5WaLI kernel: bcm2835-dma 1000010000.dma: DMA legacy API manager, dmachans=0x1
+Mar 03 14:31:15 TB5WaLI kernel: iommu: Default domain type: Translated
+Mar 03 14:31:15 TB5WaLI kernel: iommu: DMA domain TLB invalidation policy: strict mode
+Mar 03 14:31:15 TB5WaLI kernel: SCSI subsystem initialized
+Mar 03 14:31:15 TB5WaLI kernel: usbcore: registered new interface driver usbfs
+Mar 03 14:31:15 TB5WaLI kernel: usbcore: registered new interface driver hub
+Mar 03 14:31:15 TB5WaLI kernel: usbcore: registered new device driver usb
+Mar 03 14:31:15 TB5WaLI kernel: pps_core: LinuxPPS API ver. 1 registered
+Mar 03 14:31:15 TB5WaLI kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Mar 03 14:31:15 TB5WaLI kernel: PTP clock support registered
+Mar 03 14:31:15 TB5WaLI kernel: EDAC MC: Ver: 3.0.0
+Mar 03 14:31:15 TB5WaLI kernel: NetLabel: Initializing
+Mar 03 14:31:15 TB5WaLI kernel: NetLabel:  domain hash size = 128
+Mar 03 14:31:15 TB5WaLI kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Mar 03 14:31:15 TB5WaLI kernel: NetLabel:  unlabeled traffic allowed by default
+Mar 03 14:31:15 TB5WaLI kernel: clocksource: Switched to clocksource arch_sys_counter
+Mar 03 14:31:15 TB5WaLI kernel: VFS: Disk quotas dquot_6.6.0
+Mar 03 14:31:15 TB5WaLI kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Mar 03 14:31:15 TB5WaLI kernel: AppArmor: AppArmor Filesystem Enabled
+Mar 03 14:31:15 TB5WaLI kernel: NET: Registered PF_INET protocol family
+Mar 03 14:31:15 TB5WaLI kernel: IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: TCP: Hash tables configured (established 65536 bind 65536)
+Mar 03 14:31:15 TB5WaLI kernel: MPTCP token hash table entries: 8192 (order: 5, 196608 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+Mar 03 14:31:15 TB5WaLI kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Mar 03 14:31:15 TB5WaLI kernel: NET: Registered PF_XDP protocol family
+Mar 03 14:31:15 TB5WaLI kernel: PCI: CLS 0 bytes, default 64
+Mar 03 14:31:15 TB5WaLI kernel: Trying to unpack rootfs image as initramfs...
+Mar 03 14:31:15 TB5WaLI kernel: kvm [1]: IPA Size Limit: 40 bits
+Mar 03 14:31:15 TB5WaLI kernel: kvm [1]: vgic interrupt IRQ9
+Mar 03 14:31:15 TB5WaLI kernel: kvm [1]: VHE mode initialized successfully
+Mar 03 14:31:15 TB5WaLI kernel: Initialise system trusted keyrings
+Mar 03 14:31:15 TB5WaLI kernel: Key type blacklist registered
+Mar 03 14:31:15 TB5WaLI kernel: workingset: timestamp_bits=46 max_order=21 bucket_order=0
+Mar 03 14:31:15 TB5WaLI kernel: zbud: loaded
+Mar 03 14:31:15 TB5WaLI kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Mar 03 14:31:15 TB5WaLI kernel: Key type asymmetric registered
+Mar 03 14:31:15 TB5WaLI kernel: Asymmetric key parser 'x509' registered
+Mar 03 14:31:15 TB5WaLI kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+Mar 03 14:31:15 TB5WaLI kernel: io scheduler mq-deadline registered
+Mar 03 14:31:15 TB5WaLI kernel: irq_brcmstb_l2: registered L2 intc (/soc/intc@7d503000, parent irq: 26)
+Mar 03 14:31:15 TB5WaLI kernel: irq_brcmstb_l2: registered L2 intc (/soc/intc@7d508380, parent irq: 27)
+Mar 03 14:31:15 TB5WaLI kernel: irq_brcmstb_l2: registered L2 intc (/soc/intc@7d508400, parent irq: 28)
+Mar 03 14:31:15 TB5WaLI kernel: irq_brcmstb_l2: registered L2 intc (/soc/intc@7d517b00, parent irq: 29)
+Mar 03 14:31:15 TB5WaLI kernel: Serial: 8250/16550 driver, 1 ports, IRQ sharing enabled
+Mar 03 14:31:15 TB5WaLI kernel: iproc-rng200 107d208000.rng: hwrng registered
+Mar 03 14:31:15 TB5WaLI kernel: vc-mem: phys_addr:0x00000000 mem_base=0x3fc00000 mem_size:0x40000000(1024 MiB)
+Mar 03 14:31:15 TB5WaLI kernel: bcm2712-iommu-cache 1000005b00.iommuc: bcm2712_iommu_cache_probe
+Mar 03 14:31:15 TB5WaLI kernel: loop: module loaded
+Mar 03 14:31:15 TB5WaLI kernel: bcm2835-power bcm2835-power: Broadcom BCM2835 power domains driver
+Mar 03 14:31:15 TB5WaLI kernel: usbcore: registered new interface driver lan78xx
+Mar 03 14:31:15 TB5WaLI kernel: usbcore: registered new interface driver smsc95xx
+Mar 03 14:31:15 TB5WaLI kernel: mousedev: PS/2 mouse device common for all mice
+Mar 03 14:31:15 TB5WaLI kernel: i2c_dev: i2c /dev entries driver
+Mar 03 14:31:15 TB5WaLI kernel: bcm2835-wdt bcm2835-wdt: Poweroff handler already present!
+Mar 03 14:31:15 TB5WaLI kernel: bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+Mar 03 14:31:15 TB5WaLI kernel: sdhci: Secure Digital Host Controller Interface driver
+Mar 03 14:31:15 TB5WaLI kernel: sdhci: Copyright(c) Pierre Ossman
+Mar 03 14:31:15 TB5WaLI kernel: sdhci-pltfm: SDHCI platform and OF driver helper
+Mar 03 14:31:15 TB5WaLI kernel: ledtrig-cpu: registered to indicate activity on CPUs
+Mar 03 14:31:15 TB5WaLI kernel: SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+Mar 03 14:31:15 TB5WaLI kernel: hid: raw HID events driver (C) Jiri Kosina
+Mar 03 14:31:15 TB5WaLI kernel: hw perfevents: enabled with armv8_cortex_a76 PMU driver, 7 counters available
+Mar 03 14:31:15 TB5WaLI kernel: watchdog: Delayed init of the lockup detector failed: -19
+Mar 03 14:31:15 TB5WaLI kernel: watchdog: Hard watchdog permanently disabled
+Mar 03 14:31:15 TB5WaLI kernel: IPv6: Loaded, but administratively disabled, reboot required to enable
+Mar 03 14:31:15 TB5WaLI kernel: NET: Registered PF_PACKET protocol family
+Mar 03 14:31:15 TB5WaLI kernel: Key type dns_resolver registered
+Mar 03 14:31:15 TB5WaLI kernel: registered taskstats version 1
+Mar 03 14:31:15 TB5WaLI kernel: Loading compiled-in X.509 certificates
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Build time autogenerated kernel key: cd129677577e8c478efcef412f66bb00853aa978'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+Mar 03 14:31:15 TB5WaLI kernel: blacklist: Loading compiled-in revocation X.509 certificates
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+Mar 03 14:31:15 TB5WaLI kernel: Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+Mar 03 14:31:15 TB5WaLI kernel: Key type .fscrypt registered
+Mar 03 14:31:15 TB5WaLI kernel: Key type fscrypt-provisioning registered
+Mar 03 14:31:15 TB5WaLI kernel: Freeing initrd memory: 55900K
+Mar 03 14:31:15 TB5WaLI kernel: Key type encrypted registered
+Mar 03 14:31:15 TB5WaLI kernel: AppArmor: AppArmor sha256 policy hashing enabled
+Mar 03 14:31:15 TB5WaLI kernel: ima: No TPM chip found, activating TPM-bypass!
+Mar 03 14:31:15 TB5WaLI kernel: ima: Allocated hash algorithm: sha1
+Mar 03 14:31:15 TB5WaLI kernel: ima: No architecture policies found
+Mar 03 14:31:15 TB5WaLI kernel: evm: Initialising EVM extended attributes:
+Mar 03 14:31:15 TB5WaLI kernel: evm: security.selinux
+Mar 03 14:31:15 TB5WaLI kernel: evm: security.SMACK64
+Mar 03 14:31:15 TB5WaLI kernel: evm: security.SMACK64EXEC
+Mar 03 14:31:15 TB5WaLI kernel: evm: security.SMACK64TRANSMUTE
+Mar 03 14:31:15 TB5WaLI kernel: evm: security.SMACK64MMAP
+Mar 03 14:31:15 TB5WaLI kernel: evm: security.apparmor
+Mar 03 14:31:15 TB5WaLI kernel: evm: security.ima
+Mar 03 14:31:15 TB5WaLI kernel: evm: security.capability
+Mar 03 14:31:15 TB5WaLI kernel: evm: HMAC attrs: 0x1
+Mar 03 14:31:15 TB5WaLI kernel: bcm2712-iommu 1000005100.iommu: bcm2712_iommu_init: DEBUG_INFO = 0x20804774
+Mar 03 14:31:15 TB5WaLI kernel: bcm2712-iommu 1000005100.iommu: bcm2712_iommu_probe: Success
+Mar 03 14:31:15 TB5WaLI kernel: bcm2712-iommu 1000005200.iommu: bcm2712_iommu_init: DEBUG_INFO = 0x20804774
+Mar 03 14:31:15 TB5WaLI kernel: bcm2712-iommu 1000005200.iommu: bcm2712_iommu_probe: Success
+Mar 03 14:31:15 TB5WaLI kernel: bcm2712-iommu 1000005280.iommu: bcm2712_iommu_init: DEBUG_INFO = 0x20804774
+Mar 03 14:31:15 TB5WaLI kernel: bcm2712-iommu 1000005280.iommu: bcm2712_iommu_probe: Success
+Mar 03 14:31:15 TB5WaLI kernel: of_cfs_init
+Mar 03 14:31:15 TB5WaLI kernel: of_cfs_init: OK
+Mar 03 14:31:15 TB5WaLI kernel: clk: Disabling unused clocks
+Mar 03 14:31:15 TB5WaLI kernel: Freeing unused kernel memory: 6528K
+Mar 03 14:31:15 TB5WaLI kernel: Checked W+X mappings: passed, no W+X pages found
+Mar 03 14:31:15 TB5WaLI kernel: Run /init as init process
+Mar 03 14:31:15 TB5WaLI kernel:   with arguments:
+Mar 03 14:31:15 TB5WaLI kernel:     /init
+Mar 03 14:31:15 TB5WaLI kernel:     fixrtc
+Mar 03 14:31:15 TB5WaLI kernel:     splash
+Mar 03 14:31:15 TB5WaLI kernel:   with environment:
+Mar 03 14:31:15 TB5WaLI kernel:     HOME=/
+Mar 03 14:31:15 TB5WaLI kernel:     TERM=linux
+Mar 03 14:31:15 TB5WaLI kernel:     modules-load=dwc2,g_ether
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie: host bridge /axi/pcie@120000 ranges:
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie:   No bus range found for /axi/pcie@120000, using [bus 00-ff]
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie:      MEM 0x1f00000000..0x1ffffffffb -> 0x0000000000
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie:      MEM 0x1c00000000..0x1effffffff -> 0x0400000000
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie:   IB MEM 0x1f00000000..0x1f003fffff -> 0x0000000000
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie:   IB MEM 0x0000000000..0x0fffffffff -> 0x1000000000
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie: Forcing gen 2
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie: PCI host bridge to bus 0000:00
+Mar 03 14:31:15 TB5WaLI kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Mar 03 14:31:15 TB5WaLI kernel: pci_bus 0000:00: root bus resource [mem 0x1f00000000-0x1ffffffffb] (bus address [0x00000000-0xfffffffb])
+Mar 03 14:31:15 TB5WaLI kernel: pci_bus 0000:00: root bus resource [mem 0x1c00000000-0x1effffffff pref] (bus address [0x400000000-0x6ffffffff])
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0: [14e4:2712] type 01 class 0x060400 PCIe Root Port
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0: PCI bridge to [bus 00]
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0:   bridge window [mem 0x1ff8000000-0x1ff80fffff]
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0: PME# supported from D0 D3hot
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+Mar 03 14:31:15 TB5WaLI kernel: dwc2 1000480000.usb: supply vusb_d not found, using dummy regulator
+Mar 03 14:31:15 TB5WaLI kernel: dwc2 1000480000.usb: supply vusb_a not found, using dummy regulator
+Mar 03 14:31:15 TB5WaLI kernel: 107d50c000.serial: ttyS0 at MMIO 0x107d50c000 (irq = 34, base_baud = 6000000) is a Broadcom BCM7271 UART
+Mar 03 14:31:15 TB5WaLI kernel: rpi-rtc soc:rpi_rtc: trickle charging enabled at 3000000uV
+Mar 03 14:31:15 TB5WaLI kernel: serial serial0: tty port ttyS0 registered
+Mar 03 14:31:15 TB5WaLI kernel: rpi-rtc soc:rpi_rtc: registered as rtc0
+Mar 03 14:31:15 TB5WaLI kernel: rpi-rtc soc:rpi_rtc: setting system clock to 2025-03-03T19:31:12 UTC (1741030272)
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie: clkreq-mode set to default
+Mar 03 14:31:15 TB5WaLI kernel: brcm-pcie 1000120000.pcie: link up, 5.0 GT/s PCIe x4 (!SSC)
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: [1de4:0001] type 00 class 0x020000 PCIe Endpoint
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: BAR 0 [mem 0xffffc000-0xffffffff]
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: BAR 1 [mem 0xffc00000-0xffffffff]
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: BAR 2 [mem 0xffff0000-0xffffffff]
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: supports D1
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: PME# supported from D0 D1 D3hot D3cold
+Mar 03 14:31:15 TB5WaLI kernel: pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0: bridge window [mem 0x1f00000000-0x1f005fffff]: assigned
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: BAR 1 [mem 0x1f00000000-0x1f003fffff]: assigned
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: BAR 2 [mem 0x1f00400000-0x1f0040ffff]: assigned
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: BAR 0 [mem 0x1f00410000-0x1f00413fff]: assigned
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0: PCI bridge to [bus 01]
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0:   bridge window [mem 0x1f00000000-0x1f005fffff]
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:00:00.0: Max Payload Size set to  256/ 512 (was  128), Max Read Rq  512
+Mar 03 14:31:15 TB5WaLI kernel: pci 0000:01:00.0: Max Payload Size set to  256/ 256 (was  128), Max Read Rq  512
+Mar 03 14:31:15 TB5WaLI kernel: pcieport 0000:00:00.0: enabling device (0000 -> 0002)
+Mar 03 14:31:15 TB5WaLI kernel: pcieport 0000:00:00.0: PME: Signaling with IRQ 37
+Mar 03 14:31:15 TB5WaLI kernel: pcieport 0000:00:00.0: AER: enabled with IRQ 37
+Mar 03 14:31:15 TB5WaLI kernel: rp1 0000:01:00.0: bar0 len 0x4000, start 0x1f00410000, end 0x1f00413fff, flags, 0x40200
+Mar 03 14:31:15 TB5WaLI kernel: rp1 0000:01:00.0: bar1 len 0x400000, start 0x1f00000000, end 0x1f003fffff, flags, 0x40200
+Mar 03 14:31:15 TB5WaLI kernel: rp1 0000:01:00.0: enabling device (0000 -> 0002)
+Mar 03 14:31:15 TB5WaLI kernel: rp1 0000:01:00.0: chip_id 0x20001927
+Mar 03 14:31:15 TB5WaLI kernel: dwc2 1000480000.usb: EPs: 8, dedicated fifos, 4080 entries in SPRAM
+Mar 03 14:31:15 TB5WaLI kernel: dw_axi_dmac_platform 1f00188000.dma: DesignWare AXI DMA Controller, 8 channels
+Mar 03 14:31:15 TB5WaLI kernel: input: pwr_button as /devices/platform/pwr_button/input/input2
+Mar 03 14:31:15 TB5WaLI kernel: i2c-gpio 300000002.i2c: using lines 575 (SDA) and 576 (SCL)
+Mar 03 14:31:15 TB5WaLI kernel: sdhci-brcmstb 1000fff000.mmc: Got CD GPIO
+Mar 03 14:31:15 TB5WaLI kernel: mmc0: CQHCI version 5.10
+Mar 03 14:31:15 TB5WaLI kernel: mmc1: CQHCI version 5.10
+Mar 03 14:31:15 TB5WaLI kernel: macb 1f00100000.ethernet eth0: Cadence GEM rev 0x00070109 at 0x1f00100000 irq 105 (d8:3a:dd:b6:36:a1)
+Mar 03 14:31:15 TB5WaLI kernel: mmc0: SDHCI controller on 1000fff000.mmc [1000fff000.mmc] using ADMA 64-bit
+Mar 03 14:31:15 TB5WaLI kernel: mmc0: cannot verify signal voltage switch
+Mar 03 14:31:15 TB5WaLI kernel: mmc0: new ultra high speed SDR104 SDHC card at address aaaa
+Mar 03 14:31:15 TB5WaLI kernel: mmcblk0: mmc0:aaaa SL32G 29.7 GiB
+Mar 03 14:31:15 TB5WaLI kernel:  mmcblk0: p1 p2
+Mar 03 14:31:15 TB5WaLI kernel: mmcblk0: mmc0:aaaa SL32G 29.7 GiB (quirks 0x00004000)
+Mar 03 14:31:15 TB5WaLI kernel: mmc1: SDHCI controller on 1001100000.mmc [1001100000.mmc] using ADMA 64-bit
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.0: xHCI Host Controller
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.0: new USB bus registered, assigned bus number 1
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.0: hcc params 0x0240fe6d hci version 0x110 quirks 0x0000008000000810
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.0: irq 130, io mem 0x1f00200000
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.0: xHCI Host Controller
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.0: new USB bus registered, assigned bus number 2
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.0: Host supports USB 3.0 SuperSpeed
+Mar 03 14:31:15 TB5WaLI kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+Mar 03 14:31:15 TB5WaLI kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Mar 03 14:31:15 TB5WaLI kernel: usb usb1: Product: xHCI Host Controller
+Mar 03 14:31:15 TB5WaLI kernel: usb usb1: Manufacturer: Linux 6.8.0-1019-raspi xhci-hcd
+Mar 03 14:31:15 TB5WaLI kernel: usb usb1: SerialNumber: xhci-hcd.0
+Mar 03 14:31:15 TB5WaLI kernel: hub 1-0:1.0: USB hub found
+Mar 03 14:31:15 TB5WaLI kernel: hub 1-0:1.0: 2 ports detected
+Mar 03 14:31:15 TB5WaLI kernel: mmc1: cannot verify signal voltage switch
+Mar 03 14:31:15 TB5WaLI kernel: usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.08
+Mar 03 14:31:15 TB5WaLI kernel: usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Mar 03 14:31:15 TB5WaLI kernel: usb usb2: Product: xHCI Host Controller
+Mar 03 14:31:15 TB5WaLI kernel: usb usb2: Manufacturer: Linux 6.8.0-1019-raspi xhci-hcd
+Mar 03 14:31:15 TB5WaLI kernel: usb usb2: SerialNumber: xhci-hcd.0
+Mar 03 14:31:15 TB5WaLI kernel: hub 2-0:1.0: USB hub found
+Mar 03 14:31:15 TB5WaLI kernel: hub 2-0:1.0: 1 port detected
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.1: xHCI Host Controller
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.1: new USB bus registered, assigned bus number 3
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.1: hcc params 0x0240fe6d hci version 0x110 quirks 0x0000008000000810
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.1: irq 135, io mem 0x1f00300000
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.1: xHCI Host Controller
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.1: new USB bus registered, assigned bus number 4
+Mar 03 14:31:15 TB5WaLI kernel: xhci-hcd xhci-hcd.1: Host supports USB 3.0 SuperSpeed
+Mar 03 14:31:15 TB5WaLI kernel: usb usb3: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.08
+Mar 03 14:31:15 TB5WaLI kernel: usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Mar 03 14:31:15 TB5WaLI kernel: usb usb3: Product: xHCI Host Controller
+Mar 03 14:31:15 TB5WaLI kernel: usb usb3: Manufacturer: Linux 6.8.0-1019-raspi xhci-hcd
+Mar 03 14:31:15 TB5WaLI kernel: usb usb3: SerialNumber: xhci-hcd.1
+Mar 03 14:31:15 TB5WaLI kernel: hub 3-0:1.0: USB hub found
+Mar 03 14:31:15 TB5WaLI kernel: hub 3-0:1.0: 2 ports detected
+Mar 03 14:31:15 TB5WaLI kernel: usb usb4: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.08
+Mar 03 14:31:15 TB5WaLI kernel: usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Mar 03 14:31:15 TB5WaLI kernel: usb usb4: Product: xHCI Host Controller
+Mar 03 14:31:15 TB5WaLI kernel: usb usb4: Manufacturer: Linux 6.8.0-1019-raspi xhci-hcd
+Mar 03 14:31:15 TB5WaLI kernel: usb usb4: SerialNumber: xhci-hcd.1
+Mar 03 14:31:15 TB5WaLI kernel: hub 4-0:1.0: USB hub found
+Mar 03 14:31:15 TB5WaLI kernel: hub 4-0:1.0: 1 port detected
+Mar 03 14:31:15 TB5WaLI kernel: mmc1: new ultra high speed DDR50 SDIO card at address 0001
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-1: new full-speed USB device number 2 using xhci-hcd
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-1: new high-speed USB device number 2 using xhci-hcd
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-1: New USB device found, idVendor=03e7, idProduct=2485, bcdDevice= 0.01
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-1: Product: Movidius MyriadX
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-1: Manufacturer: Movidius Ltd.
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-1: SerialNumber: 03e72485
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-1: New USB device found, idVendor=1234, idProduct=5684, bcdDevice= 1.00
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-1: Product: P10S
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-1: Manufacturer: MV-SILICON
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-1: SerialNumber: 202403221
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-2: new full-speed USB device number 3 using xhci-hcd
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-2: new full-speed USB device number 3 using xhci-hcd
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-2: New USB device found, idVendor=10c4, idProduct=ea60, bcdDevice= 1.00
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-2: Product: CP2102N USB to UART Bridge Controller
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-2: Manufacturer: Silicon Labs
+Mar 03 14:31:15 TB5WaLI kernel: usb 3-2: SerialNumber: 4088e501335aee11980982dc8ffcc75d
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-2: New USB device found, idVendor=046d, idProduct=c21f, bcdDevice= 3.05
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-2: Product: Wireless Gamepad F710
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-2: Manufacturer: Logitech
+Mar 03 14:31:15 TB5WaLI kernel: usb 1-2: SerialNumber: 808A9464
+Mar 03 14:31:15 TB5WaLI kernel: usbhid 1-1:1.4: couldn't find an input interrupt endpoint
+Mar 03 14:31:15 TB5WaLI kernel: usbcore: registered new interface driver usbhid
+Mar 03 14:31:15 TB5WaLI kernel: usbhid: USB HID core driver
+Mar 03 14:31:15 TB5WaLI kernel: input: MV-SILICON P10S as /devices/platform/axi/1000120000.pcie/1f00200000.usb/xhci-hcd.0/usb1/1-1/1-1:1.3/0003:1234:5684.0001/input/input3
+Mar 03 14:31:15 TB5WaLI kernel: hid-generic 0003:1234:5684.0001: input,hidraw0: USB HID v2.01 Device [MV-SILICON P10S] on usb-xhci-hcd.0-1/input3
+Mar 03 14:31:15 TB5WaLI kernel: raid6: neonx8   gen() 11144 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: neonx4   gen() 11528 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: neonx2   gen()  9903 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: neonx1   gen()  7943 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: int64x8  gen()  5622 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: int64x4  gen()  5887 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: int64x2  gen()  4917 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: int64x1  gen()  4057 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: using algorithm neonx4 gen() 11528 MB/s
+Mar 03 14:31:15 TB5WaLI kernel: raid6: .... xor() 8634 MB/s, rmw enabled
+Mar 03 14:31:15 TB5WaLI kernel: raid6: using neon recovery algorithm
+Mar 03 14:31:15 TB5WaLI kernel: xor: measuring software checksum speed
+Mar 03 14:31:15 TB5WaLI kernel:    8regs           : 15427 MB/sec
+Mar 03 14:31:15 TB5WaLI kernel:    32regs          : 15720 MB/sec
+Mar 03 14:31:15 TB5WaLI kernel:    arm64_neon      : 11619 MB/sec
+Mar 03 14:31:15 TB5WaLI kernel: xor: using function: 32regs (15720 MB/sec)
+Mar 03 14:31:15 TB5WaLI kernel: async_tx: api initialized (async)
+Mar 03 14:31:15 TB5WaLI kernel: Btrfs loaded, zoned=yes, fsverity=no
+Mar 03 14:31:15 TB5WaLI kernel: EXT4-fs (mmcblk0p2): mounted filesystem 5c5a44bd-f1a2-4f16-a2e8-89a3f10f2eb5 ro with ordered data mode. Quota mode: none.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Inserted module 'autofs4'
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd 255.4-1ubuntu8.5 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+Mar 03 14:31:15 TB5WaLI systemd[1]: Detected architecture arm64.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Hostname set to <TB5WaLI>.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Queued start job for default target graphical.target.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Created slice user.slice - User and Session Slice.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Expecting device dev-disk-by\x2dlabel-system\x2dboot.device - /dev/disk/by-label/system-boot...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Expecting device dev-ttyAMA10.device - /dev/ttyAMA10...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Reached target slices.target - Slice Units.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Reached target swap.target - Swaps.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Reached target time-set.target - System Time Set.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on multipathd.socket - multipathd control socket.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on syslog.socket - Syslog Socket.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd-pcrextend.socket - TPM2 PCR Extension (Varlink) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting systemd-journald.service - Journal Service...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+Mar 03 14:31:15 TB5WaLI systemd-journald[323]: Collecting audit messages is disabled.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+Mar 03 14:31:15 TB5WaLI systemd[1]: modprobe@configfs.service: Deactivated successfully.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+Mar 03 14:31:15 TB5WaLI systemd[1]: modprobe@drm.service: Deactivated successfully.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+Mar 03 14:31:15 TB5WaLI systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+Mar 03 14:31:15 TB5WaLI systemd[1]: modprobe@loop.service: Deactivated successfully.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+Mar 03 14:31:15 TB5WaLI kernel: fuse: init (API version 7.39)
+Mar 03 14:31:15 TB5WaLI systemd[1]: modprobe@fuse.service: Deactivated successfully.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+Mar 03 14:31:15 TB5WaLI systemd-journald[323]: Journal started
+Mar 03 14:31:15 TB5WaLI systemd-journald[323]: Runtime Journal (/run/log/journal/26e689314d9a410b956e0f4e47ba4d4e) is 8.0M, max 79.3M, 71.3M free.
+Mar 03 14:31:15 TB5WaLI kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+Mar 03 14:31:15 TB5WaLI kernel: device-mapper: uevent: version 1.0.3
+Mar 03 14:31:15 TB5WaLI kernel: device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+Mar 03 14:31:15 TB5WaLI systemd[1]: Started systemd-journald.service - Journal Service.
+Mar 03 14:31:15 TB5WaLI systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd-repart.service - Repartition Root Disk was skipped because no trigger condition checks were met.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+Mar 03 14:31:15 TB5WaLI kernel: EXT4-fs (mmcblk0p2): re-mounted 5c5a44bd-f1a2-4f16-a2e8-89a3f10f2eb5 r/w. Quota mode: none.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting multipathd.service - Device-Mapper Multipath Device Controller...
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database was skipped because of an unmet condition check (ConditionNeedsUpdate=/etc).
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting systemd-journal-flush.service - Flush Journal to Persistent Storage...
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival was skipped because of an unmet condition check (ConditionDirectoryNotEmpty=/sys/fs/pstore).
+Mar 03 14:31:15 TB5WaLI systemd[1]: Starting systemd-random-seed.service - Load/Save OS Random Seed...
+Mar 03 14:31:15 TB5WaLI systemd[1]: systemd-tpm2-setup.service - TPM2 SRK Setup was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:15 TB5WaLI systemd-journald[323]: Time spent on flushing to /var/log/journal/26e689314d9a410b956e0f4e47ba4d4e is 451.516ms for 507 entries.
+Mar 03 14:31:15 TB5WaLI systemd-journald[323]: System Journal (/var/log/journal/26e689314d9a410b956e0f4e47ba4d4e) is 2.7G, max 2.8G, 94.7M free.
+Mar 03 14:31:17 TB5WaLI systemd-journald[323]: Received client request to flush runtime journal.
+Mar 03 14:31:17 TB5WaLI kernel: g_ether gadget.0: HOST MAC 4e:1d:52:a9:d5:22
+Mar 03 14:31:17 TB5WaLI kernel: g_ether gadget.0: MAC 92:a4:72:61:dd:7a
+Mar 03 14:31:17 TB5WaLI kernel: g_ether gadget.0: Ethernet Gadget, version: Memorial Day 2008
+Mar 03 14:31:17 TB5WaLI kernel: g_ether gadget.0: g_ether ready
+Mar 03 14:31:17 TB5WaLI kernel: dwc2 1000480000.usb: bound driver g_ether
+Mar 03 14:31:17 TB5WaLI kernel: dwc2 1000480000.usb: new device is high-speed
+Mar 03 14:31:17 TB5WaLI kernel: dwc2 1000480000.usb: new device is high-speed
+Mar 03 14:31:17 TB5WaLI kernel: dwc2 1000480000.usb: new device is high-speed
+Mar 03 14:31:17 TB5WaLI kernel: dwc2 1000480000.usb: new address 2
+Mar 03 14:31:17 TB5WaLI systemd-journald[323]: /var/log/journal/26e689314d9a410b956e0f4e47ba4d4e/system.journal: Journal file uses a different sequence number ID, rotating.
+Mar 03 14:31:17 TB5WaLI systemd-journald[323]: Rotating system journal.
+Mar 03 14:31:17 TB5WaLI kernel: loop0: detected capacity change from 0 to 69032
+Mar 03 14:31:17 TB5WaLI kernel: loop1: detected capacity change from 0 to 79232
+Mar 03 14:31:15 TB5WaLI systemd-modules-load[342]: Inserted module 'g_ether'
+Mar 03 14:31:17 TB5WaLI multipathd[373]: multipathd v0.9.4: start up
+Mar 03 14:31:17 TB5WaLI multipathd[373]: reconfigure: setting up paths and maps
+Mar 03 14:31:15 TB5WaLI systemd[1]: Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+Mar 03 14:31:16 TB5WaLI systemd[1]: Finished systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+Mar 03 14:31:16 TB5WaLI systemd[1]: systemd-sysusers.service - Create System Users was skipped because no trigger condition checks were met.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+Mar 03 14:31:16 TB5WaLI systemd[1]: Finished systemd-random-seed.service - Load/Save OS Random Seed.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Starting systemd-udevd.service - Rule-based Manager for Device Events and Files...
+Mar 03 14:31:16 TB5WaLI systemd-sysctl[378]: Couldn't write '2' to 'net/ipv6/conf/all/use_tempaddr', ignoring: No such file or directory
+Mar 03 14:31:16 TB5WaLI systemd-sysctl[378]: Couldn't write '2' to 'net/ipv6/conf/default/use_tempaddr', ignoring: No such file or directory
+Mar 03 14:31:16 TB5WaLI systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+Mar 03 14:31:16 TB5WaLI systemd-udevd[386]: Using default interface naming scheme 'v255'.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Finished lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Started multipathd.service - Device-Mapper Multipath Device Controller.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Mounting snap-snapd-21761.mount - Mount unit for snapd, revision 21761...
+Mar 03 14:31:16 TB5WaLI systemd[1]: Mounting snap-snapd-23546.mount - Mount unit for snapd, revision 23546...
+Mar 03 14:31:16 TB5WaLI systemd[1]: Mounted snap-snapd-21761.mount - Mount unit for snapd, revision 21761.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Mounted snap-snapd-23546.mount - Mount unit for snapd, revision 23546.
+Mar 03 14:31:16 TB5WaLI systemd[1]: Reached target snapd.mounts.target - Mounted snaps.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Finished systemd-journal-flush.service - Flush Journal to Persistent Storage.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Started systemd-udevd.service - Rule-based Manager for Device Events and Files.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting plymouth-start.service - Show Plymouth Boot Screen...
+Mar 03 14:31:17 TB5WaLI systemd[1]: Reached target usb-gadget.target - Hardware activated USB gadget.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Started plymouth-start.service - Show Plymouth Boot Screen.
+Mar 03 14:31:17 TB5WaLI systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch was skipped because of an unmet condition check (ConditionPathExists=!/run/plymouth/pid).
+Mar 03 14:31:17 TB5WaLI systemd[1]: Started systemd-ask-password-plymouth.path - Forward Password Requests to Plymouth Directory Watch.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Found device dev-ttyAMA10.device - /dev/ttyAMA10.
+Mar 03 14:31:17 TB5WaLI (udev-worker)[425]: eth0: Config file /usr/lib/systemd/network/10-raspi-eth0.link is applied to device based on potentially unpredictable interface name.
+Mar 03 14:31:17 TB5WaLI (udev-worker)[430]: mmcblk0: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/mmcblk0' failed with exit code 1.
+Mar 03 14:31:17 TB5WaLI (udev-worker)[422]: mmcblk0p2: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/mmcblk0p2' failed with exit code 1.
+Mar 03 14:31:17 TB5WaLI (udev-worker)[430]: mmcblk0p1: Process '/usr/bin/unshare -m /usr/bin/snap auto-import --mount=/dev/mmcblk0p1' failed with exit code 1.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Found device dev-disk-by\x2dlabel-system\x2dboot.device - /dev/disk/by-label/system-boot.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting systemd-fsck@dev-disk-by\x2dlabel-system\x2dboot.service - File System Check on /dev/disk/by-label/system-boot...
+Mar 03 14:31:17 TB5WaLI kernel: mc: Linux media interface: v0.10
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 107d508500.gpiomem: window base 0x107d508500 size 0x00000040
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 107d508500.gpiomem: initialised 1 regions as /dev/gpiomem1
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 107d517c00.gpiomem: window base 0x107d517c00 size 0x00000040
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 107d517c00.gpiomem: initialised 1 regions as /dev/gpiomem2
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 107d504100.gpiomem: window base 0x107d504100 size 0x00000020
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 107d504100.gpiomem: initialised 1 regions as /dev/gpiomem3
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 107d510700.gpiomem: window base 0x107d510700 size 0x00000020
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 107d510700.gpiomem: initialised 1 regions as /dev/gpiomem4
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 1f000d0000.gpiomem: window base 0x1f000d0000 size 0x00030000
+Mar 03 14:31:17 TB5WaLI kernel: rpi-gpiomem 1f000d0000.gpiomem: initialised 1 regions as /dev/gpiomem0
+Mar 03 14:31:17 TB5WaLI systemd[1]: Started systemd-fsckd.service - File System Check Daemon to report status.
+Mar 03 14:31:17 TB5WaLI kernel: usbcore: registered new interface driver usbserial_generic
+Mar 03 14:31:17 TB5WaLI kernel: usbserial: USB Serial support registered for generic
+Mar 03 14:31:17 TB5WaLI kernel: input: Logitech Gamepad F710 as /devices/platform/axi/1000120000.pcie/1f00200000.usb/xhci-hcd.0/usb1/1-2/1-2:1.0/input/input4
+Mar 03 14:31:17 TB5WaLI kernel: usbcore: registered new interface driver cp210x
+Mar 03 14:31:17 TB5WaLI kernel: usbserial: USB Serial support registered for cp210x
+Mar 03 14:31:17 TB5WaLI kernel: cp210x 3-2:1.0: cp210x converter detected
+Mar 03 14:31:17 TB5WaLI kernel: videodev: Linux video capture interface: v2.00
+Mar 03 14:31:17 TB5WaLI kernel: usbcore: registered new interface driver xpad
+Mar 03 14:31:17 TB5WaLI kernel: bcm2708_fb soc:fb: Unable to determine number of FBs. Disabling driver.
+Mar 03 14:31:17 TB5WaLI kernel: bcm2708_fb: probe of soc:fb failed with error -2
+Mar 03 14:31:17 TB5WaLI kernel: usb 3-2: cp210x converter now attached to ttyUSB0
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: bcm2712_iommu_of_xlate: MMU 1000005100.iommu
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: bcm2712_iommu_probe_device: MMU 1000005100.iommu
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: bcm2712_iommu_device_group: MMU 1000005100.iommu
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: Adding to iommu group 0
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: bcm2712_iommu_attach_dev: MMU 1000005100.iommu
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: pispbe_probe: HW version:  0x02252700
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: pispbe_probe: BatchStatus: 0x00000000
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: pispbe_probe: Status:      0x00000000
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: Register nodes for group 0
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: input device node registered as /dev/video20
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: tdn_input device node registered as /dev/video21
+Mar 03 14:31:17 TB5WaLI kernel: cfg80211: Loading compiled-in X.509 certificates for regulatory database
+Mar 03 14:31:17 TB5WaLI kernel: Loaded X.509 cert 'benh@debian.org: 577e021cb980e0e820821ba7b54b4961b8b4fadf'
+Mar 03 14:31:17 TB5WaLI kernel: Loaded X.509 cert 'romain.perier@gmail.com: 3abbc6ec146e09d1b6016ab9d6cf71dd233f0328'
+Mar 03 14:31:17 TB5WaLI kernel: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+Mar 03 14:31:17 TB5WaLI kernel: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: stitch_input device node registered as /dev/video22
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: hog_output device node registered as /dev/video23
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: output0 device node registered as /dev/video24
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: output1 device node registered as /dev/video25
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: tdn_output device node registered as /dev/video26
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: stitch_output device node registered as /dev/video27
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: config device node registered as /dev/video28
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: Register nodes for group 1
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: input device node registered as /dev/video29
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: tdn_input device node registered as /dev/video30
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: stitch_input device node registered as /dev/video31
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: hog_output device node registered as /dev/video32
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: output0 device node registered as /dev/video33
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: output1 device node registered as /dev/video34
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: tdn_output device node registered as /dev/video35
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: stitch_output device node registered as /dev/video36
+Mar 03 14:31:17 TB5WaLI kernel: pispbe 1000880000.pisp_be: config device node registered as /dev/video37
+Mar 03 14:31:17 TB5WaLI systemd[1]: Listening on systemd-rfkill.socket - Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: Core ver 2.22
+Mar 03 14:31:17 TB5WaLI kernel: NET: Registered PF_BLUETOOTH protocol family
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI device and connection manager initialized
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI socket layer initialized
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: L2CAP socket layer initialized
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: SCO socket layer initialized
+Mar 03 14:31:17 TB5WaLI kernel: rpivid_hevc: module is from the staging directory, the quality is unknown, you have been warned.
+Mar 03 14:31:17 TB5WaLI kernel: rpivid_hevc: module verification failed: signature and/or required key missing - tainting kernel
+Mar 03 14:31:17 TB5WaLI kernel: rpivid 1000800000.codec: bcm2712_iommu_of_xlate: MMU 1000005100.iommu
+Mar 03 14:31:17 TB5WaLI kernel: rpivid 1000800000.codec: bcm2712_iommu_probe_device: MMU 1000005100.iommu
+Mar 03 14:31:17 TB5WaLI kernel: rpivid 1000800000.codec: bcm2712_iommu_device_group: MMU 1000005100.iommu
+Mar 03 14:31:17 TB5WaLI kernel: rpivid 1000800000.codec: Adding to iommu group 0
+Mar 03 14:31:17 TB5WaLI kernel: rpivid 1000800000.codec: bcm2712_iommu_attach_dev: MMU 1000005100.iommu
+Mar 03 14:31:17 TB5WaLI kernel: rpivid 1000800000.codec: Device registered as /dev/video19
+Mar 03 14:31:17 TB5WaLI kernel: brcmfmac: F1 signature read @0x18000000=0x15264345
+Mar 03 14:31:17 TB5WaLI kernel: brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6
+Mar 03 14:31:17 TB5WaLI kernel: usbcore: registered new interface driver brcmfmac
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART driver ver 2.3
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol H4 registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol BCSP registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol LL registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol ATH3K registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol Three-wire (H5) registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol Intel registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol Broadcom registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol QCA registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol AG6XX registered
+Mar 03 14:31:17 TB5WaLI kernel: Bluetooth: HCI UART protocol Marvell registered
+Mar 03 14:31:17 TB5WaLI kernel: hci_uart_bcm serial0-0: supply vbat not found, using dummy regulator
+Mar 03 14:31:17 TB5WaLI kernel: hci_uart_bcm serial0-0: supply vddio not found, using dummy regulator
+Mar 03 14:31:17 TB5WaLI (udev-worker)[430]: js0: Process '/usr/bin/jscal-restore /dev/input/js0' failed with exit code 1.
+Mar 03 14:31:17 TB5WaLI systemd-fsck[473]: fsck.fat 4.2 (2021-01-31)
+Mar 03 14:31:17 TB5WaLI systemd-fsck[473]: /dev/mmcblk0p1: 834 files, 372678/1032408 clusters
+Mar 03 14:31:17 TB5WaLI systemd[1]: Finished systemd-fsck@dev-disk-by\x2dlabel-system\x2dboot.service - File System Check on /dev/disk/by-label/system-boot.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Mounting boot-firmware.mount - /boot/firmware...
+Mar 03 14:31:17 TB5WaLI systemd[1]: Mounted boot-firmware.mount - /boot/firmware.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Reached target local-fs.target - Local File Systems.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Listening on systemd-sysext.socket - System Extension Image Management (Varlink).
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting apparmor.service - Load AppArmor profiles...
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting console-setup.service - Set console font and keymap...
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting finalrd.service - Create final runtime dir for shutdown pivot root...
+Mar 03 14:31:17 TB5WaLI systemd[1]: ldconfig.service - Rebuild Dynamic Linker Cache was skipped because no trigger condition checks were met.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data...
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting systemd-tmpfiles-setup.service - Create Volatile Files and Directories...
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting ufw.service - Uncomplicated firewall...
+Mar 03 14:31:17 TB5WaLI apparmor.systemd[516]: Restarting AppArmor
+Mar 03 14:31:17 TB5WaLI systemd[1]: Finished console-setup.service - Set console font and keymap.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Finished finalrd.service - Create final runtime dir for shutdown pivot root.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Received SIGRTMIN+20 from PID 200 (plymouthd).
+Mar 03 14:31:17 TB5WaLI systemd[1]: Finished plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data.
+Mar 03 14:31:17 TB5WaLI systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 522 (systemd-binfmt)
+Mar 03 14:31:17 TB5WaLI apparmor.systemd[516]: Reloading AppArmor profiles
+Mar 03 14:31:17 TB5WaLI systemd[1]: Mounting proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System...
+Mar 03 14:31:17 TB5WaLI systemd[1]: Finished ufw.service - Uncomplicated firewall.
+Mar 03 14:31:17 TB5WaLI kernel: usb 1-1: Warning! Unlikely big volume range (=4096), cval->res is probably wrong.
+Mar 03 14:31:17 TB5WaLI kernel: usb 1-1: [2] FU [PCM Playback Volume] ch = 2, val = 0/4096/1
+Mar 03 14:31:17 TB5WaLI systemd[1]: Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+Mar 03 14:31:17 TB5WaLI kernel: brcmfmac: brcmf_c_process_txcap_blob: no txcap_blob available (err=-2)
+Mar 03 14:31:17 TB5WaLI kernel: brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4345/6 wl0: Apr 15 2021 03:03:20 version 7.45.234 (4ca95bb CY) FWID 01-996384e2
+Mar 03 14:31:17 TB5WaLI systemd[1]: Reached target bluetooth.target - Bluetooth Support.
+Mar 03 14:31:17 TB5WaLI systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+Mar 03 14:31:18 TB5WaLI systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.005:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=545 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.005:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=546 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.005:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=544 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.006:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=543 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.011:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=550 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.012:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=551 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.013:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=552 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.013:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="busybox" pid=553 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.014:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="cam" pid=554 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI kernel: audit: type=1400 audit(1741030278.015:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="ch-checkns" pid=555 comm="apparmor_parser"
+Mar 03 14:31:18 TB5WaLI systemd[1]: Finished systemd-tmpfiles-setup.service - Create Volatile Files and Directories.
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-firstboot.service - First Boot Wizard was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+Mar 03 14:31:18 TB5WaLI systemd[1]: first-boot-complete.target - First Boot Complete was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-journal-catalog-update.service - Rebuild Journal Catalog was skipped because of an unmet condition check (ConditionNeedsUpdate=/var).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-machine-id-commit.service - Commit a transient machine-id on disk was skipped because of an unmet condition check (ConditionPathIsMountPoint=/etc/machine-id).
+Mar 03 14:31:18 TB5WaLI systemd[1]: Starting systemd-resolved.service - Network Name Resolution...
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-update-done.service - Update is Completed was skipped because no trigger condition checks were met.
+Mar 03 14:31:18 TB5WaLI systemd[1]: Starting systemd-update-utmp.service - Record System Boot/Shutdown in UTMP...
+Mar 03 14:31:18 TB5WaLI kernel: usb 1-1: Warning! Unlikely big volume range (=4096), cval->res is probably wrong.
+Mar 03 14:31:18 TB5WaLI kernel: usb 1-1: [5] FU [Mic Capture Volume] ch = 2, val = 0/4096/1
+Mar 03 14:31:18 TB5WaLI kernel: usbcore: registered new interface driver snd-usb-audio
+Mar 03 14:31:18 TB5WaLI systemd[1]: Finished systemd-update-utmp.service - Record System Boot/Shutdown in UTMP.
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM: chip id 107
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM: features 0x2f
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM4345C0
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM4345C0 (003.001.025) build 0000
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM4345C0 'brcm/BCM4345C0.raspberrypi,5-model-b.hcd' Patch
+Mar 03 14:31:18 TB5WaLI systemd-resolved[561]: Positive Trust Anchors:
+Mar 03 14:31:18 TB5WaLI systemd-resolved[561]: . IN DS 20326 8 2 e06d44b80b8f1d39a95c0b0d7c65d08458e880409bbc683457104237c7f8ec8d
+Mar 03 14:31:18 TB5WaLI systemd-resolved[561]: Negative trust anchors: home.arpa 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 170.0.0.192.in-addr.arpa 171.0.0.192.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa ipv4only.arpa corp home internal intranet lan local private test
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch was skipped because of an unmet condition check (ConditionPathExists=!/run/plymouth/pid).
+Mar 03 14:31:18 TB5WaLI systemd[1]: ldconfig.service - Rebuild Dynamic Linker Cache was skipped because no trigger condition checks were met.
+Mar 03 14:31:18 TB5WaLI systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+Mar 03 14:31:18 TB5WaLI systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+Mar 03 14:31:18 TB5WaLI systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database was skipped because of an unmet condition check (ConditionNeedsUpdate=/etc).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-journal-catalog-update.service - Rebuild Journal Catalog was skipped because of an unmet condition check (ConditionNeedsUpdate=/var).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-pcrmachine.service - TPM2 PCR Machine ID Measurement was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-sysusers.service - Create System Users was skipped because no trigger condition checks were met.
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-firstboot.service - First Boot Wizard was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+Mar 03 14:31:18 TB5WaLI systemd[1]: first-boot-complete.target - First Boot Complete was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-machine-id-commit.service - Commit a transient machine-id on disk was skipped because of an unmet condition check (ConditionPathIsMountPoint=/etc/machine-id).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-tpm2-setup-early.service - TPM2 SRK Setup (Early) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-tpm2-setup.service - TPM2 SRK Setup was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-update-done.service - Update is Completed was skipped because no trigger condition checks were met.
+Mar 03 14:31:18 TB5WaLI systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+Mar 03 14:31:18 TB5WaLI systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+Mar 03 14:31:18 TB5WaLI systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+Mar 03 14:31:18 TB5WaLI systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival was skipped because of an unmet condition check (ConditionDirectoryNotEmpty=/sys/fs/pstore).
+Mar 03 14:31:18 TB5WaLI systemd[1]: modprobe@loop.service: Deactivated successfully.
+Mar 03 14:31:18 TB5WaLI systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+Mar 03 14:31:18 TB5WaLI systemd[1]: systemd-repart.service - Repartition Root Disk was skipped because no trigger condition checks were met.
+Mar 03 14:31:18 TB5WaLI systemd[1]: Finished apparmor.service - Load AppArmor profiles.
+Mar 03 14:31:18 TB5WaLI systemd-resolved[561]: Using system hostname 'TB5WaLI'.
+Mar 03 14:31:18 TB5WaLI systemd[1]: Starting snapd.apparmor.service - Load AppArmor profiles managed internally by snapd...
+Mar 03 14:31:18 TB5WaLI systemd[1]: vgauth.service - Authentication service for virtual machines hosted on VMware was skipped because of an unmet condition check (ConditionVirtualization=vmware).
+Mar 03 14:31:18 TB5WaLI systemd[1]: open-vm-tools.service - Service for virtual machines hosted on VMware was skipped because of an unmet condition check (ConditionVirtualization=vmware).
+Mar 03 14:31:18 TB5WaLI systemd[1]: Starting cloud-init-local.service - Cloud-init: Local Stage (pre-network)...
+Mar 03 14:31:18 TB5WaLI systemd[1]: Started systemd-resolved.service - Network Name Resolution.
+Mar 03 14:31:18 TB5WaLI systemd[1]: Reached target nss-lookup.target - Host and Network Name Lookups.
+Mar 03 14:31:18 TB5WaLI snapd-apparmor[667]: main.go:146: Loading profiles [/var/lib/snapd/apparmor/profiles/snap-confine.snapd.21761 /var/lib/snapd/apparmor/profiles/snap-confine.snapd.23546]
+Mar 03 14:31:18 TB5WaLI systemd[1]: Finished snapd.apparmor.service - Load AppArmor profiles managed internally by snapd.
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM: features 0x2f
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM43455 37.4MHz Raspberry Pi 3+-0190
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM4345C0 (003.001.025) build 0382
+Mar 03 14:31:18 TB5WaLI kernel: Bluetooth: hci0: BCM: Using default device address (43:45:c0:00:1f:ac)
+Mar 03 14:31:19 TB5WaLI cloud-init[688]: Cloud-init v. 24.4.1-0ubuntu0~24.04.1 running 'init-local' at Mon, 03 Mar 2025 19:31:19 +0000. Up 7.59 seconds.
+Mar 03 14:31:19 TB5WaLI systemd[1]: Finished cloud-init-local.service - Cloud-init: Local Stage (pre-network).
+Mar 03 14:31:19 TB5WaLI systemd[1]: Reached target network-pre.target - Preparation for Network.
+Mar 03 14:31:19 TB5WaLI systemd[1]: Starting cloud-init.service - Cloud-init: Network Stage...
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: Cloud-init v. 24.4.1-0ubuntu0~24.04.1 running 'init' at Mon, 03 Mar 2025 19:31:20 +0000. Up 8.38 seconds.
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: +++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: | Device |   Up  |  Address  |    Mask   | Scope |     Hw-Address    |
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: |  eth0  | False |     .     |     .     |   .   | d8:3a:dd:b6:36:a1 |
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: |   lo   |  True | 127.0.0.1 | 255.0.0.0 |  host |         .         |
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: |  usb0  | False |     .     |     .     |   .   | 82:be:5a:cf:ed:1f |
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: | wlan0  | False |     .     |     .     |   .   | d8:3a:dd:b6:36:a2 |
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info: +--------+-------+-----------+-----------+-------+-------------------+
+Mar 03 14:31:20 TB5WaLI cloud-init[724]: ci-info:
+Mar 03 14:31:20 TB5WaLI systemd[1]: Finished cloud-init.service - Cloud-init: Network Stage.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Reached target cloud-config.target - Cloud-config availability.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Reached target sysinit.target - System Initialization.
+Mar 03 14:31:20 TB5WaLI systemd[1]: apport-autoreport.path - Process error reports when automatic reporting is enabled (file watch) was skipped because of an unmet condition check (ConditionPathExists=/var/lib/apport/autoreport).
+Mar 03 14:31:20 TB5WaLI systemd[1]: apport-autoreport.timer - Process error reports when automatic reporting is enabled (timer based) was skipped because of an unmet condition check (ConditionPathExists=/var/lib/apport/autoreport).
+Mar 03 14:31:20 TB5WaLI systemd[1]: Started systemd-tmpfiles-clean.timer - Daily Cleanup of Temporary Directories.
+Mar 03 14:31:20 TB5WaLI systemd[1]: ua-timer.timer - Ubuntu Pro Timer for running repeated jobs was skipped because of an unmet condition check (ConditionPathExists=/var/lib/ubuntu-advantage/private/machine-token.json).
+Mar 03 14:31:20 TB5WaLI systemd[1]: Reached target paths.target - Path Units.
+Mar 03 14:31:20 TB5WaLI systemd[1]: apport-forward.socket - Unix socket for apport crash forwarding was skipped because of an unmet condition check (ConditionVirtualization=container).
+Mar 03 14:31:20 TB5WaLI systemd[1]: Listening on avahi-daemon.socket - Avahi mDNS/DNS-SD Stack Activation Socket.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Listening on cloud-init-hotplugd.socket - cloud-init hotplug hook socket.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Listening on dbus.socket - D-Bus System Message Bus Socket.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Listening on iscsid.socket - Open-iSCSI iscsid Socket.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting lxd-installer.socket - Helper to install lxd snap on demand...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting snapd.socket - Socket activation for snappy daemon...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Listening on ssh.socket - OpenBSD Secure Shell server socket.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Listening on uuidd.socket - UUID daemon activation socket.
+Mar 03 14:31:20 TB5WaLI systemd[1]: systemd-pcrphase-sysinit.service - TPM2 PCR Barrier (Initialization) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:20 TB5WaLI systemd[1]: Listening on lxd-installer.socket - Helper to install lxd snap on demand.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Listening on snapd.socket - Socket activation for snappy daemon.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Reached target sockets.target - Socket Units.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Reached target basic.target - Basic System.
+Mar 03 14:31:20 TB5WaLI systemd[1]: alsa-state.service - Manage Sound Card State (restore and store) was skipped because of an unmet condition check (ConditionPathExists=/etc/alsa/state-daemon.conf).
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting alsa-restore.service - Save/Restore Sound Card State...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting avahi-daemon.service - Avahi mDNS/DNS-SD Stack...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting dbus.service - D-Bus System Message Bus...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Started dmesg.service - Save initial kernel messages after boot.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots...
+Mar 03 14:31:20 TB5WaLI systemd[1]: getty-static.service - getty on tty2-tty6 if dbus and logind are not available was skipped because of an unmet condition check (ConditionPathExists=!/usr/bin/dbus-daemon).
+Mar 03 14:31:20 TB5WaLI systemd[1]: Started lttng-sessiond.service - LTTng session daemon.
+Mar 03 14:31:20 TB5WaLI (sessiond)[737]: lttng-sessiond.service: Referenced but unset environment variable evaluates to an empty string: DAEMON_ARGS
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: Found user 'avahi' (UID 108) and group 'avahi' (GID 110).
+Mar 03 14:31:20 TB5WaLI dbus-daemon[734]: dbus[734]: Unknown username "whoopsie" in message bus configuration file
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting networkd-dispatcher.service - Dispatcher daemon for systemd-networkd...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting polkit.service - Authorization Manager...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting rpi-eeprom-update.service - Check for Raspberry Pi EEPROM updates...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting rsyslog.service - System Logging Service...
+Mar 03 14:31:20 TB5WaLI systemd[1]: secureboot-db.service - Secure Boot updates for DB and DBX was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/db-d719b2cb-3d3a-4596-a3bc-dad00e67656f).
+Mar 03 14:31:20 TB5WaLI systemd[1]: snapd.core-fixup.service - Automatically repair incorrect owner/permissions on core devices was skipped because no trigger condition checks were met.
+Mar 03 14:31:20 TB5WaLI systemd[1]: snapd.recovery-chooser-trigger.service - Wait for the Ubuntu Core chooser trigger was skipped because of an unmet condition check (ConditionKernelCommandLine=snapd_recovery_mode).
+Mar 03 14:31:20 TB5WaLI systemd[1]: Reached target getty-pre.target - Preparation for Logins.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting snapd.seeded.service - Wait until snapd is fully seeded...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting snapd.service - Snap Daemon...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting sysstat.service - Resets System Activity Logs...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting systemd-logind.service - User Login Management...
+Mar 03 14:31:20 TB5WaLI systemd[1]: ua-reboot-cmds.service - Ubuntu Pro reboot cmds was skipped because of an unmet condition check (ConditionPathExists=/var/lib/ubuntu-advantage/private/machine-token.json).
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting udisks2.service - Disk Manager...
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: Successfully dropped root privileges.
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: avahi-daemon 0.8 starting up.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Finished alsa-restore.service - Save/Restore Sound Card State.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Reached target sound.target - Sound Card.
+Mar 03 14:31:20 TB5WaLI systemd-logind[747]: Watching system buttons on /dev/input/event0 (pwr_button)
+Mar 03 14:31:20 TB5WaLI systemd-logind[747]: New seat seat0.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Started systemd-logind.service - User Login Management.
+Mar 03 14:31:20 TB5WaLI systemd[1]: Finished sysstat.service - Resets System Activity Logs.
+Mar 03 14:31:20 TB5WaLI polkitd[739]: Started polkitd version 124
+Mar 03 14:31:20 TB5WaLI udisksd[748]: udisks daemon version 2.10.1 starting
+Mar 03 14:31:20 TB5WaLI lttng-sessiond[737]: Error: Unable to load required module lttng-ring-buffer-client-discard
+Mar 03 14:31:20 TB5WaLI lttng-sessiond[737]: Warning: No kernel tracer available
+Mar 03 14:31:20 TB5WaLI dbus-daemon[734]: [system] AppArmor D-Bus mediation is enabled
+Mar 03 14:31:20 TB5WaLI systemd[1]: Started dbus.service - D-Bus System Message Bus.
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: Successfully called chroot().
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: Successfully dropped remaining capabilities.
+Mar 03 14:31:20 TB5WaLI dbus-daemon[734]: [system] Successfully activated service 'org.freedesktop.systemd1'
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting NetworkManager.service - Network Manager...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting wpa_supplicant.service - WPA supplicant...
+Mar 03 14:31:20 TB5WaLI systemd[1]: Started avahi-daemon.service - Avahi mDNS/DNS-SD Stack.
+Mar 03 14:31:20 TB5WaLI polkitd[739]: Loading rules from directory /etc/polkit-1/rules.d
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: No service file found in /etc/avahi/services.
+Mar 03 14:31:20 TB5WaLI polkitd[739]: Loading rules from directory /usr/share/polkit-1/rules.d
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: socket() failed: Address family not supported by protocol
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: Failed to create IPv6 socket, proceeding in IPv4 only mode
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: socket() failed: Address family not supported by protocol
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: Joining mDNS multicast group on interface lo.IPv4 with address 127.0.0.1.
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: New relevant interface lo.IPv4 for mDNS.
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: Network interface enumeration completed.
+Mar 03 14:31:20 TB5WaLI avahi-daemon[733]: Registering new address record for 127.0.0.1 on lo.IPv4.
+Mar 03 14:31:20 TB5WaLI polkitd[739]: Finished loading, compiling and executing 8 rules
+Mar 03 14:31:20 TB5WaLI systemd[1]: Started polkit.service - Authorization Manager.
+Mar 03 14:31:20 TB5WaLI polkitd[739]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Mar 03 14:31:20 TB5WaLI systemd[1]: Starting ModemManager.service - Modem Manager...
+Mar 03 14:31:20 TB5WaLI rsyslogd[761]: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2312.0]
+Mar 03 14:31:20 TB5WaLI rsyslogd[761]: rsyslogd's groupid changed to 104
+Mar 03 14:31:20 TB5WaLI rsyslogd[761]: rsyslogd's userid changed to 103
+Mar 03 14:31:20 TB5WaLI rsyslogd[761]: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="761" x-info="https://www.rsyslog.com"] start
+Mar 03 14:31:20 TB5WaLI systemd[1]: Started rsyslog.service - System Logging Service.
+Mar 03 14:31:21 TB5WaLI systemd[1]: Started wpa_supplicant.service - WPA supplicant.
+Mar 03 14:31:21 TB5WaLI wpa_supplicant[810]: Successfully initialized wpa_supplicant
+Mar 03 14:31:21 TB5WaLI ModemManager[831]: <msg> ModemManager (version 1.23.4) starting in system bus...
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: No valid path found for iw
+Mar 03 14:31:21 TB5WaLI networkctl[847]: systemd-networkd is not running, output might be incomplete.
+Mar 03 14:31:21 TB5WaLI systemd[1]: networkd-dispatcher.service: Got notification message from PID 847, but reception only permitted for main PID 738
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: ERROR:Unknown state for interface NetworkctlListState(idx=1, name='lo', type='loopback', operational='-', administrative='unmanaged'): -
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: Traceback (most recent call last):
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:   File "/usr/bin/networkd-dispatcher", line 299, in trigger_all
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:     self.handle_state(iface_name,
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:   File "/usr/bin/networkd-dispatcher", line 349, in handle_state
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:     raise UnknownState(operational_state)
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: UnknownState: -
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: ERROR:Unknown state for interface NetworkctlListState(idx=2, name='eth0', type='ether', operational='-', administrative='unmanaged'): -
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: Traceback (most recent call last):
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:   File "/usr/bin/networkd-dispatcher", line 299, in trigger_all
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:     self.handle_state(iface_name,
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:   File "/usr/bin/networkd-dispatcher", line 349, in handle_state
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:     raise UnknownState(operational_state)
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: UnknownState: -
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: ERROR:Unknown state for interface NetworkctlListState(idx=3, name='usb0', type='gadget', operational='-', administrative='unmanaged'): -
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: Traceback (most recent call last):
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:   File "/usr/bin/networkd-dispatcher", line 299, in trigger_all
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:     self.handle_state(iface_name,
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:   File "/usr/bin/networkd-dispatcher", line 349, in handle_state
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:     raise UnknownState(operational_state)
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: UnknownState: -
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: ERROR:Unknown state for interface NetworkctlListState(idx=4, name='wlan0', type='wlan', operational='-', administrative='unmanaged'): -
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: Traceback (most recent call last):
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:   File "/usr/bin/networkd-dispatcher", line 299, in trigger_all
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:     self.handle_state(iface_name,
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:   File "/usr/bin/networkd-dispatcher", line 349, in handle_state
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]:     raise UnknownState(operational_state)
+Mar 03 14:31:21 TB5WaLI networkd-dispatcher[738]: UnknownState: -
+Mar 03 14:31:21 TB5WaLI systemd[1]: Started networkd-dispatcher.service - Dispatcher daemon for systemd-networkd.
+Mar 03 14:31:21 TB5WaLI systemd[1]: Started udisks2.service - Disk Manager.
+Mar 03 14:31:21 TB5WaLI udisksd[748]: Acquired the name org.freedesktop.UDisks2 on the system message bus
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.5100] NetworkManager (version 1.46.0) is starting... (boot:98d5abe3-0d2d-434c-9c84-489f37d2ac03)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.5102] Read config: /etc/NetworkManager/NetworkManager.conf (lib: 10-dns-resolved.conf, no-mac-addr-change.conf) (run: 10-globally-managed-devices.conf) (etc: default-wifi-powersave-on.conf)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.5587] manager[0xaaab18eb6820]: monitoring kernel firmware directory '/lib/firmware'.
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.5588] monitoring ifupdown state file '/run/network/ifstate'.
+Mar 03 14:31:21 TB5WaLI dbus-daemon[734]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.10' (uid=0 pid=807 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+Mar 03 14:31:21 TB5WaLI systemd[1]: Starting systemd-hostnamed.service - Hostname Service...
+Mar 03 14:31:21 TB5WaLI avahi-daemon[733]: Server startup complete. Host name is TB5WaLI.local. Local service cookie is 3728292490.
+Mar 03 14:31:21 TB5WaLI dbus-daemon[734]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Mar 03 14:31:21 TB5WaLI systemd[1]: Started systemd-hostnamed.service - Hostname Service.
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.6273] hostname: hostname: using hostnamed
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.6273] hostname: static hostname changed from (none) to "TB5WaLI"
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.6309] dns-mgr: init: dns=systemd-resolved rc-manager=unmanaged (auto), plugin=systemd-resolved
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.6369] rfkill1: found Wi-Fi radio killswitch (at /sys/devices/platform/axi/1001100000.mmc/mmc_host/mmc1/mmc1:0001/mmc1:0001:1/ieee80211/phy0/rfkill1) (driver brcmfmac)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.6374] manager[0xaaab18eb6820]: rfkill: Wi-Fi hardware radio set enabled
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.6374] manager[0xaaab18eb6820]: rfkill: WWAN hardware radio set enabled
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.6778] Loaded device plugin: NMWwanFactory (/usr/lib/aarch64-linux-gnu/NetworkManager/1.46.0/libnm-device-plugin-wwan.so)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7100] Loaded device plugin: NMBluezManager (/usr/lib/aarch64-linux-gnu/NetworkManager/1.46.0/libnm-device-plugin-bluetooth.so)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7364] Loaded device plugin: NMTeamFactory (/usr/lib/aarch64-linux-gnu/NetworkManager/1.46.0/libnm-device-plugin-team.so)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7561] Loaded device plugin: NMWifiFactory (/usr/lib/aarch64-linux-gnu/NetworkManager/1.46.0/libnm-device-plugin-wifi.so)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7654] Loaded device plugin: NMAtmManager (/usr/lib/aarch64-linux-gnu/NetworkManager/1.46.0/libnm-device-plugin-adsl.so)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7658] manager: rfkill: Wi-Fi enabled by radio killswitch; enabled by state file
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7659] manager: rfkill: WWAN enabled by radio killswitch; enabled by state file
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7659] manager: Networking is enabled by state file
+Mar 03 14:31:21 TB5WaLI dbus-daemon[734]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.10' (uid=0 pid=807 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7853] settings: Loaded settings plugin: ifupdown ("/usr/lib/aarch64-linux-gnu/NetworkManager/1.46.0/libnm-settings-plugin-ifupdown.so")
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7853] settings: Loaded settings plugin: keyfile (internal)
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7854] ifupdown: management mode: unmanaged
+Mar 03 14:31:21 TB5WaLI NetworkManager[807]: <info>  [1741030281.7877] ifupdown: interfaces file /etc/network/interfaces doesn't exist
+Mar 03 14:31:21 TB5WaLI systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+Mar 03 14:31:21 TB5WaLI dbus-daemon[734]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Mar 03 14:31:21 TB5WaLI systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+Mar 03 14:31:21 TB5WaLI rpi-eeprom-update[740]: BOOTLOADER: up to date
+Mar 03 14:31:21 TB5WaLI kernel: NET: Registered PF_QIPCRTR protocol family
+Mar 03 14:31:21 TB5WaLI systemd[1]: Started ModemManager.service - Modem Manager.
+Mar 03 14:31:21 TB5WaLI rpi-eeprom-update[740]:    CURRENT: Wed Jun  5 15:41:49 UTC 2024 (1717602109)
+Mar 03 14:31:21 TB5WaLI rpi-eeprom-update[740]:     LATEST: Wed Dec  6 18:29:25 UTC 2023 (1701887365)
+Mar 03 14:31:21 TB5WaLI rpi-eeprom-update[740]:    RELEASE: default (/lib/firmware/raspberrypi/bootloader-2712/default)
+Mar 03 14:31:21 TB5WaLI rpi-eeprom-update[740]:             Use raspi-config to change the release.
+Mar 03 14:31:21 TB5WaLI systemd[1]: Finished rpi-eeprom-update.service - Check for Raspberry Pi EEPROM updates.
+Mar 03 14:31:21 TB5WaLI systemd[1]: e2scrub_reap.service: Deactivated successfully.
+Mar 03 14:31:21 TB5WaLI systemd[1]: Finished e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots.
+Mar 03 14:31:22 TB5WaLI generate[880]: Permissions for /etc/netplan/40-ethernets.yaml are too open. Netplan configuration should NOT be accessible by others.
+Mar 03 14:31:22 TB5WaLI generate[880]: Permissions for /etc/netplan/50-wifis.yaml are too open. Netplan configuration should NOT be accessible by others.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Reloading requested from client PID 883 ('systemctl') (unit NetworkManager.service)...
+Mar 03 14:31:22 TB5WaLI systemd[1]: Reloading...
+Mar 03 14:31:22 TB5WaLI systemd[1]: Reloading finished in 449 ms.
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.6898] dhcp: init: Using DHCP client 'internal'
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.6901] manager: (lo): new Loopback device (/org/freedesktop/NetworkManager/Devices/1)
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.6912] device (lo): state change: unmanaged -> unavailable (reason 'connection-assumed', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.6916] device (lo): state change: unavailable -> disconnected (reason 'connection-assumed', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.6923] device (lo): Activation: starting connection 'lo' (06933ade-cd29-4688-9886-3661e19c21e0)
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.6936] manager: (eth0): new Ethernet device (/org/freedesktop/NetworkManager/Devices/2)
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.6939] device (eth0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI kernel: macb 1f00100000.ethernet eth0: PHY [1f00100000.ethernet-ffffffff:01] driver [Broadcom BCM54213PE] (irq=POLL)
+Mar 03 14:31:22 TB5WaLI kernel: macb 1f00100000.ethernet eth0: configuring for phy/rgmii-id link mode
+Mar 03 14:31:22 TB5WaLI kernel: pps pps0: new PPS source ptp0
+Mar 03 14:31:22 TB5WaLI kernel: macb 1f00100000.ethernet: gem-ptp-timer ptp clock registered.
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7063] manager: (usb0): new Ethernet device (/org/freedesktop/NetworkManager/Devices/3)
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7066] device (usb0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7109] device (wlan0): driver supports Access Point (AP) mode
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7116] manager: (wlan0): new 802.11 Wi-Fi device (/org/freedesktop/NetworkManager/Devices/4)
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7125] device (wlan0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI kernel: brcmfmac: brcmf_cfg80211_set_power_mgmt: power save enabled
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7485] failed to open /run/network/ifstate
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started NetworkManager.service - Network Manager.
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7493] bus-manager: acquired D-Bus service "org.freedesktop.NetworkManager"
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7504] device (lo): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI systemd[1]: Reached target network.target - Network.
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7506] device (lo): state change: prepare -> config (reason 'none', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7508] device (lo): state change: config -> ip-config (reason 'none', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7514] device (usb0): carrier: link connected
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7520] device (lo): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7525] device (usb0): state change: unavailable -> disconnected (reason 'carrier-changed', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7528] policy: auto-activating connection 'netplan-usb0' (ea8e372f-c04d-3e0a-bd69-2a2e82cd1c26)
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7532] device (usb0): Activation: starting connection 'netplan-usb0' (ea8e372f-c04d-3e0a-bd69-2a2e82cd1c26)
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7533] device (usb0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7559] manager: NetworkManager state is now CONNECTING
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7561] device (usb0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7573] device (usb0): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI systemd[1]: Starting NetworkManager-wait-online.service - Network Manager Wait Online...
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7617] modem-manager: ModemManager available
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7617] device (lo): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7619] device (lo): state change: secondaries -> activated (reason 'none', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.7624] device (lo): Activation: successful, device activated.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Starting chrony.service - chrony, an NTP client/server...
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started webserver.service - Create 3 Webserver forwarding service.
+Mar 03 14:31:22 TB5WaLI socat[953]: 2025/03/03 14:31:22 socat[953] E socket(10, 1, 6): Address family not supported by protocol
+Mar 03 14:31:22 TB5WaLI systemd[1]: webserver.service: Main process exited, code=exited, status=1/FAILURE
+Mar 03 14:31:22 TB5WaLI systemd[1]: webserver.service: Failed with result 'exit-code'.
+Mar 03 14:31:22 TB5WaLI chronyd[975]: chronyd version 4.5 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +SCFILTER +SIGND +ASYNCDNS +NTS +SECHASH +IPV6 -DEBUG)
+Mar 03 14:31:22 TB5WaLI chronyd[975]: Loaded 0 symmetric keys
+Mar 03 14:31:22 TB5WaLI chronyd[975]: Could not open command socket on [::1]:323
+Mar 03 14:31:22 TB5WaLI chronyd[975]: Frequency -1.211 +/- 0.109 ppm read from /var/lib/chrony/chrony.drift
+Mar 03 14:31:22 TB5WaLI chronyd[975]: Loaded seccomp filter (level 1)
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started chrony.service - chrony, an NTP client/server.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Reached target time-sync.target - System Time Synchronized.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started apt-daily.timer - Daily apt download activities.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started e2scrub_all.timer - Periodic ext4 Online Metadata Check for All Filesystems.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started fstrim.timer - Discard unused filesystem blocks once a week.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started logrotate.timer - Daily rotation of log files.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started man-db.timer - Daily man-db regeneration.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started motd-news.timer - Message of the Day.
+Mar 03 14:31:22 TB5WaLI systemd[1]: snapd.snap-repair.timer - Timer to automatically fetch and run repair assertions was skipped because no trigger condition checks were met.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started sysstat-collect.timer - Run system activity accounting tool every 10 minutes.
+Mar 03 14:31:22 TB5WaLI systemd[1]: Started sysstat-summary.timer - Generate summary of yesterday's process accounting.
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9020] device (wlan0): supplicant interface state: internal-starting -> disconnected
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9021] Wi-Fi P2P device controlled by interface wlan0 created
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9024] manager: (p2p-dev-wlan0): new 802.11 Wi-Fi P2P device (/org/freedesktop/NetworkManager/Devices/5)
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9026] device (p2p-dev-wlan0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9030] device (wlan0): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9035] device (p2p-dev-wlan0): state change: unavailable -> disconnected (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI snapd[745]: overlord.go:274: Acquiring state lock file
+Mar 03 14:31:22 TB5WaLI snapd[745]: overlord.go:279: Acquired state lock file
+Mar 03 14:31:22 TB5WaLI avahi-daemon[733]: Joining mDNS multicast group on interface usb0.IPv4 with address 192.168.186.3.
+Mar 03 14:31:22 TB5WaLI avahi-daemon[733]: New relevant interface usb0.IPv4 for mDNS.
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9560] device (usb0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI avahi-daemon[733]: Registering new address record for 192.168.186.3 on usb0.IPv4.
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9581] device (usb0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9583] device (usb0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9587] manager: NetworkManager state is now CONNECTED_LOCAL
+Mar 03 14:31:22 TB5WaLI NetworkManager[807]: <info>  [1741030282.9589] device (usb0): Activation: successful, device activated.
+Mar 03 14:31:22 TB5WaLI snapd[745]: daemon.go:250: started snapd/2.67 (series 16; classic) ubuntu/24.04 (arm64) linux/6.8.0-1019-raspi.
+Mar 03 14:31:23 TB5WaLI kernel: loop2: detected capacity change from 0 to 8
+Mar 03 14:31:23 TB5WaLI snapd[745]: daemon.go:353: adjusting startup timeout by 35s (pessimistic estimate of 30s plus 5s per snap)
+Mar 03 14:31:23 TB5WaLI systemd[1]: tmp-syscheck\x2dmountpoint\x2d2687804137.mount: Deactivated successfully.
+Mar 03 14:31:23 TB5WaLI systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Mar 03 14:31:23 TB5WaLI snapd[745]: backends.go:58: AppArmor status: apparmor is enabled and all features are available (using snapd provided apparmor_parser)
+Mar 03 14:31:23 TB5WaLI systemd[1]: Cannot find unit for notify message of PID 1053, ignoring.
+Mar 03 14:31:23 TB5WaLI systemd[1]: Started snapd.service - Snap Daemon.
+Mar 03 14:31:23 TB5WaLI dbus-daemon[734]: [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.15' (uid=0 pid=745 comm="/usr/lib/snapd/snapd" label="unconfined")
+Mar 03 14:31:23 TB5WaLI systemd[1]: Starting systemd-timedated.service - Time & Date Service...
+Mar 03 14:31:23 TB5WaLI dbus-daemon[734]: [system] Successfully activated service 'org.freedesktop.timedate1'
+Mar 03 14:31:23 TB5WaLI systemd[1]: Started systemd-timedated.service - Time & Date Service.
+Mar 03 14:31:23 TB5WaLI systemd[1]: Finished snapd.seeded.service - Wait until snapd is fully seeded.
+Mar 03 14:31:23 TB5WaLI systemd[1]: snapd.autoimport.service - Auto import assertions from block devices was skipped because no trigger condition checks were met.
+Mar 03 14:31:23 TB5WaLI snapd[745]: hotplug.go:200: hotplug device add event ignored, enable experimental.hotplug
+Mar 03 14:31:24 TB5WaLI systemd[1]: webserver.service: Scheduled restart job, restart counter is at 1.
+Mar 03 14:31:24 TB5WaLI systemd[1]: Started webserver.service - Create 3 Webserver forwarding service.
+Mar 03 14:31:26 TB5WaLI systemd[1]: dmesg.service: Deactivated successfully.
+Mar 03 14:31:26 TB5WaLI ModemManager[831]: <msg> [base-manager] couldn't check support for device '/sys/devices/platform/axi/1000120000.pcie/1f00300000.usb/xhci-hcd.1/usb3/3-2': not supported by any plugin
+Mar 03 14:31:26 TB5WaLI ModemManager[831]: <msg> [base-manager] couldn't check support for device '/sys/devices/platform/axi/1000120000.pcie/1f00100000.ethernet': not supported by any plugin
+Mar 03 14:31:26 TB5WaLI ModemManager[831]: <msg> [base-manager] couldn't check support for device '/sys/devices/platform/axi/1000480000.usb': not supported by any plugin
+Mar 03 14:31:26 TB5WaLI ModemManager[831]: <msg> [base-manager] couldn't check support for device '/sys/devices/platform/axi/1001100000.mmc/mmc_host/mmc1/mmc1:0001/mmc1:0001:1': not supported by any plugin
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4638] policy: auto-activating connection 'netplan-wlan0-Media6586' (ca807fbf-1a3c-3dbb-b7cd-c15e61ef6c28)
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4644] device (wlan0): Activation: starting connection 'netplan-wlan0-Media6586' (ca807fbf-1a3c-3dbb-b7cd-c15e61ef6c28)
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4645] device (wlan0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4648] manager: NetworkManager state is now CONNECTING
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4650] device (wlan0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4654] device (wlan0): Activation: (wifi) access point 'netplan-wlan0-Media6586' has security, but secrets are required.
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4654] device (wlan0): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4656] sup-iface[73cd825ba9339094,0,wlan0]: wps: type pbc start...
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4668] device (wlan0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4671] device (wlan0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:29 TB5WaLI wpa_supplicant[810]: wlan0: WPS-PBC-ACTIVE
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4678] device (wlan0): Activation: (wifi) connection 'netplan-wlan0-Media6586' has security, and secrets exist.  No new secrets needed.
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4679] Config: added 'ssid' value 'Media6586'
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4679] Config: added 'scan_ssid' value '1'
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4679] Config: added 'freq_list' value '5035 5040 5045 5055 5060 5080 5170 5180 5190 5200 5210 5220 5230 5240 5250 5260 5280 5290 5300 5320 5500 5520 5540 5560 5580 5600 5620 5640 5660 5680 5700 5745 5760 5765 5785 5800 5805 5825 4915 4920 4925 4935 4945 4960 4980'
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4680] Config: added 'bgscan' value 'simple:30:-70:86400'
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4680] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256 FT-PSK'
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4680] Config: added 'psk' value '<hidden>'
+Mar 03 14:31:29 TB5WaLI wpa_supplicant[810]: wlan0: WPS-CANCEL
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4706] device (wlan0): supplicant interface state: disconnected -> scanning
+Mar 03 14:31:29 TB5WaLI NetworkManager[807]: <info>  [1741030289.4706] device (p2p-dev-wlan0): supplicant management interface state: disconnected -> scanning
+Mar 03 14:31:32 TB5WaLI systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Mar 03 14:31:33 TB5WaLI wpa_supplicant[810]: wlan0: Trying to associate with SSID 'Media6586'
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.2704] device (wlan0): supplicant interface state: scanning -> associating
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.2705] device (p2p-dev-wlan0): supplicant management interface state: scanning -> associating
+Mar 03 14:31:33 TB5WaLI wpa_supplicant[810]: wlan0: Associated with 3e:82:c0:ed:b6:3b
+Mar 03 14:31:33 TB5WaLI wpa_supplicant[810]: wlan0: CTRL-EVENT-CONNECTED - Connection to 3e:82:c0:ed:b6:3b completed [id=0 id_str=]
+Mar 03 14:31:33 TB5WaLI wpa_supplicant[810]: wlan0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+Mar 03 14:31:33 TB5WaLI wpa_supplicant[810]: wlan0: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=US
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.4282] device (wlan0): supplicant interface state: associating -> completed
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.4282] device (wlan0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "Media6586"
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.4282] device (p2p-dev-wlan0): supplicant management interface state: associating -> completed
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.4284] device (wlan0): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.4288] dhcp4 (wlan0): activation: beginning transaction (timeout in 45 seconds)
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.4742] dhcp4 (wlan0): state changed new lease, address=10.0.0.178, acd pending
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6155] dhcp4 (wlan0): state changed new lease, address=10.0.0.178
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6160] policy: set 'netplan-wlan0-Media6586' (wlan0) as default for IPv4 routing and DNS
+Mar 03 14:31:33 TB5WaLI avahi-daemon[733]: Joining mDNS multicast group on interface wlan0.IPv4 with address 10.0.0.178.
+Mar 03 14:31:33 TB5WaLI dbus-daemon[734]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.10' (uid=0 pid=807 comm="/usr/sbin/NetworkManager --no-daemon" label="unconfined")
+Mar 03 14:31:33 TB5WaLI systemd-resolved[561]: usb0: Bus client set default route setting: no
+Mar 03 14:31:33 TB5WaLI systemd-resolved[561]: wlan0: Bus client set default route setting: yes
+Mar 03 14:31:33 TB5WaLI systemd-resolved[561]: wlan0: Bus client set DNS server list to: 75.75.75.75, 75.75.76.76
+Mar 03 14:31:33 TB5WaLI avahi-daemon[733]: New relevant interface wlan0.IPv4 for mDNS.
+Mar 03 14:31:33 TB5WaLI avahi-daemon[733]: Registering new address record for 10.0.0.178 on wlan0.IPv4.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6375] device (wlan0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:33 TB5WaLI dbus-daemon[734]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6427] device (wlan0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6429] device (wlan0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6433] manager: NetworkManager state is now CONNECTED_SITE
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6459] device (wlan0): Activation: successful, device activated.
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6465] manager: NetworkManager state is now CONNECTED_GLOBAL
+Mar 03 14:31:33 TB5WaLI NetworkManager[807]: <info>  [1741030293.6468] manager: startup complete
+Mar 03 14:31:33 TB5WaLI systemd[1]: Finished NetworkManager-wait-online.service - Network Manager Wait Online.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Reached target network-online.target - Network is Online.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started update-notifier-download.timer - Download data for packages that failed at package install time.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started update-notifier-motd.timer - Check to see whether there is a new version of Ubuntu available.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Reached target timers.target - Timer Units.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Starting cloud-config.service - Cloud-init: Config Stage...
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started discovery.service - FastDDS discovery server.
+Mar 03 14:31:33 TB5WaLI systemd[1]: open-iscsi.service - Login to default iSCSI targets was skipped because no trigger condition checks were met.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Reached target remote-fs-pre.target - Preparation for Remote File Systems.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Reached target remote-fs.target - Remote File Systems.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Starting apport.service - automatic crash report generation...
+Mar 03 14:31:33 TB5WaLI systemd[1]: Finished blk-availability.service - Availability of block devices.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started cron.service - Regular background program processing daemon.
+Mar 03 14:31:33 TB5WaLI systemd[1]: pollinate.service - Pollinate to seed the pseudo random number generator was skipped because of an unmet condition check (ConditionPathExists=!/var/cache/pollinate/seeded).
+Mar 03 14:31:33 TB5WaLI systemd[1]: Starting rc-local.service - /etc/rc.local Compatibility...
+Mar 03 14:31:33 TB5WaLI systemd[1]: systemd-pcrphase.service - TPM2 PCR Barrier (User) was skipped because of an unmet condition check (ConditionSecurity=measured-uki).
+Mar 03 14:31:33 TB5WaLI (cron)[1106]: cron.service: Referenced but unset environment variable evaluates to an empty string: EXTRA_OPTS
+Mar 03 14:31:33 TB5WaLI systemd[1]: Starting systemd-user-sessions.service - Permit User Sessions...
+Mar 03 14:31:33 TB5WaLI cron[1106]: (CRON) INFO (pidfile fd = 3)
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started turtlebot4.service - "bringup turtlebot4".
+Mar 03 14:31:33 TB5WaLI systemd[1]: ubuntu-advantage.service - Ubuntu Pro Background Auto Attach was skipped because no trigger condition checks were met.
+Mar 03 14:31:33 TB5WaLI cron[1106]: (CRON) INFO (Running @reboot jobs)
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started rc-local.service - /etc/rc.local Compatibility.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Finished systemd-user-sessions.service - Permit User Sessions.
+Mar 03 14:31:33 TB5WaLI root[1120]: turtlebot4: Using workspace setup file /etc/turtlebot4/setup.bash
+Mar 03 14:31:33 TB5WaLI turtlebot4-start[1120]: <14>Mar  3 14:31:33 root: turtlebot4: Using workspace setup file /etc/turtlebot4/setup.bash
+Mar 03 14:31:33 TB5WaLI systemd[1]: Starting plymouth-quit-wait.service - Hold until boot process finishes up...
+Mar 03 14:31:33 TB5WaLI systemd[1]: Starting plymouth-quit.service - Terminate Plymouth Boot Screen...
+Mar 03 14:31:33 TB5WaLI systemd[1]: Finished plymouth-quit-wait.service - Hold until boot process finishes up.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Finished plymouth-quit.service - Terminate Plymouth Boot Screen.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Received SIGRTMIN+21 from PID 200 (n/a).
+Mar 03 14:31:33 TB5WaLI CRON[1116]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 14:31:33 TB5WaLI CRON[1118]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 14:31:33 TB5WaLI CRON[1117]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 14:31:33 TB5WaLI CRON[1136]: (root) CMD (sleep 10  && /usr/bin/python3 /home/ubuntu/TB5-WaLI/plib/cleanlifelog.py)
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started serial-getty@ttyAMA10.service - Serial Getty on ttyAMA10.
+Mar 03 14:31:33 TB5WaLI CRON[1137]: (root) CMD (sleep 75  && sudo -u ubuntu /home/ubuntu/TB5-WaLI/wali_ws/nohup_wali.sh)
+Mar 03 14:31:33 TB5WaLI CRON[1140]: (root) CMD (sleep 15  && /home/ubuntu/TB5-WaLI/utils/nohup_loglife.sh)
+Mar 03 14:31:33 TB5WaLI systemd[1]: Starting setvtrgb.service - Set console scheme...
+Mar 03 14:31:33 TB5WaLI systemd[1]: Finished setvtrgb.service - Set console scheme.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Started getty@tty1.service - Getty on tty1.
+Mar 03 14:31:33 TB5WaLI systemd[1]: Reached target getty.target - Login Prompts.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Finished apport.service - automatic crash report generation.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Reached target multi-user.target - Multi-User System.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Reached target graphical.target - Graphical Interface.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Starting systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP...
+Mar 03 14:31:34 TB5WaLI systemd[1]: systemd-update-utmp-runlevel.service: Deactivated successfully.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Finished systemd-update-utmp-runlevel.service - Record Runlevel Change in UTMP.
+Mar 03 14:31:34 TB5WaLI cloud-init[1158]: Cloud-init v. 24.4.1-0ubuntu0~24.04.1 running 'modules:config' at Mon, 03 Mar 2025 19:31:34 +0000. Up 22.38 seconds.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Finished cloud-config.service - Cloud-init: Config Stage.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Starting cloud-final.service - Cloud-init: Final Stage...
+Mar 03 14:31:34 TB5WaLI cloud-init[1176]: Cloud-init v. 24.4.1-0ubuntu0~24.04.1 running 'modules:final' at Mon, 03 Mar 2025 19:31:34 +0000. Up 22.94 seconds.
+Mar 03 14:31:34 TB5WaLI cloud-init[1176]: Cloud-init v. 24.4.1-0ubuntu0~24.04.1 finished at Mon, 03 Mar 2025 19:31:34 +0000. Datasource DataSourceNoCloud [seed=/dev/mmcblk0p1][dsmode=local].  Up 23.02 seconds
+Mar 03 14:31:34 TB5WaLI systemd[1]: Finished cloud-final.service - Cloud-init: Final Stage.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Reached target cloud-init.target - Cloud-init target.
+Mar 03 14:31:34 TB5WaLI systemd[1]: Startup finished in 2.984s (kernel) + 20.174s (userspace) = 23.158s.
+Mar 03 14:31:35 TB5WaLI systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+Mar 03 14:31:35 TB5WaLI sshd[1185]: Server listening on 0.0.0.0 port 22.
+Mar 03 14:31:35 TB5WaLI systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Mar 03 14:31:36 TB5WaLI root[1345]: turtlebot4: Launching ROS_HOSTNAME=TB5WaLI, ROS_IP=, ROS_MASTER_URI=, ROS_HOME=/home/ubuntu/.ros, ROS_LOG_DIR=/tmp
+Mar 03 14:31:36 TB5WaLI turtlebot4-start[1345]: <14>Mar  3 14:31:36 root: turtlebot4: Launching ROS_HOSTNAME=TB5WaLI, ROS_IP=, ROS_MASTER_URI=, ROS_HOME=/home/ubuntu/.ros, ROS_LOG_DIR=/tmp
+Mar 03 14:31:36 TB5WaLI bash[1352]: ### Server is running ###
+Mar 03 14:31:36 TB5WaLI bash[1352]:   Participant Type:   SERVER
+Mar 03 14:31:36 TB5WaLI bash[1352]:   Security:           NO
+Mar 03 14:31:36 TB5WaLI bash[1352]:   Server ID:          0
+Mar 03 14:31:36 TB5WaLI bash[1352]:   Server GUID prefix: 44.53.00.5f.45.50.52.4f.53.49.4d.41
+Mar 03 14:31:36 TB5WaLI bash[1352]:   Server Addresses:   UDPv4:[0.0.0.0]:11811
+Mar 03 14:31:36 TB5WaLI systemd-journald[323]: /var/log/journal/26e689314d9a410b956e0f4e47ba4d4e/user-1000.journal: Journal file uses a different sequence number ID, rotating.
+Mar 03 14:31:37 TB5WaLI turtlebot4-start[1365]: ls: cannot access '/etc/ros/jazzy/turtlebot4.d/*.xacro': No such file or directory
+Mar 03 14:31:37 TB5WaLI root[1371]: turtlebot4: Generated launchfile: /tmp/turtlebot4.launch.py
+Mar 03 14:31:37 TB5WaLI turtlebot4-start[1371]: <14>Mar  3 14:31:37 root: turtlebot4: Generated launchfile: /tmp/turtlebot4.launch.py
+Mar 03 14:31:37 TB5WaLI root[1374]: turtlebot4: Started ros2 launch as background process, PID 1373, ROS_LOG_DIR=/tmp
+Mar 03 14:31:37 TB5WaLI turtlebot4-start[1374]: <14>Mar  3 14:31:37 root: turtlebot4: Started ros2 launch as background process, PID 1373, ROS_LOG_DIR=/tmp
+Mar 03 14:31:38 TB5WaLI sshd[1189]: Accepted password for ubuntu from 10.0.0.129 port 60482 ssh2
+Mar 03 14:31:38 TB5WaLI sshd[1189]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Mar 03 14:31:38 TB5WaLI systemd[1]: Created slice user-1000.slice - User Slice of UID 1000.
+Mar 03 14:31:38 TB5WaLI systemd[1]: Starting user-runtime-dir@1000.service - User Runtime Directory /run/user/1000...
+Mar 03 14:31:38 TB5WaLI systemd-logind[747]: New session 4 of user ubuntu.
+Mar 03 14:31:38 TB5WaLI systemd[1]: Finished user-runtime-dir@1000.service - User Runtime Directory /run/user/1000.
+Mar 03 14:31:38 TB5WaLI systemd[1]: Starting user@1000.service - User Manager for UID 1000...
+Mar 03 14:31:38 TB5WaLI (systemd)[1379]: pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Mar 03 14:31:38 TB5WaLI turtlebot4-start[1373]: [INFO] [launch]: All log files can be found below /tmp/2025-03-03-14-31-38-482310-TB5WaLI-1373
+Mar 03 14:31:38 TB5WaLI turtlebot4-start[1373]: [INFO] [launch]: Default logging verbosity is set to INFO
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Queued start job for default target default.target.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Created slice app.slice - User Application Slice.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Started launchpadlib-cache-clean.timer - Clean up old files in the Launchpadlib cache.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Reached target paths.target - Paths.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Reached target timers.target - Timers.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Starting dbus.socket - D-Bus User Message Bus Socket...
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Starting gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation)...
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on keyboxd.socket - GnuPG public key management service.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Reached target sockets.target - Sockets.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Reached target basic.target - Basic System.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Reached target default.target - Main User Target.
+Mar 03 14:31:38 TB5WaLI systemd[1379]: Startup finished in 449ms.
+Mar 03 14:31:38 TB5WaLI systemd[1]: Started user@1000.service - User Manager for UID 1000.
+Mar 03 14:31:38 TB5WaLI systemd[1]: Started session-4.scope - Session 4 of User ubuntu.
+Mar 03 14:31:39 TB5WaLI chronyd[975]: Selected source 185.125.190.58 (ntp.ubuntu.com)
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [INFO] [turtlebot4_node-1]: process started with pid [1410]
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [INFO] [create3_republisher-2]: process started with pid [1411]
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [INFO] [joy_linux_node-3]: process started with pid [1412]
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [INFO] [teleop_node-4]: process started with pid [1413]
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [INFO] [sllidar_node-5]: process started with pid [1414]
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [INFO] [robot_state_publisher-6]: process started with pid [1415]
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [INFO] [joint_state_publisher-7]: process started with pid [1416]
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030299.827735626] [create3_repub]: Creating republisher node with namespace '/' to interact with robot '_do_not_use'
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030299.827974882] [create3_repub]: Found 9 entities for robot_publishers
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030299.828005155] [create3_repub]: Subscribing to topic '_do_not_use/battery_state' and republishing it as '/battery_state' with type 'sensor_msgs/msg/BatteryState'
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [turtlebot4_node-1] [INFO] [1741030299.851093404] [turtlebot4_node]: Init Turtlebot4 Node Main
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030299.906469479] [create3_repub]: Subscribing to topic '_do_not_use/dock_status' and republishing it as '/dock_status' with type 'irobot_create_msgs/msg/DockStatus'
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [teleop_node-4] [INFO] [1741030299.907276964] [TeleopTwistJoy]: Teleop enable button 4.
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [teleop_node-4] [INFO] [1741030299.907355967] [TeleopTwistJoy]: Turbo on button 5.
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [teleop_node-4] [INFO] [1741030299.907367563] [TeleopTwistJoy]: Linear axis x on 1 at scale 0.200000.
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [teleop_node-4] [INFO] [1741030299.907380322] [TeleopTwistJoy]: Turbo for linear axis x is scale 0.500000.
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [teleop_node-4] [INFO] [1741030299.907388167] [TeleopTwistJoy]: Angular axis yaw on 0 at scale 0.500000.
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [teleop_node-4] [INFO] [1741030299.907394887] [TeleopTwistJoy]: Turbo for angular axis yaw is scale 1.900000.
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [sllidar_node-5] [INFO] [1741030299.910471678] [rplidar_composition]: SLLidar running on ROS2 package SLLidar.ROS2 SDK Version:1.0.1, SLLIDAR SDK Version:2.1.0
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [joy_linux_node-3] [WARN] [1741030299.933911128] [joy_linux_node]: Couldn't open joystick force feedback: Bad file descriptor
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [joy_linux_node-3] [INFO] [1741030299.934100150] [joy_linux_node]: Opened joystick: /dev/input/js0. deadzone_: 0.050000.
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030299.953145835] [create3_repub]: Subscribing to topic '_do_not_use/imu' and republishing it as '/imu' with type 'sensor_msgs/msg/Imu'
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030299.956541226] [create3_repub]: Subscribing to topic '_do_not_use/interface_buttons' and republishing it as '/interface_buttons' with type 'irobot_create_msgs/msg/InterfaceButtons'
+Mar 03 14:31:39 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030299.958469622] [create3_repub]: Subscribing to topic '_do_not_use/odom' and republishing it as '/odom' with type 'nav_msgs/msg/Odometry'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.013096330] [create3_repub]: Subscribing to topic '_do_not_use/stop_status' and republishing it as '/stop_status' with type 'irobot_create_msgs/msg/StopStatus'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.014695673] [create3_repub]: Subscribing to topic '_do_not_use/tf' and republishing it as '/tf' with type 'tf2_msgs/msg/TFMessage'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.018837462] [create3_repub]: Subscribing to topic '_do_not_use/tf_static' and republishing it as '/tf_static' with type 'tf2_msgs/msg/TFMessage'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.021158948] [create3_repub]: Subscribing to topic '_do_not_use/wheel_status' and republishing it as '/wheel_status' with type 'irobot_create_msgs/msg/WheelStatus'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [turtlebot4_node-1] [INFO] [1741030300.021167213] [turtlebot4_node]: Buttons Init
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.023335026] [create3_repub]: Found 4 entities for robot_subscriptions
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.023390858] [create3_repub]: Subscribing to topic '/cmd_audio' and republishing it as '_do_not_use/cmd_audio' with type 'irobot_create_msgs/msg/AudioNoteVector'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.025315382] [create3_repub]: Subscribing to topic '/cmd_lightring' and republishing it as '_do_not_use/cmd_lightring' with type 'irobot_create_msgs/msg/LightringLeds'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.026718681] [create3_repub]: Subscribing to topic '/cmd_vel' and republishing it as '_do_not_use/cmd_vel' with type 'geometry_msgs/msg/Twist'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.028538964] [create3_repub]: Subscribing to topic '/cmd_vel_stamped' and republishing it as '_do_not_use/cmd_vel_stamped' with type 'geometry_msgs/msg/TwistStamped'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.030072605] [create3_repub]: Found 3 entities for robot_services
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.030123301] [create3_repub]: Remapping robot service '_do_not_use/e_stop' as '/e_stop' with type 'irobot_create_msgs/srv/EStop'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.031824959] [create3_repub]: Remapping robot service '_do_not_use/reset_pose' as '/reset_pose' with type 'irobot_create_msgs/srv/ResetPose'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.033245973] [create3_repub]: Remapping robot service '_do_not_use/robot_power' as '/robot_power' with type 'irobot_create_msgs/srv/RobotPower'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.034788100] [create3_repub]: Found 9 entities for robot_actions
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.034837954] [create3_repub]: Remapping robot action '_do_not_use/audio_note_sequence' as '/audio_note_sequence' with type 'irobot_create_msgs/action/AudioNoteSequence'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.042240881] [create3_repub]: Remapping robot action '_do_not_use/dock' as '/dock' with type 'irobot_create_msgs/action/Dock'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [turtlebot4_node-1] [INFO] [1741030300.044168113] [turtlebot4_node]: Turtlebot4 lite running.
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.047520051] [create3_repub]: Remapping robot action '_do_not_use/drive_arc' as '/drive_arc' with type 'irobot_create_msgs/action/DriveArc'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.052168279] [create3_repub]: Remapping robot action '_do_not_use/drive_distance' as '/drive_distance' with type 'irobot_create_msgs/action/DriveDistance'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.057239549] [create3_repub]: Remapping robot action '_do_not_use/led_animation' as '/led_animation' with type 'irobot_create_msgs/action/LedAnimation'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [robot_state_publisher-6] [WARN] [1741030300.062474763] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.062663143] [create3_repub]: Remapping robot action '_do_not_use/navigate_to_position' as '/navigate_to_position' with type 'irobot_create_msgs/action/NavigateToPosition'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [robot_state_publisher-6] [INFO] [1741030300.062904225] [robot_state_publisher]: Robot initialized
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.068926643] [create3_repub]: Remapping robot action '_do_not_use/rotate_angle' as '/rotate_angle' with type 'irobot_create_msgs/action/RotateAngle'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.074365866] [create3_repub]: Remapping robot action '_do_not_use/undock' as '/undock' with type 'irobot_create_msgs/action/Undock'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.081547331] [create3_repub]: Remapping robot action '_do_not_use/wall_follow' as '/wall_follow' with type 'irobot_create_msgs/action/WallFollow'
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [create3_republisher-2] [INFO] [1741030300.088999149] [create3_repub]: Ready to go!
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [sllidar_node-5] [INFO] [1741030300.439814082] [rplidar_composition]: SLLidar S/N: B2FDE18BC7E49CCCA3EB9AF426204C72
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [sllidar_node-5] [INFO] [1741030300.439928976] [rplidar_composition]: Firmware Ver: 1.01
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [sllidar_node-5] [INFO] [1741030300.439951887] [rplidar_composition]: Hardware Rev: 18
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [sllidar_node-5] [INFO] [1741030300.442743279] [rplidar_composition]: SLLidar health status : 0
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [sllidar_node-5] [INFO] [1741030300.442837389] [rplidar_composition]: SLLidar health status : OK.
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [joint_state_publisher-7] [INFO] [1741030300.656507392] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+Mar 03 14:31:40 TB5WaLI turtlebot4-start[1373]: [sllidar_node-5] [INFO] [1741030300.735260264] [rplidar_composition]: current scan mode: Standard, sample rate: 5 Khz, max_distance: 16.0 m, scan frequency:10.0 Hz,
+Mar 03 14:31:43 TB5WaLI systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Mar 03 14:31:43 TB5WaLI CRON[1118]: (CRON) info (No MTA installed, discarding output)
+Mar 03 14:31:43 TB5WaLI CRON[1118]: pam_unix(cron:session): session closed for user root
+Mar 03 14:31:47 TB5WaLI systemd[1]: systemd-fsckd.service: Deactivated successfully.
+Mar 03 14:31:48 TB5WaLI CRON[1117]: pam_unix(cron:session): session closed for user root
+Mar 03 14:31:51 TB5WaLI systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Mar 03 14:31:53 TB5WaLI systemd[1]: systemd-timedated.service: Deactivated successfully.
+Mar 03 14:32:09 TB5WaLI turtlebot4-start[1373]: [INFO] [component_container-8]: process started with pid [1775]
+Mar 03 14:32:10 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030330.948047131] [oakd_container]: Load Library: /opt/ros/jazzy/lib/libdepthai_ros_driver.so
+Mar 03 14:32:11 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030331.924311738] [oakd_container]: Found class: rclcpp_components::NodeFactoryTemplate<depthai_ros_driver::Camera>
+Mar 03 14:32:11 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030331.924383127] [oakd_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<depthai_ros_driver::Camera>
+Mar 03 14:32:11 TB5WaLI turtlebot4-start[1373]: [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/oakd' in container '/oakd_container'
+Mar 03 14:32:12 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030332.947918100] [oakd]: Starting camera.
+Mar 03 14:32:12 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030332.977477987] [oakd]: No ip/mxid specified, connecting to the next available device.
+Mar 03 14:32:14 TB5WaLI kernel: usb 3-1: USB disconnect, device number 2
+Mar 03 14:32:15 TB5WaLI kernel: usb 3-1: new high-speed USB device number 4 using xhci-hcd
+Mar 03 14:32:15 TB5WaLI kernel: usb 3-1: New USB device found, idVendor=03e7, idProduct=f63b, bcdDevice= 1.00
+Mar 03 14:32:15 TB5WaLI kernel: usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 03 14:32:15 TB5WaLI kernel: usb 3-1: Product: Luxonis Device
+Mar 03 14:32:15 TB5WaLI kernel: usb 3-1: Manufacturer: Intel Corporation
+Mar 03 14:32:15 TB5WaLI kernel: usb 3-1: SerialNumber: 184430101175A41200
+Mar 03 14:32:15 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030335.497711720] [oakd]: Camera with MXID: 184430101175A41200 and Name: 3.1 connected!
+Mar 03 14:32:15 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030335.498567720] [oakd]: USB SPEED: HIGH
+Mar 03 14:32:15 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030335.530836274] [oakd]: Device type: OAK-D-LITE
+Mar 03 14:32:15 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030335.533253514] [oakd]: Pipeline type: RGB
+Mar 03 14:32:16 TB5WaLI turtlebot4-start[1373]: [component_container-8] [WARN] [1741030336.154098717] [oakd]: IMU enabled but not available!
+Mar 03 14:32:16 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030336.159143031] [oakd]: Finished setting up pipeline.
+Mar 03 14:32:16 TB5WaLI turtlebot4-start[1373]: [component_container-8] [INFO] [1741030336.477594400] [oakd]: Camera ready!
+Mar 03 14:32:17 TB5WaLI sshd[1799]: Accepted password for ubuntu from 10.0.0.129 port 60483 ssh2
+Mar 03 14:32:17 TB5WaLI sshd[1799]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Mar 03 14:32:17 TB5WaLI systemd-logind[747]: New session 6 of user ubuntu.
+Mar 03 14:32:17 TB5WaLI systemd[1]: Started session-6.scope - Session 6 of User ubuntu.
+Mar 03 14:32:48 TB5WaLI sudo[1948]:     root : PWD=/root ; USER=ubuntu ; COMMAND=/home/ubuntu/TB5-WaLI/wali_ws/nohup_wali.sh
+Mar 03 14:32:48 TB5WaLI sudo[1948]: pam_unix(sudo:session): session opened for user ubuntu(uid=1000) by root(uid=0)
+Mar 03 14:32:48 TB5WaLI sudo[1950]:   ubuntu : PWD=/root ; USER=root ; COMMAND=/usr/bin/rm /home/ubuntu/TB5-WaLI/logs/nohup_wali.log
+Mar 03 14:32:48 TB5WaLI sudo[1950]: pam_unix(sudo:session): session opened for user root(uid=0) by root(uid=1000)
+Mar 03 14:32:48 TB5WaLI sudo[1950]: pam_unix(sudo:session): session closed for user root
+Mar 03 14:32:55 TB5WaLI sudo[2103]:   ubuntu : PWD=/root ; USER=root ; COMMAND=/usr/bin/chmod 666 /home/ubuntu/TB5-WaLI/logs/nohup_wali.log
+Mar 03 14:32:55 TB5WaLI sudo[2103]: pam_unix(sudo:session): session opened for user root(uid=0) by root(uid=1000)
+Mar 03 14:32:55 TB5WaLI sudo[2103]: pam_unix(sudo:session): session closed for user root
+Mar 03 14:32:55 TB5WaLI sudo[1948]: pam_unix(sudo:session): session closed for user ubuntu
+Mar 03 14:32:55 TB5WaLI CRON[1116]: pam_unix(cron:session): session closed for user root
+Mar 03 14:33:51 TB5WaLI chronyd[975]: Selected source 45.55.126.202 (2.ubuntu.pool.ntp.org)
+Mar 03 14:34:26 TB5WaLI sudo[2177]:   ubuntu : TTY=pts/0 ; PWD=/home/ubuntu/TB5-WaLI/wali_ws ; USER=root ; COMMAND=/usr/bin/systemctl restart turtlebot4.service
+Mar 03 14:34:26 TB5WaLI sudo[2177]: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+Mar 03 14:34:26 TB5WaLI systemd[1]: Stopping turtlebot4.service - "bringup turtlebot4"...
+Mar 03 14:34:27 TB5WaLI kernel: usb 3-1: USB disconnect, device number 4
+Mar 03 14:34:29 TB5WaLI kernel: usb 3-1: new high-speed USB device number 5 using xhci-hcd
+Mar 03 14:34:29 TB5WaLI kernel: usb 3-1: New USB device found, idVendor=03e7, idProduct=2485, bcdDevice= 0.01
+Mar 03 14:34:29 TB5WaLI kernel: usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 03 14:34:29 TB5WaLI kernel: usb 3-1: Product: Movidius MyriadX
+Mar 03 14:34:29 TB5WaLI kernel: usb 3-1: Manufacturer: Movidius Ltd.
+Mar 03 14:34:29 TB5WaLI kernel: usb 3-1: SerialNumber: 03e72485
+Mar 03 14:34:31 TB5WaLI kernel: cp210x ttyUSB0: failed set request 0x12 status: -110
+Mar 03 14:34:41 TB5WaLI systemd[1]: turtlebot4.service: Deactivated successfully.
+Mar 03 14:34:41 TB5WaLI systemd[1]: Stopped turtlebot4.service - "bringup turtlebot4".
+Mar 03 14:34:41 TB5WaLI systemd[1]: turtlebot4.service: Consumed 31.952s CPU time.
+Mar 03 14:34:41 TB5WaLI systemd[1]: Started turtlebot4.service - "bringup turtlebot4".
+Mar 03 14:34:41 TB5WaLI sudo[2177]: pam_unix(sudo:session): session closed for user root
+Mar 03 14:34:41 TB5WaLI root[2212]: turtlebot4: Using workspace setup file /etc/turtlebot4/setup.bash
+Mar 03 14:34:41 TB5WaLI turtlebot4-start[2212]: <14>Mar  3 14:34:41 root: turtlebot4: Using workspace setup file /etc/turtlebot4/setup.bash
+Mar 03 14:34:41 TB5WaLI root[2295]: turtlebot4: Launching ROS_HOSTNAME=TB5WaLI, ROS_IP=, ROS_MASTER_URI=, ROS_HOME=/home/ubuntu/.ros, ROS_LOG_DIR=/tmp
+Mar 03 14:34:41 TB5WaLI turtlebot4-start[2295]: <14>Mar  3 14:34:41 root: turtlebot4: Launching ROS_HOSTNAME=TB5WaLI, ROS_IP=, ROS_MASTER_URI=, ROS_HOME=/home/ubuntu/.ros, ROS_LOG_DIR=/tmp
+Mar 03 14:34:41 TB5WaLI turtlebot4-start[2302]: ls: cannot access '/etc/ros/jazzy/turtlebot4.d/*.xacro': No such file or directory
+Mar 03 14:34:42 TB5WaLI root[2307]: turtlebot4: Generated launchfile: /tmp/turtlebot4.launch.py
+Mar 03 14:34:42 TB5WaLI turtlebot4-start[2307]: <14>Mar  3 14:34:42 root: turtlebot4: Generated launchfile: /tmp/turtlebot4.launch.py
+Mar 03 14:34:42 TB5WaLI root[2310]: turtlebot4: Started ros2 launch as background process, PID 2309, ROS_LOG_DIR=/tmp
+Mar 03 14:34:42 TB5WaLI turtlebot4-start[2310]: <14>Mar  3 14:34:42 root: turtlebot4: Started ros2 launch as background process, PID 2309, ROS_LOG_DIR=/tmp
+Mar 03 14:34:42 TB5WaLI turtlebot4-start[2309]: [INFO] [launch]: All log files can be found below /tmp/2025-03-03-14-34-42-561457-TB5WaLI-2309
+Mar 03 14:34:42 TB5WaLI turtlebot4-start[2309]: [INFO] [launch]: Default logging verbosity is set to INFO
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [INFO] [turtlebot4_node-1]: process started with pid [2313]
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [INFO] [create3_republisher-2]: process started with pid [2314]
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [INFO] [joy_linux_node-3]: process started with pid [2315]
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [INFO] [teleop_node-4]: process started with pid [2316]
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [INFO] [sllidar_node-5]: process started with pid [2317]
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [INFO] [robot_state_publisher-6]: process started with pid [2318]
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [INFO] [joint_state_publisher-7]: process started with pid [2319]
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [teleop_node-4] [INFO] [1741030483.275848512] [TeleopTwistJoy]: Teleop enable button 4.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [teleop_node-4] [INFO] [1741030483.275943104] [TeleopTwistJoy]: Turbo on button 5.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [teleop_node-4] [INFO] [1741030483.275952253] [TeleopTwistJoy]: Linear axis x on 1 at scale 0.200000.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [teleop_node-4] [INFO] [1741030483.275964642] [TeleopTwistJoy]: Turbo for linear axis x is scale 0.500000.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [teleop_node-4] [INFO] [1741030483.275970882] [TeleopTwistJoy]: Angular axis yaw on 0 at scale 0.500000.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [teleop_node-4] [INFO] [1741030483.275975790] [TeleopTwistJoy]: Turbo for angular axis yaw is scale 1.900000.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.275944290] [create3_repub]: Creating republisher node with namespace '/' to interact with robot '_do_not_use'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.276120049] [create3_repub]: Found 9 entities for robot_publishers
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.276141920] [create3_repub]: Subscribing to topic '_do_not_use/battery_state' and republishing it as '/battery_state' with type 'sensor_msgs/msg/BatteryState'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.289184509] [create3_repub]: Subscribing to topic '_do_not_use/dock_status' and republishing it as '/dock_status' with type 'irobot_create_msgs/msg/DockStatus'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.295375480] [create3_repub]: Subscribing to topic '_do_not_use/imu' and republishing it as '/imu' with type 'sensor_msgs/msg/Imu'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.299678522] [create3_repub]: Subscribing to topic '_do_not_use/interface_buttons' and republishing it as '/interface_buttons' with type 'irobot_create_msgs/msg/InterfaceButtons'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.303411156] [create3_repub]: Subscribing to topic '_do_not_use/odom' and republishing it as '/odom' with type 'nav_msgs/msg/Odometry'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.309734238] [create3_repub]: Subscribing to topic '_do_not_use/stop_status' and republishing it as '/stop_status' with type 'irobot_create_msgs/msg/StopStatus'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [turtlebot4_node-1] [INFO] [1741030483.311776111] [turtlebot4_node]: Init Turtlebot4 Node Main
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [robot_state_publisher-6] [WARN] [1741030483.314694540] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [robot_state_publisher-6] [INFO] [1741030483.315080837] [robot_state_publisher]: Robot initialized
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.315168819] [create3_repub]: Subscribing to topic '_do_not_use/tf' and republishing it as '/tf' with type 'tf2_msgs/msg/TFMessage'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.321319826] [create3_repub]: Subscribing to topic '_do_not_use/tf_static' and republishing it as '/tf_static' with type 'tf2_msgs/msg/TFMessage'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.323297366] [create3_repub]: Subscribing to topic '_do_not_use/wheel_status' and republishing it as '/wheel_status' with type 'irobot_create_msgs/msg/WheelStatus'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.325601665] [create3_repub]: Found 4 entities for robot_subscriptions
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.325660443] [create3_repub]: Subscribing to topic '/cmd_audio' and republishing it as '_do_not_use/cmd_audio' with type 'irobot_create_msgs/msg/AudioNoteVector'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [sllidar_node-5] [INFO] [1741030483.325636294] [rplidar_composition]: SLLidar running on ROS2 package SLLidar.ROS2 SDK Version:1.0.1, SLLIDAR SDK Version:2.1.0
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.328093668] [create3_repub]: Subscribing to topic '/cmd_lightring' and republishing it as '_do_not_use/cmd_lightring' with type 'irobot_create_msgs/msg/LightringLeds'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.330502337] [create3_repub]: Subscribing to topic '/cmd_vel' and republishing it as '_do_not_use/cmd_vel' with type 'geometry_msgs/msg/Twist'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.333205452] [create3_repub]: Subscribing to topic '/cmd_vel_stamped' and republishing it as '_do_not_use/cmd_vel_stamped' with type 'geometry_msgs/msg/TwistStamped'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.335283621] [create3_repub]: Found 3 entities for robot_services
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.335337121] [create3_repub]: Remapping robot service '_do_not_use/e_stop' as '/e_stop' with type 'irobot_create_msgs/srv/EStop'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.337556290] [create3_repub]: Remapping robot service '_do_not_use/reset_pose' as '/reset_pose' with type 'irobot_create_msgs/srv/ResetPose'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.340798109] [create3_repub]: Remapping robot service '_do_not_use/robot_power' as '/robot_power' with type 'irobot_create_msgs/srv/RobotPower'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [joy_linux_node-3] [WARN] [1741030483.342735130] [joy_linux_node]: Couldn't open joystick force feedback: Bad file descriptor
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [joy_linux_node-3] [INFO] [1741030483.342994667] [joy_linux_node]: Opened joystick: /dev/input/js0. deadzone_: 0.050000.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.344112650] [create3_repub]: Found 9 entities for robot_actions
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.344168150] [create3_repub]: Remapping robot action '_do_not_use/audio_note_sequence' as '/audio_note_sequence' with type 'irobot_create_msgs/action/AudioNoteSequence'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [turtlebot4_node-1] [INFO] [1741030483.348228581] [turtlebot4_node]: Buttons Init
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [turtlebot4_node-1] [INFO] [1741030483.350731732] [turtlebot4_node]: Turtlebot4 lite running.
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.354394274] [create3_repub]: Remapping robot action '_do_not_use/dock' as '/dock' with type 'irobot_create_msgs/action/Dock'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.362231542] [create3_repub]: Remapping robot action '_do_not_use/drive_arc' as '/drive_arc' with type 'irobot_create_msgs/action/DriveArc'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.368951939] [create3_repub]: Remapping robot action '_do_not_use/drive_distance' as '/drive_distance' with type 'irobot_create_msgs/action/DriveDistance'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.375073280] [create3_repub]: Remapping robot action '_do_not_use/led_animation' as '/led_animation' with type 'irobot_create_msgs/action/LedAnimation'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.380546787] [create3_repub]: Remapping robot action '_do_not_use/navigate_to_position' as '/navigate_to_position' with type 'irobot_create_msgs/action/NavigateToPosition'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.386436276] [create3_repub]: Remapping robot action '_do_not_use/rotate_angle' as '/rotate_angle' with type 'irobot_create_msgs/action/RotateAngle'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.392291912] [create3_repub]: Remapping robot action '_do_not_use/undock' as '/undock' with type 'irobot_create_msgs/action/Undock'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.398201568] [create3_repub]: Remapping robot action '_do_not_use/wall_follow' as '/wall_follow' with type 'irobot_create_msgs/action/WallFollow'
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [create3_republisher-2] [INFO] [1741030483.404491057] [create3_repub]: Ready to go!
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [joint_state_publisher-7] [INFO] [1741030483.673182512] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [sllidar_node-5] [INFO] [1741030483.846348463] [rplidar_composition]: SLLidar S/N: B2FDE18BC7E49CCCA3EB9AF426204C72
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [sllidar_node-5] [INFO] [1741030483.846421889] [rplidar_composition]: Firmware Ver: 1.01
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [sllidar_node-5] [INFO] [1741030483.846441834] [rplidar_composition]: Hardware Rev: 18
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [sllidar_node-5] [INFO] [1741030483.848991485] [rplidar_composition]: SLLidar health status : 0
+Mar 03 14:34:43 TB5WaLI turtlebot4-start[2309]: [sllidar_node-5] [INFO] [1741030483.849035263] [rplidar_composition]: SLLidar health status : OK.
+Mar 03 14:34:44 TB5WaLI turtlebot4-start[2309]: [sllidar_node-5] [INFO] [1741030484.130769253] [rplidar_composition]: current scan mode: Standard, sample rate: 5 Khz, max_distance: 16.0 m, scan frequency:10.0 Hz,
+Mar 03 14:35:01 TB5WaLI CRON[2419]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 14:35:01 TB5WaLI CRON[2420]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Mar 03 14:35:01 TB5WaLI CRON[2419]: pam_unix(cron:session): session closed for user root
+Mar 03 14:35:13 TB5WaLI turtlebot4-start[2309]: [INFO] [component_container-8]: process started with pid [2452]
+Mar 03 14:35:15 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030515.666533971] [oakd_container]: Load Library: /opt/ros/jazzy/lib/libdepthai_ros_driver.so
+Mar 03 14:35:15 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030515.786900114] [oakd_container]: Found class: rclcpp_components::NodeFactoryTemplate<depthai_ros_driver::Camera>
+Mar 03 14:35:15 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030515.786972762] [oakd_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<depthai_ros_driver::Camera>
+Mar 03 14:35:15 TB5WaLI turtlebot4-start[2309]: [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/oakd' in container '/oakd_container'
+Mar 03 14:35:16 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030516.803731801] [oakd]: Starting camera.
+Mar 03 14:35:16 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030516.814669055] [oakd]: No ip/mxid specified, connecting to the next available device.
+Mar 03 14:35:18 TB5WaLI kernel: usb 3-1: USB disconnect, device number 5
+Mar 03 14:35:19 TB5WaLI kernel: usb 3-1: new high-speed USB device number 6 using xhci-hcd
+Mar 03 14:35:19 TB5WaLI kernel: usb 3-1: New USB device found, idVendor=03e7, idProduct=f63b, bcdDevice= 1.00
+Mar 03 14:35:19 TB5WaLI kernel: usb 3-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Mar 03 14:35:19 TB5WaLI kernel: usb 3-1: Product: Luxonis Device
+Mar 03 14:35:19 TB5WaLI kernel: usb 3-1: Manufacturer: Intel Corporation
+Mar 03 14:35:19 TB5WaLI kernel: usb 3-1: SerialNumber: 184430101175A41200
+Mar 03 14:35:19 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030519.313306352] [oakd]: Camera with MXID: 184430101175A41200 and Name: 3.1 connected!
+Mar 03 14:35:19 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030519.314161816] [oakd]: USB SPEED: HIGH
+Mar 03 14:35:19 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030519.335468915] [oakd]: Device type: OAK-D-LITE
+Mar 03 14:35:19 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030519.337768455] [oakd]: Pipeline type: RGB
+Mar 03 14:35:20 TB5WaLI turtlebot4-start[2309]: [component_container-8] [WARN] [1741030520.448933124] [oakd]: IMU enabled but not available!
+Mar 03 14:35:20 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030520.449115106] [oakd]: Finished setting up pipeline.
+Mar 03 14:35:20 TB5WaLI turtlebot4-start[2309]: [component_container-8] [INFO] [1741030520.667592976] [oakd]: Camera ready!
+Mar 03 14:36:23 TB5WaLI systemd[1]: Starting update-notifier-download.service - Download data for packages that failed at package install time...
+Mar 03 14:36:23 TB5WaLI systemd[1]: update-notifier-download.service: Deactivated successfully.
+Mar 03 14:36:23 TB5WaLI systemd[1]: Finished update-notifier-download.service - Download data for packages that failed at package install time.
+Mar 03 14:36:23 TB5WaLI dbus-daemon[734]: [system] Activating via systemd: service name='org.freedesktop.timedate1' unit='dbus-org.freedesktop.timedate1.service' requested by ':1.15' (uid=0 pid=745 comm="/usr/lib/snapd/snapd" label="unconfined")
+Mar 03 14:36:23 TB5WaLI systemd[1]: Starting systemd-timedated.service - Time & Date Service...
+Mar 03 14:36:23 TB5WaLI dbus-daemon[734]: [system] Successfully activated service 'org.freedesktop.timedate1'
+Mar 03 14:36:23 TB5WaLI systemd[1]: Started systemd-timedated.service - Time & Date Service.
+Mar 03 14:36:53 TB5WaLI systemd[1]: systemd-timedated.service: Deactivated successfully.
+Mar 03 14:37:30 TB5WaLI systemd[1379]: launchpadlib-cache-clean.service - Clean up old files in the Launchpadlib cache was skipped because of an unmet condition check (ConditionPathExists=/home/ubuntu/.launchpadlib/api.launchpad.net/cache).
+Mar 03 14:40:18 TB5WaLI systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Mar 03 14:40:18 TB5WaLI systemd[1]: sysstat-collect.service: Deactivated successfully.
+Mar 03 14:40:18 TB5WaLI systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Mar 03 14:45:01 TB5WaLI CRON[2506]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 14:45:01 TB5WaLI CRON[2507]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Mar 03 14:45:01 TB5WaLI CRON[2506]: pam_unix(cron:session): session closed for user root
+Mar 03 14:46:23 TB5WaLI systemd[1]: Starting systemd-tmpfiles-clean.service - Cleanup of Temporary Directories...
+Mar 03 14:46:23 TB5WaLI systemd[1]: systemd-tmpfiles-clean.service: Deactivated successfully.
+Mar 03 14:46:23 TB5WaLI systemd[1]: Finished systemd-tmpfiles-clean.service - Cleanup of Temporary Directories.
+Mar 03 14:50:18 TB5WaLI systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Mar 03 14:50:18 TB5WaLI systemd[1]: sysstat-collect.service: Deactivated successfully.
+Mar 03 14:50:18 TB5WaLI systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Mar 03 14:55:01 TB5WaLI CRON[2526]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 14:55:01 TB5WaLI CRON[2527]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Mar 03 14:55:01 TB5WaLI CRON[2526]: pam_unix(cron:session): session closed for user root
+Mar 03 15:00:01 TB5WaLI CRON[2533]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 15:00:01 TB5WaLI CRON[2534]: (root) CMD (/usr/bin/python3 /home/ubuntu/TB5-WaLI/plib/cleanlifelog.py)
+Mar 03 15:00:01 TB5WaLI systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Mar 03 15:00:01 TB5WaLI systemd[1]: sysstat-collect.service: Deactivated successfully.
+Mar 03 15:00:01 TB5WaLI systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Mar 03 15:00:01 TB5WaLI CRON[2533]: (CRON) info (No MTA installed, discarding output)
+Mar 03 15:00:01 TB5WaLI CRON[2533]: pam_unix(cron:session): session closed for user root
+Mar 03 15:03:26 TB5WaLI sshd[2544]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.0.0.129  user=ubuntu
+Mar 03 15:03:28 TB5WaLI sshd[2544]: Failed password for ubuntu from 10.0.0.129 port 60510 ssh2
+Mar 03 15:03:34 TB5WaLI sshd[2544]: Accepted password for ubuntu from 10.0.0.129 port 60510 ssh2
+Mar 03 15:03:34 TB5WaLI sshd[2544]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+Mar 03 15:03:34 TB5WaLI systemd-logind[747]: New session 11 of user ubuntu.
+Mar 03 15:03:34 TB5WaLI systemd[1]: Started session-11.scope - Session 11 of User ubuntu.
+Mar 03 15:05:01 TB5WaLI CRON[2701]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 15:05:01 TB5WaLI CRON[2703]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Mar 03 15:05:01 TB5WaLI CRON[2701]: pam_unix(cron:session): session closed for user root
+Mar 03 15:10:18 TB5WaLI systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Mar 03 15:10:18 TB5WaLI systemd[1]: sysstat-collect.service: Deactivated successfully.
+Mar 03 15:10:18 TB5WaLI systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Mar 03 15:14:09 TB5WaLI socat[2756]: 2025/03/03 15:14:09 socat[2756] E write(6, 0xaaaac59e3000, 1052): Broken pipe
+Mar 03 15:15:01 TB5WaLI CRON[2758]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 15:15:01 TB5WaLI CRON[2759]: (root) CMD (command -v debian-sa1 > /dev/null && debian-sa1 1 1)
+Mar 03 15:15:01 TB5WaLI CRON[2758]: pam_unix(cron:session): session closed for user root
+Mar 03 15:17:01 TB5WaLI CRON[2766]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+Mar 03 15:17:01 TB5WaLI CRON[2767]: (root) CMD (cd / && run-parts --report /etc/cron.hourly)
+Mar 03 15:17:01 TB5WaLI CRON[2766]: pam_unix(cron:session): session closed for user root
+Mar 03 15:20:18 TB5WaLI systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Mar 03 15:20:18 TB5WaLI systemd[1]: sysstat-collect.service: Deactivated successfully.
+Mar 03 15:20:18 TB5WaLI systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
