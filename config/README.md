@@ -304,3 +304,7 @@ sudo systemctl disable fwupd fwupd-refresh fwupd-refresh.timer
 ubuntu@TB5WaLI:~/TB5-WaLI/issues/create3stops_pub$ sudo systemctl disable fwupd fwupd-refresh fwupd-refresh.timer
 Removed "/etc/systemd/system/timers.target.wants/fwupd-refresh.timer".
 ``` 
+- If still gets triggerd by something, use:
+```
+sudo systemctl mask fwupd fwupd-refresh fwupd-refresh.timer
+```
