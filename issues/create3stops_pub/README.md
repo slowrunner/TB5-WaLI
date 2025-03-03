@@ -3,8 +3,8 @@
 
 ## Requested mod:
 - /etc/systemd/logind.conf
-  - uncomment ```#RemoteIPC=yes```
-  - change to ```RemoteIPC=no```
+  - uncomment ```#RemoveIPC=yes```
+  - change to ```RemoveIPC=no```
 - reboot
 
 
