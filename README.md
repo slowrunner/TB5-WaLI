@@ -14,7 +14,7 @@ Raspberry Pi 5 based ROS 2 Robot "Wallfollower Looking for Intelligence" based o
   - oakd 
   - robot and joint state publishers
   - teleop_twist_joy and joy_linux_node
-  - turtlebot4 diagnostics and diagnostics aggregator
+  - turtlebot4 diagnostics and diagnostics aggregator  (disabled)
 - ROS 2 Jazzy Jalisco
 - Ubuntu 24.04 LTS (64-bit) Server  
 - Raspberry Pi 5 8GB  
