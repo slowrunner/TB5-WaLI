@@ -24,7 +24,7 @@ setup(
                 turtlebot4_python_tutorials.turtlebot4_first_python_node:main',
             'nav_to_pose = turtlebot4_python_tutorials.nav_to_pose:main',
             'nav_to_kitchen = turtlebot4_python_tutorials.nav_to_kitchen:main',
-            'nav_kitchen_to_undocked = turtlebot4_python_tutorials.nav_kitchen_to_undocked:main',
+            'nav_kitchen_and_back = turtlebot4_python_tutorials.nav_kitchen_and_back:main',
             'nav_through_poses = turtlebot4_python_tutorials.nav_through_poses:main',
             'follow_waypoints = turtlebot4_python_tutorials.follow_waypoints:main',
             'create_path = turtlebot4_python_tutorials.create_path:main',

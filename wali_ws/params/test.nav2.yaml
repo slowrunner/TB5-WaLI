@@ -140,7 +140,7 @@ local_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 4.0
-        inflation_radius: 0.35
+        inflation_radius: 0.45
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: true
@@ -215,12 +215,15 @@ planner_server:
 smoother_server:
   ros__parameters:
     enable_stamped_cmd_vel: true
-    smoother_plugins: ["simple_smoother"]
+    # smoother_plugins: ["simple_smoother"]
+    smoother_plugins: ["curvature_smoother"]
     simple_smoother:
       plugin: "nav2_smoother::SimpleSmoother"
       tolerance: 1.0e-10
       max_its: 1000
       do_refinement: true
+    curvature_smoother:
+      plugin: "nav2_constrained_smoother/ConstrainedSmoother"
 
 behavior_server:
   ros__parameters:
