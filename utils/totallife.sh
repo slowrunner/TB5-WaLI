@@ -23,7 +23,12 @@ echo "*** TB5-WaLI TOTAL LIFE STATISTICS ***"
 echo "Total Awake:  " $totalAwake " hrs"
 echo "Total Naps:    " $totalNaps " hrs"
 echo "Total Life:   " $totalLife " hrs (since Jan 09, 2025)"
-echo "Playtimes (Undocked-Docked):" `(grep -c "\- Docking: success " $fn)`
+noticedDockings=`(grep -c "Noticed Docking: success " $fn)`
+echo "\"Noticed Dockings\": " $noticedDockings
+regDockings=`(grep -c "\- Docking: success " $fn)`
+echo "Playtimes (Undocked-Docked): " $regDockings 
+totalDockings=`(echo "scale=1; $regDockings + $noticedDockings" | bc)`
+echo "Total Dockings: " $totalDockings
 last5playtimes=`(grep " hrs playtime " $fn | tail -5 | awk -F" after "  '{sum+=$2}END{print sum;}' )`
 last5avePlaytime=`(echo "scale=1; $last5playtimes / 5" | bc)`
 echo "Average playtime (last five)" $last5avePlaytime "hrs "
