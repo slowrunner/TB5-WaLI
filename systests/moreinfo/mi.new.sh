@@ -1,8 +1,8 @@
 #!/bin/bash
 #--------><--------><--------><--------><--------><--------><--------><-------->
 # Author           : OneOfTheInfinteMonkeys
-# Revision         : 1.5
-# Date             : 04 Mar 2023
+# Revision         : 1.5 (1.5.1 modified for ubuntu) 
+# Date             : 04 Mar 2023   (03 Sep 2025)
 # License          : MIT
 #------------------:
 # Comments         : Recover Raspberry Pi board version and return additional release information
