@@ -44,4 +44,7 @@ echo "Safety Shutdowns: " $safetyShutdowns
 totalMoved=`(awk -F'moved:' '{sum+=$2}END{printf "%.1f", sum;}' $ofn)`
 totalMovedFt=`(echo "scale=1; ($totalMoved / 0.3048)" | bc)`
 echo "Total Travel: " $totalMoved "meters" $totalMovedFt "feet"
+echo "Last Docking:   $(grep "WaLI dock goal" $fn | tail -1)"
+echo "Last Recharge:  $(grep "WaLI Undocking:" $fn | tail -n 1)"
+uptime
 
