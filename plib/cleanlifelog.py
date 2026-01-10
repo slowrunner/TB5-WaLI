@@ -51,6 +51,23 @@ print("lastline: {}".format(lineList[last]))
 bootlogline = "----- boot -----"
 executionlogline = "dEmain execution:"
 
+
+# REMOVE Null Chars from power failure
+nullchar = '\x00'
+new_lineList = []
+
+for s in lineList:
+  if nullchar in s:
+    new_lineList.append(s.replace(nullchar,""))
+    changed = True
+    print("Removed null chars from life.log\n")
+  else:
+    new_lineList.append(s)
+
+if (changed == True):
+  lineList = new_lineList
+
+
 if (clean_previous_session == True):
     # Find last boot log line
     while (bootlogline not in lineList[lineIdx]):
