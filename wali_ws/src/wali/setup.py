@@ -33,6 +33,7 @@ setup(
             'wallfollower = wali.wallfollower:main',
             'sub_tf = wali.sub_tf:main',
             'c3interface = wali.c3interface:main',
+            'lifelognode = wali.lifelognode:main',
             'sub_ir = wali.sub_ir:main'
         ],
     },
