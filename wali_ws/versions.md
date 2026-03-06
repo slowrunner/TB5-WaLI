@@ -13,7 +13,7 @@ Model: lite
 Version: 2.0.2  
 ROS: Jazzy  
 Hostname: TB5WaLI  
-IP: 10.0.0.178  
+IP: x.0.0.x  
 The TurtleBot 4 was created in a partnership between Open Robotics and Clearpath Robotics.  
 
 ```
@@ -42,7 +42,7 @@ ROS_DISCOVERY_SERVER=127.0.0.1:11811;
 ```
 Raspberry Pi 5 8GB
 ```
-Linux TB5WaLI 6.8.0-1018-raspi #20-Ubuntu SMP PREEMPT_DYNAMIC Fri Jan 17 12:35:36 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
+Linux TB5WaLI 6.8.0-1042-raspi #46-Ubuntu SMP PREEMPT_DYNAMIC Tue Oct 14 18:59:27 UTC 2025 aarch64 aarch64 aarch64 GNU/Linux
 ```
 
 NTP Setup:  
@@ -53,5 +53,5 @@ NTP Setup:
 sudo chronyc clients
 Hostname                      NTP   Drop Int IntL Last     Cmd   Drop Int  Last
 ===============================================================================
-192.168.186.2                  29      0   7   -    62       0      0   -     -
+x.x.x.2                  29      0   7   -    62       0      0   -     -
 ```
