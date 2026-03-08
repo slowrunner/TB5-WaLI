@@ -30,6 +30,12 @@ source /home/ubuntu/TB5-WaLI/wali_ws/install/setup.bash
 # source $ROBOT_SETUP
 # echo -e "sourced /etc/turtlebot4/setup.bash" >> $logfile
 
+
+echo -e "\n*** Start lifelognode" >> $logfile
+echo '*** ros2 run wali lifelognode & ' >> $logfile
+nohup ros2 run wali lifelognode >> $logfile &
+
+
 echo -e "\n*** Start odometer node" >> $logfile
 echo -e '*** ros2 run wali odometer & ' >> $logfile
 nohup ros2 run wali odometer >> $logfile &

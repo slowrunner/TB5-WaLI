@@ -13,6 +13,11 @@ if [ -f /home/ubuntu/TB5-WaLI/wali_ws/install/setup.bash ]; then
 fi
 
 
+echo -e "\n*** Start lifelognode"
+echo '*** ros2 run wali lifelognode &'
+ros2 run wali lifelognode &
+
+
 echo -e "\n*** Start odometer node"
 echo '*** ros2 run wali odometer & '
 ros2 run wali odometer &
