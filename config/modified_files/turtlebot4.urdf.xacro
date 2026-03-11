@@ -27,9 +27,9 @@
   <xacro:rplidar name="rplidar" parent_link="base_link" gazebo="$(arg gazebo)">
     <!-- <origin xyz="${rplidar_x_offset} ${rplidar_y_offset} ${rplidar_z_offset + base_link_z_offset}"
             rpy="0 0 ${pi/2}"/> -->
-    <!-- rplidar is tilted about 5 degrees up around y axis -->
+    <!-- rplidar origin is 90 degrees ccw from TB4 RPLidar A1M8 (facing rear of WaLI instead of left side of TB4) -->
     <origin xyz="${rplidar_x_offset} ${rplidar_y_offset} ${rplidar_z_offset + base_link_z_offset}"
-            rpy="0 0.0872665 ${pi}"/>
+            rpy="0 0.0 ${pi}"/>
   </xacro:rplidar>
   
   <xacro:camera_bracket name="oakd_camera_bracket" parent_link="base_link">
