@@ -1,5 +1,7 @@
 #!/bin/env python3
 
+
+
 import time
 import os
 import io
@@ -7,8 +9,9 @@ from PIL import Image
 from ollama import Client
 
 # Configuration
-REMOTE_SERVER_IP = "10.0.0.xxx"  # Replace with your actual server IP
-MODEL_NAME = 'qwen3-vl:8b' 
+REMOTE_SERVER_IP = "x.0.0.x"  # Replace with your actual server IP
+MODEL_NAME = 'qwen3-vl:8b' # not bad but takes 220s for "What do you see?"
+# MODEL_NAME = 'llama3.2-vision:11b' # not very good 
 IMAGE_PATH = '../images/dave.jpg'
 PROMPT = "Describe the robot in this image."
 RESIZE_DIM = (448, 448)
