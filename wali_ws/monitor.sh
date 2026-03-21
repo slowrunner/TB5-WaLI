@@ -26,6 +26,22 @@ echo -n `date +"%A %D"`; \
 echo ""; \
 uptime; \
 vcgencmd measure_temp && vcgencmd measure_clock arm && vcgencmd get_throttled; \
+
+load=`cat /proc/loadavg` ; \
+load="${load%% *}"; \
+cpu=`(echo " ($load / 4.0 * 100)" | bc -l)`; \
+cpu="${cpu:0:3}"; \
+echo -e "$d 1m load: $load  $cpu% demand on RPi 5's four cores"; \
+
+read -a arr <<< "$(vmstat 1 2 | tail -n 1)"; \
+# declare -p arr
+idle_index=14; \
+idle=${arr[idle_index]}; \
+cpu=$(bc <<< "100 - $idle"); \
+echo -e "$d total cpu usage: $cpu% of RPi 5 CPU"; \
+echo " "; \
+
+
 free -h; \
 echo ""; \
 echo "Voltage: $volt  Current: $curr  Watts: $watts"; \

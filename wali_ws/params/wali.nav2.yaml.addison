@@ -20,7 +20,7 @@ bt_navigator:
 controller_server:
   ros__parameters:
     enable_stamped_cmd_vel: true
-    controller_frequency: 20.0
+    controller_frequency: 5.0  # default 20.0
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.5
     min_theta_velocity_threshold: 0.001
@@ -40,8 +40,8 @@ controller_server:
       yaw_goal_tolerance: 0.25
     FollowPath:
       plugin: "nav2_mppi_controller::MPPIController"
-      time_steps: 56
-      model_dt: 0.05
+      time_steps: 15   # default 56
+      model_dt: 0.2 # default 0.05 (Set to duration of the control frequency)
       batch_size: 2000
       ax_max: 3.0
       ax_min: -3.0
@@ -95,7 +95,7 @@ controller_server:
         cost_power: 1
         cost_weight: 3.81
         critical_cost: 300.0
-        consider_footprint: true
+        consider_footprint: false # was true with octagonal footprint 
         collision_cost: 1000000.0
         near_goal_distance: 1.0
         trajectory_point_step: 2
@@ -134,15 +134,16 @@ local_costmap:
       rolling_window: true
       width: 3
       height: 3
-      resolution: 0.06
-      footprint: "[[ 0.189,  0.000],
-                  [ 0.134, -0.134],
-                  [ 0.000, -0.189],
-                  [-0.134, -0.134],
-                  [-0.189,  0.000],
-                  [-0.134,  0.134],
-                  [ 0.000,  0.189],
-                  [ 0.134,  0.134]]"
+      resolution: 0.05  # default 0.06
+      robot_radius: 0.189  # max dimension 338mm uses less CPU than octagonal footprint
+      # footprint: "[[ 0.189,  0.000],
+      #             [ 0.134, -0.134],
+      #             [ 0.000, -0.189],
+      #             [-0.134, -0.134],
+      #             [-0.189,  0.000],
+      #             [-0.134,  0.134],
+      #             [ 0.000,  0.189],
+      #             [ 0.134,  0.134]]"
       plugins: ["static_layer", "voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
@@ -181,15 +182,16 @@ global_costmap:
       publish_frequency: 1.0
       global_frame: map
       robot_base_frame: base_link
-      footprint: "[[ 0.189,  0.000],
-                  [ 0.134, -0.134],
-                  [ 0.000, -0.189],
-                  [-0.134, -0.134],
-                  [-0.189,  0.000],
-                  [-0.134,  0.134],
-                  [ 0.000,  0.189],
-                  [ 0.134,  0.134]]"
-      resolution: 0.06
+      robot_radius: 0.169  # maximum dimension 338mm (lower CPU than octagonal footprint)
+      # footprint: "[[ 0.189,  0.000],
+      #             [ 0.134, -0.134],
+      #             [ 0.000, -0.189],
+      #             [-0.134, -0.134],
+      #             [-0.189,  0.000],
+      #             [-0.134,  0.134],
+      #             [ 0.000,  0.189],
+      #             [ 0.134,  0.134]]"
+      resolution: 0.05  # default 0.06
       track_unknown_space: true
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       obstacle_layer:

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-# FILE: nav_to_kitchen.py
+# FILE: nav_to_undocked.py
 #
 # @author slowrunner (slowrunner@noreply.github.com)
 #
-# Navigate from docked to kitchen  
-# - Center of Kitchen per map (3.71, 1.04)
+# Navigate  to undocked (ready to dock position)
+# - Undocked ([-0.0104, -0.372], TurtleBot4Directions.SOUTH)
 
 # Copyright 2022 Clearpath Robotics, Inc.
 #
@@ -34,7 +34,10 @@ def main():
     navigator = TurtleBot4Navigator()
 
     # Set goal poses
-    goal_pose = navigator.getPoseStamped([3.71, 1.04], TurtleBot4Directions.SOUTH_EAST)
+    # goal_pose = navigator.getPoseStamped([-13.0, 9.0], TurtleBot4Directions.EAST)
+    # goal_pose = navigator.getPoseStamped([3.550, 0.968], TurtleBot4Directions.EAST)  # kitchen ctr facing away from stove
+    # - Undocked ([-0.0104, -0.372], TurtleBot4Directions.SOUTH)
+    goal_pose = navigator.getPoseStamped([-0.0104, -0.372], TurtleBot4Directions.SOUTH)  # WaLI undocked 
 
     # Go to each goal pose
     navigator.startToPose(goal_pose)

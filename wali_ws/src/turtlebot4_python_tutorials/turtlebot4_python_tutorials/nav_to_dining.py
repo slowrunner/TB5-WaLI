@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 
-# FILE: nav_to_kitchen.py
+# FILE: nav_to_dining.py
 #
 # @author slowrunner (slowrunner@noreply.github.com)
 #
-# Navigate from docked to kitchen  
-# - Center of Kitchen per map (3.71, 1.04)
-
 # Copyright 2022 Clearpath Robotics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,7 +31,7 @@ def main():
     navigator = TurtleBot4Navigator()
 
     # Set goal poses
-    goal_pose = navigator.getPoseStamped([3.71, 1.04], TurtleBot4Directions.SOUTH_EAST)
+    goal_pose = navigator.getPoseStamped([-2.75, -1.55], TurtleBot4Directions.WEST)
 
     # Go to each goal pose
     navigator.startToPose(goal_pose)

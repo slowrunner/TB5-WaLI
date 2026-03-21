@@ -8,9 +8,9 @@
     - subscribes to Create3 /battery_state and /dock_status
     - publishes /undock action goal when BatteryState.percentage full
     - Logs successful undock to life.log
-    - publishes /rotate_angle {angle: 1.57} (180deg) when BatteryState.percentage < 25% 
+    - [commented out] publishes /rotate_angle {angle: 1.57} (180deg) when BatteryState.percentage < 25% 
                                                           and dock not visible
-    - publishes /dock action goal when BatteryState.percentage < 0.205 and dock visible
+    - publishes /dock action goal when BatteryState.percentage < 0.205 [and dock visible]
     - Logs successful docking to life.log
 
     Requires:
@@ -94,8 +94,8 @@ import logging
 import datetime as dt
 
 DEBUG = False
-# Uncomment for debug prints to console, run kill_docker-r2hdp.sh, then ./run_docker_r2hdp.sh to see console msgs
-# DEBUG = True
+# Uncomment for debug prints to console
+# # DEBUG = True
 
 LIFELOGFILE = "/home/ubuntu/TB5-WaLI/logs/life.log"
 
@@ -141,7 +141,8 @@ class WaLINode(Node):
     self.loghandler.setFormatter(self.logformatter)
     self.lifeLog.addHandler(self.loghandler)
 
-    printMsg = '** WaLI node started - Undock:{:2d}% Rotate:{:2d}% Dock:{:2d}% **'.format(int(UNDOCK_AT_PERCENTAGE * 100), int(ROTATE_AT_PERCENTAGE * 100), int(DOCK_AT_PERCENTAGE * 100) )
+    # printMsg = '** WaLI node started - Undock:{:2d}% Rotate:{:2d}% Dock:{:2d}% **'.format(int(UNDOCK_AT_PERCENTAGE * 100), int(ROTATE_AT_PERCENTAGE * 100), int(DOCK_AT_PERCENTAGE * 100) )
+    printMsg = '** WaLI node started - Undock:{:2d}%  Dock:{:2d}% **'.format(int(UNDOCK_AT_PERCENTAGE * 100), int(DOCK_AT_PERCENTAGE * 100) )
     print(printMsg)
     self.lifeLog.info(printMsg)
 
@@ -444,18 +445,18 @@ class WaLINode(Node):
           print(dtstr, printMsg)
         self.undock_action_send_goal()
 
-      elif (self.battery_percentage < ROTATE_AT_PERCENTAGE) and (self.state in ["undocked"]) and not(self.dock_status.dock_visible):
-        self.state = "turning"
-        if DEBUG:
-           dtstr = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-           printMsg = "wali_main_cb(): battery_percentage {:.0} % sending rotate180 action goal".format(self.battery_percentage)
-           print(dtstr, printMsg)
+      # elif (self.battery_percentage < ROTATE_AT_PERCENTAGE) and (self.state in ["undocked"]) and not(self.dock_status.dock_visible):
+      #   self.state = "turning"
+      #   if DEBUG:
+      #      dtstr = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+      #      printMsg = "wali_main_cb(): battery_percentage {:.0} % sending rotate180 action goal".format(self.battery_percentage)
+      #      print(dtstr, printMsg)
 
-        # TODO: change this to NavigateToPosition facing dock
-        self.rotate_angle_action_send_goal(angle=math.pi)    # pi=180 deg
+      # TODO: change this to NavigateToPosition facing dock
+      #   self.rotate_angle_action_send_goal(angle=math.pi)    # pi=180 deg
 
 
-      elif (self.battery_percentage < DOCK_AT_PERCENTAGE) and (self.state in ["ready2dock"]):
+      elif (self.battery_percentage < DOCK_AT_PERCENTAGE) and (self.state in ["undocked"]): #  and (self.state in ["ready2dock"]):
         self.state = "docking"
         if DEBUG:
            dtstr = dt.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
