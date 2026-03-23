@@ -92,3 +92,16 @@ ubuntu@TB5WaLI:~/TB5-WaLI/wali_ws/params$ diff test.nav2.yaml wali.nav2.yaml
 <     bond_timeout: 10.0
 
 ```
+Why These Changes Fix Nav2:
+
+The BT Loop (100ms vs 10ms): By dropping to 10Hz, you freed up a huge amount of overhead. 
+The bt_navigator isn't constantly nagging the other nodes, 
+which lets the Raspberry Pi prioritize the Controller (driving).
+
+The 1000ms Server Timeout: This is likely why he didn't "butt heads with the bar stools" 
+If a costmap update took 50ms instead of 10ms, the old settings would have aborted the plan. 
+Now, WaLI just waits a heartbeat and keeps going.
+
+The Bond Timeout (10.0s): This is your safety net. 
+It ensures that even if the Pi hits a 100% CPU spike while processing a heavy 
+/battery_state request or a complex scan, the lifecycle_manager won't pull the plug on the whole operation.
