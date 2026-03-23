@@ -4,10 +4,10 @@ bt_navigator:
     global_frame: map
     robot_base_frame: base_link
     odom_topic: odom
-    bt_loop_duration: 10
-    default_server_timeout: 20
-    wait_for_service_timeout: 1000
-    action_server_result_timeout: 900.0
+    bt_loop_duration: 100  # 10 Hz , 10 ms 100 Hz by default
+    default_server_timeout:  1000  # 20 ms by default
+    wait_for_service_timeout: 2000 # 1000 by default
+    action_server_result_timeout: 1800.0 # 900.0
     navigators: ["navigate_to_pose", "navigate_through_poses"]
     navigate_to_pose:
       plugin: "nav2_bt_navigator::NavigateToPoseNavigator"
@@ -17,6 +17,9 @@ bt_navigator:
       - compute_path_error_code
       - follow_path_error_code
 
+lifecycle_manager_navigation:
+  ros__parameters:
+    bond_timeout: 10.0
 controller_server:
   ros__parameters:
     enable_stamped_cmd_vel: true

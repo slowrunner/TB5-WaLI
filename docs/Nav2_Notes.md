@@ -24,9 +24,18 @@ Experiments:
 - wali.nav2.yaml.increase_voxel_height_and_max_height (size to 0.1  number to 10 = 1 meter)  eliminated rug crossing out of bounds  
 - wali.nav2.tune_global_cost_and_inflation: Gemini   <--- Using 3/18/26  
   - recommended values to make WaLI less likely to go close to obstacles - navigation nearly always succeeds)  
-- wali.nav2.2D_Layers: (rejected)
-  - global_costmap is already 2D, but local costmap is voxel/3D planned.  Prediction was 2D planning would significantly save CPU usage
-  - Result: no detectable CPU usage reduction, increased local cost map localization, introduced goal failures
+- wali.nav2.2D_Layers: (rejected)  
+  - global_costmap is already 2D, but local costmap is voxel/3D planned.  Prediction was 2D planning would significantly save CPU usage  
+  - Result: no detectable CPU usage reduction, increased local cost map localization, introduced goal failures  
+- wali.nav2.composition:  (rejected)  
+  - ROS 2 Nav2 issue pushed to later versions to solve: parameters on late launched nodes do not get passed parameter file values  
+  - Seg Faults easily  
+  -  Using composition doesn't load costmap parameters from yaml file #4011 https://github.com/ros-navigation/navigation2/issues/4011  
+- wali.nav2.relax:  
+  - reduced cycle rate, increased timeouts, to prevent slow planner cancelations, and early declaration of failure.   
+
+### 2D vs 3D Nav
+
 ```
 Lessons Learned: WaLI 2D vs. 3D Navigation
 Mechanical Reality > Theory: Because the LiDAR isn't perfectly horizontal, 
@@ -47,4 +56,39 @@ proving the stack is more stable when operating in its intended 3D-aware mode.
 Optimized Configuration: A 0.1m resolution with 10 voxels (1.0m height) is the ideal balance 
 for WaLI—it handles the 34cm LiDAR line's vertical "shimmer" 
 without the performance hit of the original 0.05m resolution.
+```
+
+### Relaxed Nav2: (THIS IS HUGE IMPROVEMENT)
+
+```
+WaLI performed seven successful navigations, including the very challenging exit from the laundry room, 
+and was able to "walk and chew gum at the same time". I could ask him to echo his /battery_state 
+and he kept right on planning, driving the plan, 
+and he didn't stop to butt heads with the bar stools, or investigate any walls.
+(Additionally all this with remote test tool running, which previously would cause goal failures.)
+
+These are the changes I made to the nav2.yaml file for this major improvement in navigation performance:
+
+ubuntu@TB5WaLI:~/TB5-WaLI/wali_ws/params$ diff test.nav2.yaml wali.nav2.yaml
+
+7,10c7,10
+
+<     bt_loop_duration: 100  # 10 Hz , 10 ms 100 Hz by default
+<     default_server_timeout:  1000  # 20 ms by default
+<     wait_for_service_timeout: 2000 # 1000 by default
+<     action_server_result_timeout: 1800.0 # 900.0
+
+---
+
+>     bt_loop_duration: 10
+>     default_server_timeout: 20
+>     wait_for_service_timeout: 1000
+>     action_server_result_timeout: 900.0
+
+20,22d19
+
+< lifecycle_manager_navigation:
+<   ros__parameters:
+<     bond_timeout: 10.0
+
 ```
