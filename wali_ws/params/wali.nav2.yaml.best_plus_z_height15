@@ -154,14 +154,13 @@ local_costmap:
         publish_voxel_map: true
         origin_z: 0.0
         z_resolution: 0.1  # was 0.05 - making it 0.1 will lower CPU usage
-        z_voxels: 20       # was 16 (16x0.05=0.80 getting sensor origin out of map bounds so upped to 2.0 meter)
-        max_obstacle_height: 0.40 # was 2.0  WaLI is only 35 cm high
-        min_obstacle_height: 0.05 # was not included - added to ignore floor returns
+        z_voxels: 15       # was 16 (16x0.05=0.80 busted when crossed rug edge so upped to 1.5 meter)
+        max_obstacle_height: 2.0
         mark_threshold: 0
         observation_sources: scan
         scan:
           topic: scan
-          max_obstacle_height: 1.0 # was 2.0 getting sensor origin out of map bounds
+          max_obstacle_height: 2.0
           clearing: true
           marking: true
           data_type: "LaserScan"

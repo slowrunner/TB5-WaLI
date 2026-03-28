@@ -31,7 +31,7 @@ def main():
     navigator = TurtleBot4Navigator()
 
     # Set goal poses
-    goal_pose = navigator.getPoseStamped([-2.75, -1.55], TurtleBot4Directions.WEST)
+    goal_pose = navigator.getPoseStamped([-2.6, -0.5], TurtleBot4Directions.WEST)
 
     # Go to each goal pose
     navigator.startToPose(goal_pose)
