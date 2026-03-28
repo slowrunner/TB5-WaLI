@@ -44,7 +44,25 @@ ubuntu@TB5WaLI:~/TB5-WaLI/wali_ws/params$ diff test.nav2.yaml wali.nav2.yaml.pre
 >         inflation_radius: 0.35
 ```
 
-Experiments:
+### Nav2 investigation results:
+
+- Using 2D_obstacle_layer showed no visible CPU usage reduction, but navigation reliability was decreased
+
+- Increasing z_voxels to 20 and z_resolution to 0.1 (2 meters), and lowering max_obstacle_height to 0.40 appears to have eliminated "sensor origin out of map bounds" warnings
+
+- Increasing inflation_radius from 0.35 to 1.25 combined with lowering the cost_scaling_factor from 4.0 to 1.25 causes nav2 to plan farther from walls and obstacles which lowers the incidence of "side object distractions" during path following.
+
+- Navigation may still fail when passing through narrow areas with high number of "side object distractions" (clear path on global costmap, but no clear path between on the local costmap).  When the goal fails in these locations, issuing the goal again seems to succeed.
+
+- Laundry room destination was adjusted to not be as deep in the room avoiding the "end of the canyon"
+
+- Dining room destination was adjusted to not be as deep in the room to avoid traveling with the mirror wall on the right side of WaLI.  Navigation was reaching the goal, but the mirror wall prevented final pose planning.
+
+- Navigation failures mid-travel when checking the /battery_state from the command-line are attributed to a known DDS CPU usage spike reported in https://github.com/ros2/rmw_fastrtps/issues/741
+
+
+
+### Experiments:
 - default wali.nav2.yaml.pre-tuining:  0.05 x 16 voxel height (rug crossing caused "out of map verticle bounds" by 10cm)  
 
 - wali.nav2.yaml.increase_voxel_height_and_max_height (size to 0.1  number to 10 = 1 meter)  eliminated rug crossing out of bounds  
