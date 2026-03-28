@@ -60,6 +60,7 @@ ubuntu@TB5WaLI:~/TB5-WaLI/wali_ws/params$ diff test.nav2.yaml wali.nav2.yaml.pre
 
 - Navigation failures mid-travel when checking the /battery_state from the command-line are attributed to a known DDS CPU usage spike reported in https://github.com/ros2/rmw_fastrtps/issues/741
 
+- Lowering particles and beams in localization did not visibly reduce CPU usage, but did reduce navigation reliability.
 
 
 ### Experiments:
