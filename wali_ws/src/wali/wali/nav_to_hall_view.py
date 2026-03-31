@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+# FILE: nav_to_hall_view.py
+#
+# Navigate to position looking toward master hallway
+
+# @author slowrunner (slowrunner@noreply.github.com)
+#
+
 # Copyright 2022 Clearpath Robotics, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,8 +24,21 @@
 # @author Roni Kreinin (rkreinin@clearpathrobotics.com)
 
 import rclpy
+from enum import IntEnum
 
-from turtlebot4_navigation.turtlebot4_navigator import TurtleBot4Directions, TurtleBot4Navigator
+# from turtlebot4_navigation.turtlebot4_navigator import TurtleBot4Directions, TurtleBot4Navigator
+from turtlebot4_navigation.turtlebot4_navigator import TurtleBot4Navigator
+
+class WaLI_Dir(IntEnum):
+    # WaLI_Dir          TurtleBot4Directions
+    SOUTH = 0         # NORTH
+    SOUTH_WEST = 315  # NORTH_EAST
+    WEST = 270        # EAST
+    NORTH_EAST = 135  # SOUTH_WSST
+    NORTH = 180       # SOUTH
+    NORTH_WEST = 225  # SOUTH_EAST
+    EAST = 90         # WEST
+    SOUTH_EAST = 45   # NORTH_WEST
 
 
 def main():
@@ -26,25 +46,12 @@ def main():
 
     navigator = TurtleBot4Navigator()
 
-    # Start on dock
-    if not navigator.getDockedStatus():
-        navigator.info('Docking before intialising pose')
-        navigator.dock()
-
-    # Set initial pose
-    initial_pose = navigator.getPoseStamped([0.0, 0.0], TurtleBot4Directions.NORTH)
-    navigator.setInitialPose(initial_pose)
-
-    # Wait for Nav2
-    navigator.waitUntilNav2Active()
-
     # Set goal poses
-    goal_pose = navigator.getPoseStamped([-13.0, 9.0], TurtleBot4Directions.EAST)
 
-    # Undock
-    navigator.undock()
+    goal_pose = navigator.getPoseStamped([2.1, 4.0], WaLI_Dir.NORTH_EAST)    # south edge of master hallway
 
     # Go to each goal pose
+    navigator.info('Starting to master hall view')
     navigator.startToPose(goal_pose)
 
     rclpy.shutdown()

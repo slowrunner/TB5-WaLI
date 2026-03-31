@@ -22,16 +22,7 @@ setup(
         'console_scripts': [
             'turtlebot4_first_python_node = \
                 turtlebot4_python_tutorials.turtlebot4_first_python_node:main',
-            'set_pose_docked = turtlebot4_python_tutorials.set_initial_pose_docked:main',
-            'set_pose_undocked = turtlebot4_python_tutorials.set_initial_pose_undocked:main',
             'nav_to_pose = turtlebot4_python_tutorials.nav_to_pose:main',
-            'nav_to_kitchen = turtlebot4_python_tutorials.nav_to_kitchen:main',
-            'nav_to_laundry = turtlebot4_python_tutorials.nav_to_laundry:main',
-            'nav_to_see_front_door = turtlebot4_python_tutorials.nav_to_see_front_door:main',
-            'nav_to_undocked = turtlebot4_python_tutorials.nav_to_undocked:main',
-            'nav_to_dining = turtlebot4_python_tutorials.nav_to_dining:main',
-            'nav_to_office = turtlebot4_python_tutorials.nav_to_office:main',
-            'nav_kitchen_and_back = turtlebot4_python_tutorials.nav_kitchen_and_back:main',
             'nav_through_poses = turtlebot4_python_tutorials.nav_through_poses:main',
             'follow_waypoints = turtlebot4_python_tutorials.follow_waypoints:main',
             'create_path = turtlebot4_python_tutorials.create_path:main',

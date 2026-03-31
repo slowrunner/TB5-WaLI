@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "ros2 run turtlebot4_python_tutorials nav_kitchen_and_back"
+echo -e "ros2 run wali nav_to_kitchen"
 uptime
-ros2 run turtlebot4_python_tutorials nav_to_kitchen
+ros2 run wali nav_to_kitchen
 uptime

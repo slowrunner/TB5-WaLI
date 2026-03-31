@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-# FILE: nav_to_undocked.py
+# FILE: nav_to_table.py
 #
 # @author slowrunner (slowrunner@noreply.github.com)
 #
-# Navigate  to undocked (ready to dock position)
-# - Undocked ([-0.0104, -0.372], TurtleBot4Directions.SOUTH)
+# Navigate from docked to kitchen  
+# - Center of Kitchen per map (3.71, 1.04)
 
 # Copyright 2022 Clearpath Robotics, Inc.
 #
@@ -24,9 +24,20 @@
 # @author Roni Kreinin (rkreinin@clearpathrobotics.com)
 
 import rclpy
+from enum import IntEnum
 
-from turtlebot4_navigation.turtlebot4_navigator import TurtleBot4Directions, TurtleBot4Navigator
+# from turtlebot4_navigation.turtlebot4_navigator import TurtleBot4Directions, TurtleBot4Navigator
+from turtlebot4_navigation.turtlebot4_navigator import TurtleBot4Navigator
 
+class WaLI_Dir(IntEnum):
+    SOUTH = 0         # NORTH
+    SOUTH_WEST = 315  # NORTH_EAST
+    WEST = 270        # EAST
+    NORTH_EAST = 135  # SOUTH_WSST
+    NORTH = 180       # SOUTH
+    NORTH_WEST = 225  # SOUTH_EAST
+    EAST = 90         # WEST
+    SOUTH_EAST = 45  # NORTH_WEST
 
 def main():
     rclpy.init()
@@ -34,12 +45,10 @@ def main():
     navigator = TurtleBot4Navigator()
 
     # Set goal poses
-    # goal_pose = navigator.getPoseStamped([-13.0, 9.0], TurtleBot4Directions.EAST)
-    # goal_pose = navigator.getPoseStamped([3.550, 0.968], TurtleBot4Directions.EAST)  # kitchen ctr facing away from stove
-    # - Undocked ([-0.0104, -0.372], TurtleBot4Directions.SOUTH)
-    goal_pose = navigator.getPoseStamped([-0.0104, -0.372], TurtleBot4Directions.SOUTH)  # WaLI undocked 
+    goal_pose = navigator.getPoseStamped([0.97, -0.7], WaLI_Dir.SOUTH_EAST)
 
     # Go to each goal pose
+    navigator.info('Starting to table')
     navigator.startToPose(goal_pose)
 
     rclpy.shutdown()
