@@ -146,8 +146,8 @@ local_costmap:
       plugins: ["static_layer", "voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 4.0
-        inflation_radius: 0.35
+        cost_scaling_factor: 2.5 #  was 4.0
+        inflation_radius: 0.55 # was 0.35
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: true
@@ -212,8 +212,8 @@ global_costmap:
         map_subscribe_transient_local: true
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 1.25
-        inflation_radius: 1.25
+        cost_scaling_factor: 3.5 # was 1.25
+        inflation_radius: 0.30 # was 1.25
       always_send_full_costmap: true
 
 planner_server:
@@ -275,7 +275,7 @@ waypoint_follower:
     wait_at_waypoint:
       plugin: "nav2_waypoint_follower::WaitAtWaypoint"
       enabled: true
-      waypoint_pause_duration: 200
+      waypoint_pause_duration: 10000 # ms  was 200
 
 velocity_smoother:
   ros__parameters:

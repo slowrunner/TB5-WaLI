@@ -45,10 +45,12 @@ setup(
             'nav_to_laundry = wali.nav_to_laundry:main',
             'nav_to_office = wali.nav_to_office:main',
             'nav_to_patio_view = wali.nav_to_patio_view:main',
+            'nav_to_ready = wali.nav_to_ready:main',
             'nav_to_see_front_door = wali.nav_to_see_front_door:main',
             'nav_to_table = wali.nav_to_table:main',
             'nav_to_undocked = wali.nav_to_undocked:main',
             'wali_tour = wali.wali_tour:main',
+            'tour_metrics = wali.tour_metrics_node:main',
         ],
     },
 )

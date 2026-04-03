@@ -1,0 +1,414 @@
+#!/usr/bin/env python3
+"""
+tour_metrics_node.py  (wali package)
+
+Passive observer node that collects navigation metrics during a
+wali_tour.py run using nav2_simple_commander.followWaypoints().
+
+Monitors:
+  /follow_waypoints action  -- waypoint transitions, tour start/complete
+  /navigate_to_pose action  -- per-waypoint recovery counts and timing
+
+Metrics reported per waypoint and for the full tour:
+  - Navigation time (seconds)
+  - Number of recoveries
+  - Estimated recovery time (seconds)
+  - Estimated recovery efficiency (recovery_time / total_nav_time %)
+
+Recovery time estimation methodology:
+  Recovery duration is not directly published by Nav2. This node times
+  the interval between a new recovery being detected (number_of_recoveries
+  increments) and the next navigate_to_pose feedback cycle where
+  number_of_recoveries stops incrementing. This is a consistent estimate
+  — not exact — but is applied identically across all test runs, making
+  it valid for relative comparison between nav2 parameter sets.
+
+Usage:
+  Terminal 1:  ros2 run wali tour_metrics
+  Terminal 2:  ros2 run wali wali_tour
+
+  The metrics node will detect the tour automatically, collect data,
+  print a report when the tour completes, and exit.
+
+  Optional argument to label the parameter set being tested:
+  ros2 run wali tour_metrics --ros-args -p label:="inflation_0.75"
+"""
+
+import rclpy
+from rclpy.node import Node
+from rclpy.action import ActionClient
+from rclpy.time import Time
+from action_msgs.msg import GoalStatusArray, GoalStatus
+from nav2_msgs.action import FollowWaypoints, NavigateToPose
+
+import time
+import sys
+from datetime import datetime
+
+WAYPOINT_PAUSE_DURATION=10.0
+
+# ---------------------------------------------------------------------------
+# Data class for per-waypoint metrics
+# ---------------------------------------------------------------------------
+
+class WaypointMetrics:
+    def __init__(self, index: int):
+        self.index                  = index       # 0-based waypoint index
+        self.start_time             = None        # wall time when waypoint started
+        self.end_time               = None        # wall time when waypoint completed
+        self.nav_time_sec           = 0.0         # total nav time from feedback
+        self.recoveries             = 0           # total recoveries for waypoint
+        self.recovery_start_time    = None        # wall time recovery started
+        self.recovery_total_sec     = 0.0         # accumulated estimated recovery time
+        self.in_recovery            = False       # currently in a recovery
+        self.skipped                = False       # True if in missed_waypoints result
+
+    @property
+    def nav_time(self) -> float:
+        """Total navigation time including recoveries (seconds)."""
+        if self.end_time and self.start_time:
+            return self.end_time - self.start_time
+        return self.nav_time_sec
+
+    @property
+    def recovery_efficiency(self) -> float:
+        """Fraction of navigation time spent in recovery (0.0 - 1.0)."""
+        total = self.nav_time
+        if total <= 0.0:
+            return 0.0
+        return min(self.recovery_total_sec / total, 1.0)
+
+    def __str__(self):
+        status = "SKIPPED" if self.skipped else "OK"
+        return (
+            f"  Waypoint {self.index + 1:2d} [{status}] "
+            f"nav={self.nav_time:6.1f}s  "
+            f"recoveries={self.recoveries:2d}  "
+            f"est.recovery={self.recovery_total_sec:5.1f}s  "
+            f"efficiency={self.recovery_efficiency * 100.0:5.1f}%"
+        )
+
+
+# ---------------------------------------------------------------------------
+# Metrics node
+# ---------------------------------------------------------------------------
+
+class WaliNavMetricsNode(Node):
+
+    def __init__(self):
+        super().__init__('wali_nav_metrics_node')
+
+        # Optional label for the parameter set being tested
+        self.declare_parameter('label', 'unlabeled')
+        self.label = self.get_parameter('label').get_parameter_value().string_value
+
+        # --------------- state ---------------
+        self.tour_started           = False
+        self.tour_complete          = False
+        self.tour_start_time        = None
+        self.tour_end_time          = None
+
+        self.waypoints: list[WaypointMetrics] = []
+        self.current_waypoint_index = -1        # -1 = tour not started
+        self.total_waypoints        = 0
+        self.missed_waypoints       = []
+
+        # /navigate_to_pose tracking
+        self.last_recovery_count    = 0
+        self.np_feedback_time       = None      # last time np feedback arrived
+
+        # --------------- subscribers ---------------
+        # Follow waypoints action — goal status tells us tour start/complete
+        self.fw_status_sub = self.create_subscription(
+            GoalStatusArray,
+            '/follow_waypoints/_action/status',
+            self._fw_status_callback,
+            10
+        )
+
+        # Follow waypoints feedback — current_waypoint index
+        # The action feedback topic for follow_waypoints
+        from nav2_msgs.action import FollowWaypoints
+        from rclpy.action import ActionClient
+
+        # We subscribe to the raw feedback topic rather than using an
+        # ActionClient so we remain a passive observer with no influence
+        # on the tour execution.
+        from nav2_msgs.action._follow_waypoints import FollowWaypoints_FeedbackMessage
+        self.fw_feedback_sub = self.create_subscription(
+            FollowWaypoints_FeedbackMessage,
+            '/follow_waypoints/_action/feedback',
+            self._fw_feedback_callback,
+            10
+        )
+
+        from nav2_msgs.action._navigate_to_pose import NavigateToPose_FeedbackMessage
+        self.np_feedback_sub = self.create_subscription(
+            NavigateToPose_FeedbackMessage,
+            '/navigate_to_pose/_action/feedback',
+            self._np_feedback_callback,
+            10
+        )
+
+        # Follow waypoints result — missed waypoints list, tour done
+        from nav2_msgs.action._follow_waypoints import FollowWaypoints_GetResult_Response
+        # Result comes through status + goal status SUCCEEDED/ABORTED
+        # We use a timer to poll for tour completion via status array
+
+        self._timer = self.create_timer(1.0, self._poll_completion)
+
+        self.get_logger().info(
+            f'WaLI Nav Metrics Node started. Label: "{self.label}". '
+            f'Waiting for /follow_waypoints tour to begin...'
+        )
+
+    # -----------------------------------------------------------------------
+    #  /follow_waypoints/_action/status callback
+    #  Detects tour start and tour completion
+    # -----------------------------------------------------------------------
+
+    def _fw_status_callback(self, msg: GoalStatusArray):
+        if not msg.status_list:
+            return
+
+        status = msg.status_list[-1].status
+
+        # Tour started
+        if not self.tour_started and status in (
+            GoalStatus.STATUS_ACCEPTED,
+            GoalStatus.STATUS_EXECUTING
+        ):
+            self.tour_started    = True
+            self.tour_start_time = time.monotonic()
+            self.get_logger().info('Tour started — collecting metrics.')
+
+        # Tour complete
+        if self.tour_started and not self.tour_complete and status in (
+            GoalStatus.STATUS_SUCCEEDED,
+            GoalStatus.STATUS_ABORTED,
+            GoalStatus.STATUS_CANCELED
+        ):
+            self.tour_complete  = True
+            self.tour_end_time  = time.monotonic()
+
+            # Close out the last waypoint
+            if self.waypoints:
+                last = self.waypoints[-1]
+                if last.end_time is None:
+                    last.end_time = self.tour_end_time
+                    if last.in_recovery:
+                        last.recovery_total_sec += (
+                            self.tour_end_time - last.recovery_start_time
+                        )
+                        last.in_recovery = False
+
+            self.get_logger().info('Tour complete — printing report.')
+            self._print_report()
+            # Signal main to shut down
+            rclpy.shutdown()
+
+    # -----------------------------------------------------------------------
+    #  /follow_waypoints/_action/feedback callback
+    #  Detects waypoint transitions via current_waypoint index changes
+    # -----------------------------------------------------------------------
+
+    def _fw_feedback_callback(self, msg):
+        try:
+            idx = msg.feedback.current_waypoint
+        except AttributeError:
+            return
+
+        if not self.tour_started:
+            return
+
+        if idx != self.current_waypoint_index:
+            now = time.monotonic()
+
+            # Close out previous waypoint
+            if self.current_waypoint_index >= 0 and self.waypoints:
+                prev = self.waypoints[self.current_waypoint_index]
+                if prev.end_time is None:
+                    prev.end_time = now
+                    if prev.in_recovery:
+                        prev.recovery_total_sec += now - prev.recovery_start_time
+                        prev.in_recovery = False
+
+            # Start new waypoint
+            self.current_waypoint_index = idx
+            wp = WaypointMetrics(idx)
+            wp.start_time = now
+
+            # Extend list to cover this index (waypoints arrive in order)
+            while len(self.waypoints) <= idx:
+                self.waypoints.append(None)
+            self.waypoints[idx] = wp
+
+            self.last_recovery_count = 0    # reset per-waypoint recovery tracking
+
+            self.get_logger().info(f'Waypoint {idx + 1} started.')
+
+    # -----------------------------------------------------------------------
+    #  /navigate_to_pose/_action/feedback callback
+    #  Tracks recovery count increments to estimate recovery time
+    # -----------------------------------------------------------------------
+
+    def _np_feedback_callback(self, msg):
+        if not self.tour_started:
+            return
+        if self.current_waypoint_index < 0:
+            return
+
+        wp = self.waypoints[self.current_waypoint_index]
+        if wp is None:
+            return
+
+        try:
+            recoveries  = msg.feedback.number_of_recoveries
+            nav_time    = msg.feedback.navigation_time.sec + \
+                          msg.feedback.navigation_time.nanosec * 1e-9
+            nav_time    = nav_time - WAYPOINT_PAUSE_DURATION    # exclude waypoint pause time, only navigation time
+
+        except AttributeError:
+            return
+
+        now = time.monotonic()
+
+        # Update nav time from feedback (more accurate than wall clock)
+        wp.nav_time_sec = nav_time
+
+        # Detect recovery start
+        if recoveries > self.last_recovery_count:
+            new_recoveries = recoveries - self.last_recovery_count
+            wp.recoveries += new_recoveries
+            self.last_recovery_count = recoveries
+
+            if not wp.in_recovery:
+                wp.in_recovery        = True
+                wp.recovery_start_time = now
+                self.get_logger().debug(
+                    f'Waypoint {self.current_waypoint_index + 1}: '
+                    f'recovery #{wp.recoveries} started.'
+                )
+
+        else:
+            # Recovery count stopped incrementing — recovery likely over
+            if wp.in_recovery:
+                elapsed = now - wp.recovery_start_time
+                # Only close recovery if at least one feedback cycle has
+                # passed without a new recovery (debounce ~1 feedback cycle)
+                if elapsed > 0.2:
+                    wp.recovery_total_sec += elapsed
+                    wp.in_recovery         = False
+                    wp.recovery_start_time = None
+                    self.get_logger().debug(
+                        f'Waypoint {self.current_waypoint_index + 1}: '
+                        f'recovery ended, est. duration {elapsed:.1f}s.'
+                    )
+
+        self.np_feedback_time = now
+
+    # -----------------------------------------------------------------------
+    #  Completion poll timer
+    #  Fallback: if status callback missed the SUCCEEDED status, detect
+    #  via /navigate_to_pose feedback going silent after all waypoints done.
+    # -----------------------------------------------------------------------
+
+    def _poll_completion(self):
+        if not self.tour_started or self.tour_complete:
+            return
+
+        if self.np_feedback_time is None:
+            return
+
+        # If no navigate_to_pose feedback for 10 seconds after tour started,
+        # and we have seen at least one waypoint, assume tour is done.
+        silence = time.monotonic() - self.np_feedback_time
+        if silence > (WAYPOINT_PAUSE_DURATION+20.0) and self.current_waypoint_index >= 0:
+            self.get_logger().warn(
+                f'No navigate_to_pose feedback for {WAYPOINT_PAUSE_DURATION+20.0}s — assuming tour complete.'
+            )
+            self.tour_complete = True
+            self.tour_end_time = time.monotonic()
+            self._print_report()
+            rclpy.shutdown()
+
+    # -----------------------------------------------------------------------
+    #  Report
+    # -----------------------------------------------------------------------
+
+    def _print_report(self):
+        now_str      = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        tour_elapsed = (self.tour_end_time - self.tour_start_time) \
+                       if self.tour_end_time and self.tour_start_time else 0.0
+
+        valid_wps    = [w for w in self.waypoints if w is not None]
+        total_rec    = sum(w.recoveries for w in valid_wps)
+        total_rec_t  = sum(w.recovery_total_sec for w in valid_wps)
+        total_nav_t  = sum(w.nav_time for w in valid_wps)
+        skipped      = [w.index + 1 for w in valid_wps if w.skipped]
+
+        # overall_eff  = ((1.0-(total_rec_t / tour_elapsed)) * 100.0) \
+        #                if tour_elapsed > 0 else 0.0
+        overall_eff  = ((1.0-(total_rec_t / total_nav_t)) * 100.0) \
+                       if total_nav_t > 0 else 0.0
+
+        sep  = '=' * 65
+        sep2 = '-' * 65
+
+        print()
+        print(sep)
+        print(f'  TB5-WaLI NAVIGATION METRICS REPORT')
+        print(f'  {now_str}')
+        print(f'  Parameter set label : {self.label}')
+        print(sep)
+        print()
+        print('  PER-WAYPOINT METRICS')
+        print(sep2)
+        for wp in valid_wps:
+            print(wp)
+        print(sep2)
+        print()
+        print('  TOUR SUMMARY')
+        print(sep2)
+        print(f'  Waypoints attempted : {len(valid_wps)}')
+        print(f'  Waypoints skipped   : {len(skipped)}'
+              + (f'  (waypoints: {skipped})' if skipped else ''))
+        print(f'  Total nav time      : {total_nav_t:7.1f} s'
+              f'  ({total_nav_t / 60.0:.1f} min)')
+        print(f'  Total tour time     : {tour_elapsed:7.1f} s'
+              f'  ({tour_elapsed / 60.0:.1f} min)  [includes pauses]')
+        print(f'  Total recoveries    : {total_rec:7d}')
+        print(f'  Est. recovery time  : {total_rec_t:7.1f} s')
+        # print(f'  Recovery efficiency : {overall_eff:7.1f} %'
+        #       f'  [1.0 - (recovery_time / tour_time)]')
+        print(f'  Recovery efficiency : {overall_eff:7.1f} %'
+              f'  [1.0 - (recovery_time / total_nav_t)]')
+        print(sep)
+        print()
+        print('  NOTE: Recovery time is estimated (see node docstring).')
+        print('        Consistent methodology enables valid cross-run comparison.')
+        print()
+        print(sep)
+
+
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = WaliNavMetricsNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        print('\nMetrics node interrupted by user.')
+        if node.tour_started and not node.tour_complete:
+            print('Tour was in progress — partial report:')
+            node._print_report()
+    finally:
+        node.destroy_node()
+
+
+if __name__ == '__main__':
+    main()
+

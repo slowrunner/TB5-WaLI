@@ -32,7 +32,7 @@ controller_server:
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
       required_movement_radius: 0.5
-      movement_time_allowance: 10.0
+      movement_time_allowance: 20.0  # was 10.0 claude gives more time before declares stuck
     general_goal_checker:
       stateful: true
       plugin: "nav2_controller::SimpleGoalChecker"
@@ -93,7 +93,7 @@ controller_server:
       CostCritic:
         enabled: true
         cost_power: 1
-        cost_weight: 3.81
+        cost_weight: 2.0  # was 3.81 default
         critical_cost: 300.0
         consider_footprint: true
         collision_cost: 1000000.0
@@ -128,7 +128,7 @@ local_costmap:
     ros__parameters:
       enable_stamped_cmd_vel: true
       update_frequency: 5.0
-      publish_frequency: 2.0
+      publish_frequency: 2.0  # was 2.0
       global_frame: odom
       robot_base_frame: base_link
       rolling_window: true
@@ -146,8 +146,8 @@ local_costmap:
       plugins: ["static_layer", "voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 2.5 #  was 4.0
-        inflation_radius: 0.55 # was 0.35
+        cost_scaling_factor: 2.0 # was 4.0
+        inflation_radius: 0.55  # was 0.35
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: true
@@ -212,8 +212,8 @@ global_costmap:
         map_subscribe_transient_local: true
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.5 # was 1.25
-        inflation_radius: 0.30 # was 1.25
+        cost_scaling_factor: 3.5  # claude suggested was 1.25 gemini suggested
+        inflation_radius: 0.75  # claude suggested was 1.25 gemini suggested
       always_send_full_costmap: true
 
 planner_server:
@@ -224,7 +224,7 @@ planner_server:
     GridBased:
       plugin: "nav2_navfn_planner::NavfnPlanner"
       tolerance: 0.5
-      use_astar: false
+      use_astar: true   # was false claude should route more through open space
       allow_unknown: true
 
 smoother_server:
@@ -248,8 +248,11 @@ behavior_server:
     behavior_plugins: ["spin", "backup", "drive_on_heading", "assisted_teleop", "wait"]
     spin:
       plugin: "nav2_behaviors::Spin"
+      simulate_ahead_time: 2.0  # was not specified - claude suggestion
     backup:
       plugin: "nav2_behaviors::BackUp"
+      backup_dist: 0.15  # was not specified - default 30cm
+      backup_speed: 0.025  # was not specified - slower 
     drive_on_heading:
       plugin: "nav2_behaviors::DriveOnHeading"
     wait:
@@ -275,7 +278,7 @@ waypoint_follower:
     wait_at_waypoint:
       plugin: "nav2_waypoint_follower::WaitAtWaypoint"
       enabled: true
-      waypoint_pause_duration: 10000 # ms  was 200
+      waypoint_pause_duration: 10000  # ms, was 200 
 
 velocity_smoother:
   ros__parameters:
