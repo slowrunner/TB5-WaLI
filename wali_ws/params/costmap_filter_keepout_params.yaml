@@ -11,4 +11,4 @@ filter_mask_server:
     use_sim_time: false
     frame_id: "map"
     topic_name: "/keepout_filter_mask"
-    yaml_filename: "keepout_mask.yaml"
+    yaml_filename: "/home/ubuntu/TB5-WaLI/wali_ws/maps/tb5wali_current.keepout.yaml"

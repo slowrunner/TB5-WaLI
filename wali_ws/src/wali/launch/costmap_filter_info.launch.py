@@ -93,7 +93,8 @@ def generate_launch_description():
             keepout_params_file,        # contains filter mask map topic name
             {'use_sim_time': use_sim_time,
              'yaml_filename':  keepout_map}
-        ]
+        ],
+        remappings=[('/map', '/keepout_filter_mask')],    # added b/c map_server defaults to /map
     )
 
     # ------------------------------------------------------------------ #

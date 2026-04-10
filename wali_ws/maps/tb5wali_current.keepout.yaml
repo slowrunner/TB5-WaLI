@@ -1,4 +1,4 @@
-image: tb5wali_current.keepout.pgm
+image: /home/ubuntu/TB5-WaLI/wali_ws/maps/tb5wali_current.keepout.pgm
 mode: trinary
 resolution: 0.05
 origin: [-7.46, -2.83, 0]
