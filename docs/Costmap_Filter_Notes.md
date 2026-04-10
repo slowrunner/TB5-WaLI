@@ -12,6 +12,8 @@ Solution:
      with full path to image:  
      /home/ubuntu/TB5-WaLI/wali_ws/maps/tb5wali_current.keepout.pgm
 
+<img src="https://github.com/slowrunner/TB5-WaLI/blob/main/wali_ws/maps/tb5wali_current.keepout.jpg" />
+
 2) Create costmap_filter_info params file:
    - params/costmap_filter_keepout_params.yaml  
      with full path to keepout map in filter_mask_server.yaml_filename  
