@@ -17,19 +17,45 @@ Solution:
 2) Create costmap_filter_info params file:
    - params/costmap_filter_keepout_params.yaml  
      with full path to keepout map in filter_mask_server.yaml_filename  
-     "/home/ubuntu/TB5-WaLI/wali_ws/maps/tb5wali_current.keepout.yaml"  
+     "/home/ubuntu/TB5-WaLI/wali_ws/maps/tb5wali_current.keepout.yaml"
 
-3) Create wali/launch/costmap_filter_info.launch.py  
+3) Add keepout_filter to nav2 yaml parameter file:
+```
+local_costmap:
+  local_costmap:
+    ros__parameters:
+       ...
+       filters: ["keepout_filter"]
+       keepout_filter:
+         plugin: "nav2_costmap_2d::KeepoutFilter"
+         enabled: True
+         # filter_info_topic: "keepout_costmap_filter_info"
+         filter_info_topic: "/costmap_filter_info"
+
+global_costmap:
+  global_costmap:
+    ros__parameters:
+       ...
+       filters: ["keepout_filter"]
+       keepout_filter:
+         plugin: "nav2_costmap_2d::KeepoutFilter"
+         enabled: True
+         # filter_info_topic: "keepout_costmap_filter_info"
+         filter_info_topic: "/costmap_filter_info"
+
+```
+   
+4) Create wali/launch/costmap_filter_info.launch.py  
    - with lifecycle manager that launches only  
      costmap_filter_info_server  and  
      filter_mask_server  
    - with filter_mask_server remapping of /map to /keepout_filter_mask  
 
-4) To see the keepout zones in rViz2:  
+5) To see the keepout zones in rViz2:  
    - add by topic /keepout_filter_mask  
      changed Alpha from 0.7 default to 0.4  
 
-5) Launch 
+7) Launch 
    - cmds/launch_localization.sh  
 ```
 #!/bin/bash
@@ -64,5 +90,7 @@ echo -e "ros2 launch turtlebot4_navigation nav2.launch.py params_file:=/home/ubu
 ros2 launch turtlebot4_navigation nav2.launch.py \
   params_file:=/home/ubuntu/TB5-WaLI/wali_ws/params/test.nav2.yaml 
 ```
+
+8) Test by setting a goal with the shortest route through the livingroom keepout area
 
 <img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/Costmap_Filter_Info_rViz2.jpg" height="630" />
