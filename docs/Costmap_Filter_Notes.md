@@ -94,3 +94,9 @@ ros2 launch turtlebot4_navigation nav2.launch.py \
 8) Test by setting a goal with the shortest route through the livingroom keepout area
 
 <img src="https://github.com/slowrunner/TB5-WaLI/blob/main/graphics/Costmap_Filter_Info_rViz2.jpg" height="630" />
+
+
+### REF:  https://docs.nav2.org/tutorials/docs/navigation2_with_keepout_filter.html
+
+(I should have followed this more closely, instead of trying it on my own with Claude.)
+
