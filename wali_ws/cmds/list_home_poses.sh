@@ -1,0 +1,23 @@
+#!/bin/bash
+
+echo ' *** '
+echo 'Home Poses:'
+echo ' '
+echo "Directions are IntEnum (0-359) from WaLI_Dir class - e.g. WaLI_Dir.SOUTH"
+echo ' '
+echo '  1)  front door:  ( 3.39  ,  3.99 , "SOUTH"     )'
+echo '  2)  couch view:  ( 0.5   ,  2.7  , "NORTH_WEST")'
+echo '  3)  Laundry:     ( 2.7   , -1.47 , "SOUTH"     )'
+echo '  4)  table:       ( 0.97  , -0.7  , "SOUTH_EAST")'
+echo '  5)  kitchen:     ( 3.71  ,  1.04 , "NORTH_WEST")'
+echo '  6)  Dining:      (-2.6   , -0.5  , "SOUTH_EAST")'
+echo '  7)  patio view:  (-3.4   ,  2.1  , "NORTH_EAST")'
+echo '  8)  office:      (-4.56  , -0.01 , "NORTH_WEST")'
+echo '  9)  hall view :  ( 2.1   ,  4.0  , "NORTH_EAST")'
+echo ' 10)  Ready:       (-0.208 , -0.317, "NORTH_EAST")'
+echo ' '
+echo '  Note: undocked: (-0.010 , -0.372,  "NORTH"     )'
+echo '  Note: docked:   ( 0.022 , -0.372,  "SOUTH"     )'
+echo '        .275 from wall to LIDAR ctr, ~ .240 to WaLI ctr'
+echo ' *** '
+echo ' '

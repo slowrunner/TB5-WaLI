@@ -35,11 +35,23 @@ Create3 configuration:
   - safety_override: "full"
 
 
+### UPDATING TB5-WaLI
+
 NOTE:  After running ```sudo apt update && sudo apt upgrade -y``` run:
+
 ```
 turtlebot4-service-restart
 ```
-Then wait till oakd container is up with "camera ready"
+
+After performing either update method:
+
+```
+~/TB5-WaLI/config/install_gamepad_param_files.sh
+```
+
+### NO LONGER NEEDED?
+
+Wait till oakd container is up with "camera ready"
 
 ```
 systemctl status turtlebot4.service

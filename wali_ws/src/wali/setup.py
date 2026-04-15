@@ -54,6 +54,8 @@ setup(
             'nav_to_undocked = wali.nav_to_undocked:main',
             'wali_tour = wali.wali_tour:main',
             'tour_metrics = wali.tour_metrics_node:main',
+            'echo_pose = wali.echo_pose:main',
+            'echo_odom = wali.echo_odom:main',
         ],
     },
 )
